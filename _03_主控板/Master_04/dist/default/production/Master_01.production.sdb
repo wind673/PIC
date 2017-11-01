@@ -1,0 +1,768 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F67K22 ]
+[d frameptr 4065 ]
+"28 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Key.c
+[e E8334 __KEY_TYPE__ `uc
+KEY_default 0
+KEY_short 1
+KEY_double 2
+KEY_hold 3
+KEY_busy 4
+KEY_long 5
+]
+"135 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_USART.c
+[e E8481 __Hardware_Type `uc
+Type_HANDLE 0
+Type_MASTER 1
+Type_SENSOR 2
+]
+"39 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+"58
+[v _LED_Control LED_Control `(v  1 e 0 0 ]
+[v i2_LED_Control LED_Control `(v  1 e 0 0 ]
+"42 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+"69
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+"91
+[v _Key_ScanFSM Key_ScanFSM `(v  1 e 0 0 ]
+"113
+[v _Key_ReadFSM Key_ReadFSM `(v  1 e 0 0 ]
+"162
+[v _Key_ResetFSM Key_ResetFSM `(v  1 e 0 0 ]
+"182
+[v _Key_ManageMessage Key_ManageMessage `(v  1 e 0 0 ]
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+"37 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_ADC.c
+[v _ADC6_Init ADC6_Init `(v  1 e 0 0 ]
+"67
+[v _GetADC6 GetADC6 `(v  1 e 0 0 ]
+"69 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_Delay.c
+[v _Delay_1Khz Delay_1Khz `(v  1 e 0 0 ]
+"86
+[v _Pulse_1Khz Pulse_1Khz `(v  1 e 0 0 ]
+"106
+[v _delay1ms delay1ms `(v  1 s 0 delay1ms ]
+"114
+[v _delay1s delay1s `(v  1 s 0 delay1s ]
+"43 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(v  1 e 0 0 ]
+"81
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+"100
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+"47 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_USART.c
+[v _RS485_Init RS485_Init `(v  1 e 0 0 ]
+"77
+[v _RS485_SendDate RS485_SendDate `(v  1 e 0 0 ]
+"114
+[v _RS485_ManageMessage RS485_ManageMessage `(uc  1 e 1 0 ]
+"163
+[v _VerifyCRC VerifyCRC `(v  1 s 0 VerifyCRC ]
+"96 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Run.c
+[v _ShowResult ShowResult `(v  1 e 0 0 ]
+"21 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/TM1640.c
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+"44
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+"63
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+"99
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+"116
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+"166
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+"206
+[v _TM1640_Show_integer TM1640_Show_integer `(v  1 e 0 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"63 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"26 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+"22 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+"305 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+"24 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+"35 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\EEP\read_B.c
+[v _Read_b_eep Read_b_eep `(uc  1 e 1 0 ]
+"49 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\EEP\write_B.c
+[v _Write_b_eep Write_b_eep `(v  1 e 0 0 ]
+"124 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\USART\u1open.c
+[v _Open1USART Open1USART `(v  1 e 0 0 ]
+"26 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/GPIO.c
+[v _LED_BUS LED_BUS `uc  1 e 1 0 ]
+[s S307 Key_Struct 21 `VEuc 1 key_BUS 1 0 `VEuc 1 key_group 1 1 `VEuc 1 key_group_state 1 2 `VE[6]ui 1 a_key_count 12 3 `VE[6]uc 1 a_key_state 6 15 ]
+"28 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Key.c
+[v _s_Local_Key_FSM s_Local_Key_FSM `VES307  1 e 21 0 ]
+"29
+[v _gs_Local_Key_User gs_Local_Key_User `VES307  1 e 21 0 ]
+"24 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_ADC.c
+[v _gf_ADC6_Buff gf_ADC6_Buff `VEf  1 e 3 0 ]
+"28 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_Timer.c
+[v _g_Timer_Cyc g_Timer_Cyc `ul  1 e 4 0 ]
+"30 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_USART.c
+[v _ga_RS485_SendBuff ga_RS485_SendBuff `[10]uc  1 e 10 0 ]
+"31
+[v _ga_RS485_ReceiveBuff ga_RS485_ReceiveBuff `[10]uc  1 e 10 0 ]
+"32
+[v _g_RS485_Receive_Flag g_RS485_Receive_Flag `uc  1 e 1 0 ]
+"33
+[v _g_RS485_Byte g_RS485_Byte `uc  1 e 1 0 ]
+[s S337 __Switch 4 `uc 1 _1Khz 1 0 `uc 1 ADC6 1 1 `uc 1 Usart_OneDate 1 2 `uc 1 Show_Send_Receive 1 3 ]
+"34 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Run.c
+[v _gs_Handle_Switch gs_Handle_Switch `S337  1 e 4 0 ]
+[s S441 __Msg 7 `uc 1 Order 1 0 `[4]uc 1 a_Parameter 4 1 `uc 1 Hardware_Type 1 5 `uc 1 hand_info 1 6 ]
+"35
+[v _gsa_Handle_Msg gsa_Handle_Msg `[10]S441  1 e 70 0 ]
+"13 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/TM1640.c
+[v _LED_Number LED_Number `[16]uc  1 s 16 LED_Number ]
+"666 F:/Program Files (x86)/Microchip/xc8/v1.34/include\pic18f67k22.h
+[v _TXREG2 TXREG2 `VEuc  1 e 1 @3868 ]
+[s S388 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"921
+[s S397 . 1 `uc 1 TX9D2 1 0 :1:0 
+`uc 1 TRMT2 1 0 :1:1 
+`uc 1 BRGH2 1 0 :1:2 
+`uc 1 SENDB2 1 0 :1:3 
+`uc 1 SYNC2 1 0 :1:4 
+`uc 1 TXEN2 1 0 :1:5 
+`uc 1 TX92 1 0 :1:6 
+`uc 1 CSRC2 1 0 :1:7 
+]
+[s S406 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_92 1 0 :1:6 
+]
+[s S409 . 1 `uc 1 TXD82 1 0 :1:0 
+]
+[u S411 . 1 `S388 1 . 1 0 `S397 1 . 1 0 `S406 1 . 1 0 `S409 1 . 1 0 ]
+[v _TXSTA2bits TXSTA2bits `VES411  1 e 1 @3873 ]
+[s S65 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 RE4 1 0 :1:4 
+`uc 1 RE5 1 0 :1:5 
+`uc 1 RE6 1 0 :1:6 
+`uc 1 RE7 1 0 :1:7 
+]
+"8793
+[s S74 . 1 `uc 1 AD8 1 0 :1:0 
+`uc 1 AD9 1 0 :1:1 
+`uc 1 AD10 1 0 :1:2 
+`uc 1 AD11 1 0 :1:3 
+`uc 1 AD12 1 0 :1:4 
+`uc 1 AD13 1 0 :1:5 
+`uc 1 AD14 1 0 :1:6 
+`uc 1 AD15 1 0 :1:7 
+]
+[s S83 . 1 `uc 1 P2D 1 0 :1:0 
+`uc 1 P2C 1 0 :1:1 
+`uc 1 P2B 1 0 :1:2 
+`uc 1 P3C 1 0 :1:3 
+`uc 1 P3B 1 0 :1:4 
+`uc 1 P1C 1 0 :1:5 
+`uc 1 P1B 1 0 :1:6 
+`uc 1 P2A 1 0 :1:7 
+]
+[s S92 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9 1 0 :1:3 
+`uc 1 CCP8 1 0 :1:4 
+`uc 1 CCP7 1 0 :1:5 
+`uc 1 CCP6 1 0 :1:6 
+`uc 1 CCP2 1 0 :1:7 
+]
+[s S100 . 1 `uc 1 NOT_RD 1 0 :1:0 
+]
+[s S102 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_WR 1 0 :1:1 
+]
+[s S105 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_CS 1 0 :1:2 
+]
+[s S108 . 1 `uc 1 nRD 1 0 :1:0 
+`uc 1 nWR 1 0 :1:1 
+`uc 1 nCS 1 0 :1:2 
+`uc 1 REFO 1 0 :1:3 
+]
+[s S113 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S116 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CCP6E 1 0 :1:6 
+]
+[s S119 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 CCP7E 1 0 :1:5 
+]
+[s S122 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP8E 1 0 :1:4 
+]
+[s S125 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP9E 1 0 :1:3 
+]
+[s S128 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CS 1 0 :1:2 
+]
+[s S131 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S134 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PB1E 1 0 :1:6 
+]
+[s S137 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+]
+[s S140 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PB3E 1 0 :1:4 
+]
+[s S143 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 PC1E 1 0 :1:5 
+]
+[s S146 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+]
+[s S149 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 PC3E 1 0 :1:3 
+]
+[s S152 . 1 `uc 1 PD2 1 0 :1:0 
+]
+[s S154 . 1 `uc 1 RDE 1 0 :1:0 
+]
+[s S156 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+]
+[u S159 . 1 `S65 1 . 1 0 `S74 1 . 1 0 `S83 1 . 1 0 `S92 1 . 1 0 `S100 1 . 1 0 `S102 1 . 1 0 `S105 1 . 1 0 `S108 1 . 1 0 `S113 1 . 1 0 `S116 1 . 1 0 `S119 1 . 1 0 `S122 1 . 1 0 `S125 1 . 1 0 `S128 1 . 1 0 `S131 1 . 1 0 `S134 1 . 1 0 `S137 1 . 1 0 `S140 1 . 1 0 `S143 1 . 1 0 `S146 1 . 1 0 `S149 1 . 1 0 `S152 1 . 1 0 `S154 1 . 1 0 `S156 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES159  1 e 1 @3972 ]
+[s S587 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR1GIE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"10922
+[s S596 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S601 . 1 `S587 1 . 1 0 `S596 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES601  1 e 1 @3997 ]
+"12571
+[v _RCREG1 RCREG1 `VEuc  1 e 1 @4014 ]
+"16833
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"16852
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+"18157
+[v _ANSEL4 ANSEL4 `VEb  1 e 0 @31020 ]
+"18161
+[v _ANSEL6 ANSEL6 `VEb  1 e 0 @31022 ]
+"18163
+[v _ANSEL7 ANSEL7 `VEb  1 e 0 @31023 ]
+"18165
+[v _ANSEL8 ANSEL8 `VEb  1 e 0 @31008 ]
+"18897
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"19015
+[v _IPEN IPEN `VEb  1 e 0 @32391 ]
+"19555
+[v _PSA PSA `VEb  1 e 0 @32427 ]
+"19615
+[v _RA4 RA4 `VEb  1 e 0 @31748 ]
+"19617
+[v _RA5 RA5 `VEb  1 e 0 @31749 ]
+"19647
+[v _RC0 RC0 `VEb  1 e 0 @31760 ]
+"19649
+[v _RC1 RC1 `VEb  1 e 0 @31761 ]
+"19653
+[v _RC1IF RC1IF `VEb  1 e 0 @31989 ]
+"19725
+[v _RD5 RD5 `VEb  1 e 0 @31773 ]
+"19727
+[v _RD6 RD6 `VEb  1 e 0 @31774 ]
+"19761
+[v _RF1 RF1 `VEb  1 e 0 @31785 ]
+"19763
+[v _RF2 RF2 `VEb  1 e 0 @31786 ]
+"19765
+[v _RF3 RF3 `VEb  1 e 0 @31787 ]
+"20063
+[v _T08BIT T08BIT `VEb  1 e 0 @32430 ]
+"20067
+[v _T0CS T0CS `VEb  1 e 0 @32429 ]
+"20075
+[v _T0PS0 T0PS0 `VEb  1 e 0 @32424 ]
+"20077
+[v _T0PS1 T0PS1 `VEb  1 e 0 @32425 ]
+"20079
+[v _T0PS2 T0PS2 `VEb  1 e 0 @32426 ]
+"20081
+[v _T0SE T0SE `VEb  1 e 0 @32428 ]
+"20267
+[v _TMR0IE TMR0IE `VEb  1 e 0 @32661 ]
+"20269
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"20273
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"20437
+[v _TRISA4 TRISA4 `VEb  1 e 0 @31892 ]
+"20439
+[v _TRISA5 TRISA5 `VEb  1 e 0 @31893 ]
+"20461
+[v _TRISC0 TRISC0 `VEb  1 e 0 @31904 ]
+"20463
+[v _TRISC1 TRISC1 `VEb  1 e 0 @31905 ]
+"20473
+[v _TRISC6 TRISC6 `VEb  1 e 0 @31910 ]
+"20475
+[v _TRISC7 TRISC7 `VEb  1 e 0 @31911 ]
+"20487
+[v _TRISD5 TRISD5 `VEb  1 e 0 @31917 ]
+"20489
+[v _TRISD6 TRISD6 `VEb  1 e 0 @31918 ]
+"20509
+[v _TRISF1 TRISF1 `VEb  1 e 0 @31929 ]
+"20511
+[v _TRISF2 TRISF2 `VEb  1 e 0 @31930 ]
+"20513
+[v _TRISF3 TRISF3 `VEb  1 e 0 @31931 ]
+[s S812 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR1GIF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"11004 F:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f67k22.h
+[s S821 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S826 . 1 `S812 1 . 1 0 `S821 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES826  1 e 1 @3998 ]
+"11910
+[v _RCSTA1 RCSTA1 `VEuc  1 e 1 @4011 ]
+[s S1181 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"11965
+[s S1190 . 1 `uc 1 RCD8 1 0 :1:0 
+`uc 1 . 1 0 :2:1 
+`uc 1 ADEN 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S1196 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_RC8 1 0 :1:6 
+]
+[s S1199 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nRC8 1 0 :1:6 
+]
+[s S1202 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S1205 . 1 `uc 1 RX9D1 1 0 :1:0 
+`uc 1 OERR1 1 0 :1:1 
+`uc 1 FERR1 1 0 :1:2 
+`uc 1 ADDEN1 1 0 :1:3 
+`uc 1 CREN1 1 0 :1:4 
+`uc 1 SREN1 1 0 :1:5 
+`uc 1 RX91 1 0 :1:6 
+`uc 1 SPEN1 1 0 :1:7 
+]
+[s S1214 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[u S1217 . 1 `S1181 1 . 1 0 `S1190 1 . 1 0 `S1196 1 . 1 0 `S1199 1 . 1 0 `S1202 1 . 1 0 `S1205 1 . 1 0 `S1214 1 . 1 0 ]
+[v _RCSTA1bits RCSTA1bits `VES1217  1 e 1 @4011 ]
+"12247
+[v _TXSTA1 TXSTA1 `VEuc  1 e 1 @4012 ]
+"12292
+[s S1127 . 1 `uc 1 TXD8 1 0 :1:0 
+`uc 1 . 1 0 :5:1 
+`uc 1 TX8_9 1 0 :1:6 
+]
+[s S1131 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 NOT_TX8 1 0 :1:6 
+]
+[s S1134 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 nTX8 1 0 :1:6 
+]
+[s S1137 . 1 `uc 1 TX9D1 1 0 :1:0 
+`uc 1 TRMT1 1 0 :1:1 
+`uc 1 BRGH1 1 0 :1:2 
+`uc 1 SENDB1 1 0 :1:3 
+`uc 1 SYNC1 1 0 :1:4 
+`uc 1 TXEN1 1 0 :1:5 
+`uc 1 TX91 1 0 :1:6 
+`uc 1 CSRC1 1 0 :1:7 
+]
+[u S1146 . 1 `S388 1 . 1 0 `S1127 1 . 1 0 `S1131 1 . 1 0 `S1134 1 . 1 0 `S1137 1 . 1 0 ]
+[v _TXSTA1bits TXSTA1bits `VES1146  1 e 1 @4012 ]
+"12608
+[v _SPBRG1 SPBRG1 `VEuc  1 e 1 @4015 ]
+"13874
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"13944
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"14053
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S695 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"14098
+[s S698 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S702 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S710 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S713 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S716 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S719 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S722 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S725 . 1 `S695 1 . 1 0 `S698 1 . 1 0 `S702 1 . 1 0 `S710 1 . 1 0 `S713 1 . 1 0 `S716 1 . 1 0 `S719 1 . 1 0 `S722 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES725  1 e 1 @4034 ]
+"14183
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"14202
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"16739
+[v _SPBRGH1 SPBRGH1 `VEuc  1 e 1 @4052 ]
+[s S862 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"17602
+[s S871 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S880 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S897 . 1 `S862 1 . 1 0 `S871 1 . 1 0 `S880 1 . 1 0 `S871 1 . 1 0 `S880 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES897  1 e 1 @4082 ]
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"61
+} 0
+"43 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(v  1 e 0 0 ]
+{
+"69
+} 0
+"81
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v SetTimer0@_tmr _tmr `ui  1 p 2 0 ]
+"88
+} 0
+"96 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Run.c
+[v _ShowResult ShowResult `(v  1 e 0 0 ]
+{
+"111
+} 0
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 4 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 0 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 2 ]
+"53
+} 0
+"206 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/TM1640.c
+[v _TM1640_Show_integer TM1640_Show_integer `(v  1 e 0 0 ]
+{
+[v TM1640_Show_integer@Numbers Numbers `ui  1 p 2 7 ]
+"213
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 4 ]
+"8
+[v ___lwmod@dividend dividend `ui  1 p 2 0 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+"26
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 5 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 4 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 0 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+"31
+} 0
+"99 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/TM1640.c
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Date Date `uc  1 p 1 5 ]
+"101
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 6 ]
+"108
+} 0
+"58 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/GPIO.c
+[v _LED_Control LED_Control `(v  1 e 0 0 ]
+{
+[v LED_Control@_LED_num _LED_num `uc  1 a 1 wreg ]
+[v LED_Control@_LED_num _LED_num `uc  1 a 1 wreg ]
+[v LED_Control@_switch _switch `uc  1 p 1 0 ]
+"62
+[v LED_Control@_LED_num _LED_num `uc  1 a 1 1 ]
+"74
+} 0
+"47 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_USART.c
+[v _RS485_Init RS485_Init `(v  1 e 0 0 ]
+{
+"64
+} 0
+"124 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\USART\u1open.c
+[v _Open1USART Open1USART `(v  1 e 0 0 ]
+{
+[v Open1USART@config config `uc  1 a 1 wreg ]
+[v Open1USART@config config `uc  1 a 1 wreg ]
+[v Open1USART@spbrg spbrg `ui  1 p 2 0 ]
+"126
+[v Open1USART@config config `uc  1 a 1 2 ]
+"169
+} 0
+"42 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+{
+"57
+} 0
+"21 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/TM1640.c
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+{
+"36
+} 0
+"116
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Byte@Date Date `uc  1 a 1 wreg ]
+"118
+[v TM1640_Writer_Byte@mask mask `uc  1 a 1 3 ]
+"116
+[v TM1640_Writer_Byte@Date Date `uc  1 a 1 wreg ]
+"120
+[v TM1640_Writer_Byte@Date Date `uc  1 a 1 2 ]
+"132
+} 0
+"63
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+{
+"74
+} 0
+"44
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+{
+"55
+} 0
+"166
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+{
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+"168
+[v TM1640_Delay@i i `uc  1 a 1 1 ]
+"166
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+[v TM1640_Delay@Time Time `uc  1 a 1 0 ]
+"174
+} 0
+"39 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+{
+"47
+} 0
+"37 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_ADC.c
+[v _ADC6_Init ADC6_Init `(v  1 e 0 0 ]
+{
+"56
+} 0
+"305 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+{
+[v OpenADC@config config `uc  1 a 1 wreg ]
+[v OpenADC@config config `uc  1 a 1 wreg ]
+"306
+[v OpenADC@config2 config2 `uc  1 p 1 0 ]
+"307
+[v OpenADC@config3 config3 `uc  1 p 1 1 ]
+"309
+[v OpenADC@config config `uc  1 a 1 4 ]
+"328
+} 0
+"100 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_Timer.c
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+{
+"105
+[v Sys_Cyc@_temp _temp `uc  1 a 1 23 ]
+"102
+[v Sys_Cyc@_overturn_LED _overturn_LED `uc  1 s 1 overturn_LED ]
+"103
+[v Sys_Cyc@_Byte _Byte `uc  1 s 1 Byte ]
+"104
+[v Sys_Cyc@_flag _flag `uc  1 s 1 flag ]
+"155
+} 0
+"81
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v i2SetTimer0@_tmr _tmr `ui  1 p 2 0 ]
+"88
+} 0
+"58 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/GPIO.c
+[v i2_LED_Control LED_Control `(v  1 e 0 0 ]
+{
+[v i2LED_Control@_LED_num _LED_num `uc  1 a 1 wreg ]
+[v i2LED_Control@_LED_num _LED_num `uc  1 a 1 wreg ]
+[v i2LED_Control@_switch _switch `uc  1 p 1 0 ]
+"62
+[v i2LED_Control@_LED_num _LED_num `uc  1 a 1 1 ]
+"74
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"8
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"26
+} 0
+"86 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/My_Delay.c
+[v _Pulse_1Khz Pulse_1Khz `(v  1 e 0 0 ]
+{
+"88
+[v Pulse_1Khz@_pulse _pulse `uc  1 a 1 3 ]
+"89
+[v Pulse_1Khz@_overturn_1Khz _overturn_1Khz `uc  1 s 1 overturn_1Khz ]
+"99
+} 0
+"69
+[v _Delay_1Khz Delay_1Khz `(v  1 e 0 0 ]
+{
+"71
+[v Delay_1Khz@c c `uc  1 a 1 2 ]
+[v Delay_1Khz@b b `uc  1 a 1 1 ]
+[v Delay_1Khz@a a `uc  1 a 1 0 ]
+"75
+} 0
+"91 D:\_05_PIC\_03_程序\_02_MyWork\_03_主控板\Master_01\_01_USER/Key.c
+[v _Key_ScanFSM Key_ScanFSM `(v  1 e 0 0 ]
+{
+"101
+} 0
+"69
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+{
+"79
+} 0

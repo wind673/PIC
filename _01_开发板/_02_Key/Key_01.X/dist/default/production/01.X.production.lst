@@ -1,0 +1,404 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.34 build -361300703 
+                                                                                               Sun Nov 01 10:43:35 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
+     1                           	processor	18F67K22
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    10                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    11                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    12  0000                     _PORTCbits	set	3970
+    13  0000                     _PORTEbits	set	3972
+    14  0000                     _TRISC	set	3988
+    15  0000                     _TRISE	set	3990
+    16                           
+    17                           ; 2 bytes @ 0x0
+    18 ;;
+    19 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    20 ;;
+    21 ;; *************** function _main *****************
+    22 ;; Defined at:
+    23 ;;		line 29 in file "_01_USER/main.c"
+    24 ;; Parameters:    Size  Location     Type
+    25 ;;		None
+    26 ;; Auto vars:     Size  Location     Type
+    27 ;;		None
+    28 ;; Return value:  Size  Location     Type
+    29 ;;                  2    8[None  ] int 
+    30 ;; Registers used:
+    31 ;;		wreg, status,2, status,0, cstack
+    32 ;; Tracked objects:
+    33 ;;		On entry : 0/0
+    34 ;;		On exit  : 0/0
+    35 ;;		Unchanged: 0/0
+    36 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+    37 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    38 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    39 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    40 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    41 ;;Total ram usage:        0 bytes
+    42 ;; Hardware stack levels required when called:    1
+    43 ;; This function calls:
+    44 ;;		_GPIO_Config
+    45 ;; This function is called by:
+    46 ;;		Startup code after reset
+    47 ;; This function uses a non-reentrant model
+    48 ;;
+    49                           
+    50                           	psect	text0
+    51  01FFCC                     __ptext0:
+    52                           	opt stack 0
+    53  01FFCC                     _main:
+    54                           	opt stack 30
+    55                           
+    56                           ;main.c: 31: GPIO_Config();
+    57                           
+    58                           ;incstack = 0
+    59  01FFCC  ECDB  F0FF         	call	_GPIO_Config	;wreg free
+    60  01FFD0  D000               	goto	l671
+    61  01FFD2                     l671:
+    62                           
+    63                           ;main.c: 33: {
+    64                           ;main.c: 34: if(PORTCbits.RC2 == 0) PORTEbits.RE2=0; else PORTEbits.RE2=1;
+    65  01FFD2  B482               	btfsc	3970,2,c	;volatile
+    66  01FFD4  D002               	goto	l10
+    67  01FFD6  9484               	bcf	3972,2,c	;volatile
+    68  01FFD8  D001               	goto	l11
+    69  01FFDA                     l10:
+    70  01FFDA  8484               	bsf	3972,2,c	;volatile
+    71  01FFDC                     l11:
+    72                           
+    73                           ;main.c: 35: if(PORTCbits.RC3 == 0) PORTEbits.RE3=0; else PORTEbits.RE3=1;
+    74  01FFDC  B682               	btfsc	3970,3,c	;volatile
+    75  01FFDE  D002               	goto	l12
+    76  01FFE0  9684               	bcf	3972,3,c	;volatile
+    77  01FFE2  D001               	goto	l13
+    78  01FFE4                     l12:
+    79  01FFE4  8684               	bsf	3972,3,c	;volatile
+    80  01FFE6                     l13:
+    81                           
+    82                           ;main.c: 36: if(PORTCbits.RC4 == 0) PORTEbits.RE4=0; else PORTEbits.RE4=1;
+    83  01FFE6  B882               	btfsc	3970,4,c	;volatile
+    84  01FFE8  D002               	goto	l14
+    85  01FFEA  9884               	bcf	3972,4,c	;volatile
+    86  01FFEC  D001               	goto	l15
+    87  01FFEE                     l14:
+    88  01FFEE  8884               	bsf	3972,4,c	;volatile
+    89  01FFF0                     l15:
+    90                           
+    91                           ;main.c: 37: if(PORTCbits.RC5 == 0) PORTEbits.RE5=0; else PORTEbits.RE5=1;
+    92  01FFF0  BA82               	btfsc	3970,5,c	;volatile
+    93  01FFF2  D002               	goto	l16
+    94  01FFF4  9A84               	bcf	3972,5,c	;volatile
+    95  01FFF6  D7ED               	goto	l671
+    96  01FFF8                     l16:
+    97  01FFF8  8A84               	bsf	3972,5,c	;volatile
+    98  01FFFA  D7EB               	goto	l671
+    99                           
+   100                           ;main.c: 38: }
+   101                           ;main.c: 40: return 0;
+   102                           ;	Return value of _main is never used
+   103  01FFFC  EF00  F000         	goto	start
+   104  020000                     __end_of_main:
+   105                           	opt stack 0
+   106                           
+   107                           	psect	cinit
+   108  01FFC0                     __pcinit:
+   109                           	opt stack 0
+   110  01FFC0                     start_initialization:
+   111                           	opt stack 0
+   112  01FFC0                     __initialization:
+   113                           	opt stack 0
+   114                           
+   115                           ; Clear objects allocated to COMRAM (3 bytes)
+   116  01FFC0  6A03               	clrf	(__pbssCOMRAM+2)& (0+255),c
+   117  01FFC2  6A02               	clrf	(__pbssCOMRAM+1)& (0+255),c
+   118  01FFC4  6A01               	clrf	__pbssCOMRAM& (0+255),c
+   119  01FFC6                     end_of_initialization:
+   120                           	opt stack 0
+   121  01FFC6                     __end_of__initialization:
+   122                           	opt stack 0
+   123  01FFC6  0100               	movlb	0
+   124  01FFC8  EFE6  F0FF         	goto	_main	;jump to C main() function
+   125                           
+   126                           	psect	bssCOMRAM
+   127  000001                     __pbssCOMRAM:
+   128                           	opt stack 0
+   129  000001                     _Local_Key:
+   130                           	opt stack 0
+   131  000001                     	ds	3
+   132                           
+   133                           	psect	cstackCOMRAM
+   134  000000                     __pcstackCOMRAM:
+   135                           	opt stack 0
+   136  000000                     
+   137 ;; *************** function _GPIO_Config *****************
+   138 ;; Defined at:
+   139 ;;		line 35 in file "_01_USER/GPIO_Config.c"
+   140 ;; Parameters:    Size  Location     Type
+   141 ;;		None
+   142 ;; Auto vars:     Size  Location     Type
+   143 ;;		None
+   144 ;; Return value:  Size  Location     Type
+   145 ;;		None               void
+   146 ;; Registers used:
+   147 ;;		wreg, status,2, status,0
+   148 ;; Tracked objects:
+   149 ;;		On entry : 0/0
+   150 ;;		On exit  : 0/0
+   151 ;;		Unchanged: 0/0
+   152 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   153 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   154 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   155 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   156 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   157 ;;Total ram usage:        0 bytes
+   158 ;; Hardware stack levels used:    1
+   159 ;; This function calls:
+   160 ;;		Nothing
+   161 ;; This function is called by:
+   162 ;;		_main
+   163 ;; This function uses a non-reentrant model
+   164 ;;
+   165                           
+   166                           	psect	text1
+   167  01FFB6                     __ptext1:
+   168                           	opt stack 0
+   169  01FFB6                     _GPIO_Config:
+   170                           	opt stack 30
+   171                           
+   172                           ;GPIO_Config.c: 37: TRISE &= 0xc3;
+   173                           
+   174                           ;incstack = 0
+   175  01FFB6  0EC3               	movlw	195
+   176  01FFB8  1696               	andwf	3990,f,c	;volatile
+   177                           
+   178                           ;GPIO_Config.c: 38: TRISC |= 0x3c;
+   179  01FFBA  0E3C               	movlw	60
+   180  01FFBC  1294               	iorwf	3988,f,c	;volatile
+   181  01FFBE  0012               	return		;funcret
+   182  01FFC0                     __end_of_GPIO_Config:
+   183                           	opt stack 0
+   184  0000                     
+   185                           	psect	rparam
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         3
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      0       3
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15           22      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    None.
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0       0
+                        _GPIO_Config
+ ---------------------------------------------------------------------------------
+ (1) _GPIO_Config                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _GPIO_Config
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             F15      0       0      37        0.0%
+EEDATA             400      0       0       0        0.0%
+BITBANK14          100      0       0      33        0.0%
+BANK14             100      0       0      34        0.0%
+BITBANK13          100      0       0      31        0.0%
+BANK13             100      0       0      32        0.0%
+BITBANK12          100      0       0      29        0.0%
+BANK12             100      0       0      30        0.0%
+BITBANK11          100      0       0      27        0.0%
+BANK11             100      0       0      28        0.0%
+BITBANK10          100      0       0      25        0.0%
+BANK10             100      0       0      26        0.0%
+BITBANK9           100      0       0      23        0.0%
+BANK9              100      0       0      24        0.0%
+BITBANK8           100      0       0      21        0.0%
+BANK8              100      0       0      22        0.0%
+BITBANK7           100      0       0      19        0.0%
+BANK7              100      0       0      20        0.0%
+BITBANK6           100      0       0      17        0.0%
+BANK6              100      0       0      18        0.0%
+BITBANK5           100      0       0      15        0.0%
+BANK5              100      0       0      16        0.0%
+BITBANK4           100      0       0      13        0.0%
+BANK4              100      0       0      14        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F      0       3       1        3.2%
+BITBANK15           16      0       0      35        0.0%
+BANK15              16      0       0      36        0.0%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0       3      12        0.0%
+DATA                 0      0       3       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.34 build -361300703 
+Symbol Table                                                                                   Sun Nov 01 10:43:35 2015
+
+                     l10 FFDA                       l11 FFDC                       l12 FFE4  
+                     l13 FFE6                       l14 FFEE                       l15 FFF0  
+                     l16 FFF8              __CFG_BORV$3 000000             __CFG_CP0$OFF 000000  
+           __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000  
+           __CFG_CP4$OFF 000000             __CFG_CP5$OFF 000000             __CFG_CP6$OFF 000000  
+           __CFG_CP7$OFF 000000                      l671 FFD2             __CFG_CPB$OFF 000000  
+           __CFG_CPD$OFF 000000             ?_GPIO_Config 0000                     _main FFCC  
+                   start 0000            __CFG_IESO$OFF 000000            __CFG_MCLRE$ON 000000  
+           ___param_bank 000010            __CFG_RETEN$ON 000000                    ?_main 0000  
+                  _TRISC 000F94                    _TRISE 000F96            __CFG_WRT0$OFF 000000  
+          __CFG_WRT1$OFF 000000            __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000  
+          __CFG_WRT4$OFF 000000           __CFG_EBRT0$OFF 000000            __CFG_WRT5$OFF 000000  
+         __CFG_EBRT1$OFF 000000            __CFG_WRT6$OFF 000000           __CFG_EBRT2$OFF 000000  
+          __CFG_WRT7$OFF 000000           __CFG_EBRT3$OFF 000000           __CFG_EBRT4$OFF 000000  
+         __CFG_FCMEN$OFF 000000           __CFG_EBRT5$OFF 000000           __CFG_EBRT6$OFF 000000  
+         __CFG_EBRT7$OFF 000000            __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000  
+          __CFG_WRTD$OFF 000000           __CFG_EBRTB$OFF 000000          __initialization FFC0  
+           __end_of_main 0000                   ??_main 0000            __activetblptr 000003  
+        __CFG_BBSIZ$BB2K 000000           __CFG_XINST$OFF 000000           __CFG_STVREN$ON 000000  
+   __size_of_GPIO_Config 000A               __accesstop 0060  __end_of__initialization FFC6  
+          ___rparam_used 000001           __pcstackCOMRAM 0000          __CFG_PLLCFG$OFF 000000  
+        __CFG_PWRTEN$OFF 000000                  __Hparam 0000                  __Lparam 0000  
+                __pcinit FFC0                  __ramtop 1000                  __ptext0 FFCC  
+                __ptext1 FFB6        __CFG_MSSPMSK$MSK7 000000     end_of_initialization FFC6  
+              _PORTCbits 000F82                _PORTEbits 000F84         __CFG_FOSC$INTIO2 000000  
+      __CFG_SOSCSEL$HIGH 000000            ??_GPIO_Config 0000      start_initialization FFC0  
+              _Local_Key 0001              __pbssCOMRAM 0001      __end_of_GPIO_Config FFC0  
+      __CFG_CCP2MX$PORTC 000000              _GPIO_Config FFB6                 __Hrparam 0000  
+               __Lrparam 0000       __CFG_BOREN$SBORDIS 000000            __size_of_main 0034  
+    __CFG_RTCOSC$SOSCREF 000000      __CFG_INTOSCSEL$HIGH 000000       __CFG_WDTEN$SWDTDIS 000000  
+     __CFG_WDTPS$1048576 000000      __CFG_BORPWR$ZPBORMV 000000  

@@ -1,0 +1,182 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F67K22 ]
+[d frameptr 4065 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+[v ___awdiv __awdiv `(i  1 e 2 0 ]
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"63 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"15 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"12 E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+[v _Init_Key Init_Key `(v  1 e 0 0 ]
+"12 E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+[v _Init_LED Init_LED `(v  1 e 0 0 ]
+"15 E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+[v _main main `(v  1 e 0 0 ]
+"36
+[v _Init_System Init_System `(v  1 e 0 0 ]
+"17 E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+"30
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+"109
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+"120
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+"152
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+"162
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+[s S86 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"10500 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f67k22.h
+[u S95 . 1 `S86 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES95  1 e 1 @3988 ]
+"19665
+[v _RC3 RC3 `VEb  1 e 0 @31763 ]
+"19667
+[v _RC4 RC4 `VEb  1 e 0 @31764 ]
+"19727
+[v _RD6 RD6 `VEb  1 e 0 @31774 ]
+"19729
+[v _RD7 RD7 `VEb  1 e 0 @31775 ]
+"19739
+[v _RE2 RE2 `VEb  1 e 0 @31778 ]
+"19741
+[v _RE3 RE3 `VEb  1 e 0 @31779 ]
+"19743
+[v _RE4 RE4 `VEb  1 e 0 @31780 ]
+"19745
+[v _RE5 RE5 `VEb  1 e 0 @31781 ]
+"19747
+[v _RE6 RE6 `VEb  1 e 0 @31782 ]
+"19749
+[v _RE7 RE7 `VEb  1 e 0 @31783 ]
+"20489
+[v _TRISD6 TRISD6 `VEb  1 e 0 @31918 ]
+"20491
+[v _TRISD7 TRISD7 `VEb  1 e 0 @31919 ]
+"20497
+[v _TRISE2 TRISE2 `VEb  1 e 0 @31922 ]
+"20499
+[v _TRISE3 TRISE3 `VEb  1 e 0 @31923 ]
+"20501
+[v _TRISE4 TRISE4 `VEb  1 e 0 @31924 ]
+"20503
+[v _TRISE5 TRISE5 `VEb  1 e 0 @31925 ]
+"20505
+[v _TRISE6 TRISE6 `VEb  1 e 0 @31926 ]
+"20507
+[v _TRISE7 TRISE7 `VEb  1 e 0 @31927 ]
+"15 E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+[v _main main `(v  1 e 0 0 ]
+{
+"18
+[v main@i i `i  1 a 2 6 ]
+"17
+[v main@NUM NUM `uc  1 a 1 8 ]
+"34
+} 0
+"8 C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 5 ]
+[v ___awmod@counter counter `uc  1 a 1 4 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 0 ]
+[v ___awmod@divisor divisor `i  1 p 2 2 ]
+"35
+} 0
+"109 E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Date Date `uc  1 p 1 4 ]
+"111
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 5 ]
+"118
+} 0
+"36 E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+[v _Init_System Init_System `(v  1 e 0 0 ]
+{
+"41
+} 0
+"162 E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+{
+"175
+} 0
+"120
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 wreg ]
+"122
+[v TM1640_Writer_Byte@mask mask `uc  1 a 1 3 ]
+"120
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 wreg ]
+"124
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 2 ]
+"136
+} 0
+"30
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+{
+"41
+} 0
+"17
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+{
+"28
+} 0
+"152
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+{
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+"154
+[v TM1640_Delay@i i `uc  1 a 1 1 ]
+"152
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+[v TM1640_Delay@Time Time `uc  1 a 1 0 ]
+"160
+} 0
+"12 E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+[v _Init_LED Init_LED `(v  1 e 0 0 ]
+{
+"21
+} 0
+"12 E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+[v _Init_Key Init_Key `(v  1 e 0 0 ]
+{
+"19
+} 0

@@ -1,0 +1,819 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F67K22 ]
+[d frameptr 4065 ]
+"42 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/triac.c
+[e E8799 . `uc
+DEMAG 0
+MAGNET 1
+]
+"241
+[e E8803 . `uc
+DISABLE 0
+ENABLE 1
+]
+"85 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/message.c
+[e E9629 . `uc
+DEMAG 0
+MAGNET 1
+]
+"63 D:\Program Files\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 D:\Program Files\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 D:\Program Files\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 D:\Program Files\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 D:\Program Files\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 D:\Program Files\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 D:\Program Files\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 D:\Program Files\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 D:\Program Files\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 D:\Program Files\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"8 D:\Program Files\Microchip\xc8\v1.34\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"8 D:\Program Files\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"15 D:\Program Files\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 D:\Program Files\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"26 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+"22 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+"305 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+"24 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+"18 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0open.c
+[v _OpenTimer0 OpenTimer0 `(v  1 e 0 0 ]
+"16 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0write.c
+[v _WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
+[v i2_WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/ADC.c
+[v _ADC_Init ADC_Init `(v  1 e 0 0 ]
+"64
+[v _ADC_ElecGet ADC_ElecGet `(ui  1 e 2 0 ]
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/delay.c
+[v _delay_us delay_us `(v  1 e 0 0 ]
+"45
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/gpio.c
+[v _GPIO_Init GPIO_Init `(v  1 e 0 0 ]
+"33 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/KeyState.c
+[v _Key_State_Sweep Key_State_Sweep `(v  1 e 0 0 ]
+"134
+[v _Key_Num_Get Key_Num_Get `(v  1 s 0 Key_Num_Get ]
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/main.c
+[v _main main `(i  1 e 2 0 ]
+"37 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/message.c
+[v _Message_Send Message_Send `(v  1 e 0 0 ]
+"74
+[v _Message_Manage Message_Manage `(v  1 e 0 0 ]
+"34 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/parameter.c
+[v _Parameter_Init Parameter_Init `(v  1 e 0 0 ]
+"33 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/pic18f67xx_it.c
+[v _ISR ISR `II(v  1 e 0 0 ]
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/timer.c
+[v _Timer_Init Timer_Init `(v  1 e 0 0 ]
+"41 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/triac.c
+[v _Trica_Mag Trica_Mag `(uc  1 s 1 Trica_Mag ]
+"188
+[v _Trica_Control Trica_Control `(v  1 s 0 Trica_Control ]
+"223
+[v _Magne_Demag_Dispose Magne_Demag_Dispose `(v  1 e 0 0 ]
+"326
+[v _Relay_Channel_SW Relay_Channel_SW `(v  1 e 0 0 ]
+[s S120 . 1 `uc 1 ANSEL0 1 0 :1:0 
+`uc 1 ANSEL1 1 0 :1:1 
+`uc 1 ANSEL2 1 0 :1:2 
+`uc 1 ANSEL3 1 0 :1:3 
+`uc 1 ANSEL4 1 0 :1:4 
+`uc 1 ANSEL5 1 0 :1:5 
+`uc 1 ANSEL6 1 0 :1:6 
+`uc 1 ANSEL7 1 0 :1:7 
+]
+"1344 D:\Program Files\Microchip\xc8\v1.34\include\pic18f67k22.h
+[s S129 . 1 `uc 1 PCFG0 1 0 :1:0 
+]
+[s S131 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PCFG1 1 0 :1:1 
+]
+[s S134 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PCFG2 1 0 :1:2 
+]
+[s S137 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 PCFG3 1 0 :1:3 
+]
+[s S140 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PCFG4 1 0 :1:4 
+]
+[s S143 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 PCFG5 1 0 :1:5 
+]
+[s S146 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PCFG6 1 0 :1:6 
+]
+[s S149 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PCFG7 1 0 :1:7 
+]
+[u S152 . 1 `S120 1 . 1 0 `S129 1 . 1 0 `S131 1 . 1 0 `S134 1 . 1 0 `S137 1 . 1 0 `S140 1 . 1 0 `S143 1 . 1 0 `S146 1 . 1 0 `S149 1 . 1 0 ]
+[v _ANCON0bits ANCON0bits `VES152  1 e 1 @3877 ]
+"7864
+[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
+[s S916 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"7920
+[s S925 . 1 `uc 1 AN0 1 0 :1:0 
+`uc 1 AN1 1 0 :1:1 
+`uc 1 AN2 1 0 :1:2 
+`uc 1 AN3 1 0 :1:3 
+`uc 1 . 1 0 :1:4 
+`uc 1 AN4 1 0 :1:5 
+`uc 1 OSC2 1 0 :1:6 
+`uc 1 OSC1 1 0 :1:7 
+]
+[s S934 . 1 `uc 1 ULPWU 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 VREF_MINUS 1 0 :1:2 
+`uc 1 VREF_PLUS 1 0 :1:3 
+`uc 1 T0CKI 1 0 :1:4 
+`uc 1 T1CKI 1 0 :1:5 
+`uc 1 CLKO 1 0 :1:6 
+`uc 1 CLKI 1 0 :1:7 
+]
+[s S943 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 T3G 1 0 :1:5 
+]
+[s S946 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 HLVDIN 1 0 :1:5 
+]
+[s S949 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 LVDIN 1 0 :1:5 
+]
+[s S952 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 RJPU 1 0 :1:7 
+]
+[s S955 . 1 `uc 1 ULPWUIN 1 0 :1:0 
+]
+[u S957 . 1 `S916 1 . 1 0 `S925 1 . 1 0 `S934 1 . 1 0 `S943 1 . 1 0 `S946 1 . 1 0 `S949 1 . 1 0 `S952 1 . 1 0 `S955 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES957  1 e 1 @3968 ]
+"8059
+[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
+"8244
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+[s S292 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"8294
+[s S301 . 1 `uc 1 SOSCO 1 0 :1:0 
+`uc 1 SOSCI 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 SCK1 1 0 :1:3 
+`uc 1 SDI1 1 0 :1:4 
+`uc 1 SDO1 1 0 :1:5 
+`uc 1 TX1 1 0 :1:6 
+`uc 1 RX1 1 0 :1:7 
+]
+[s S310 . 1 `uc 1 SCKLI 1 0 :1:0 
+`uc 1 CCP2 1 0 :1:1 
+`uc 1 CCP1 1 0 :1:2 
+`uc 1 SCL1 1 0 :1:3 
+`uc 1 SDA1 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 CK1 1 0 :1:6 
+`uc 1 DT1 1 0 :1:7 
+]
+[s S319 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 P2A 1 0 :1:1 
+`uc 1 P1A 1 0 :1:2 
+]
+[s S323 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PA1 1 0 :1:2 
+]
+[s S326 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PA2 1 0 :1:1 
+]
+[u S329 . 1 `S292 1 . 1 0 `S301 1 . 1 0 `S310 1 . 1 0 `S319 1 . 1 0 `S323 1 . 1 0 `S326 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES329  1 e 1 @3970 ]
+"8428
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S385 . 1 `uc 1 RD0 1 0 :1:0 
+`uc 1 RD1 1 0 :1:1 
+`uc 1 RD2 1 0 :1:2 
+`uc 1 RD3 1 0 :1:3 
+`uc 1 RD4 1 0 :1:4 
+`uc 1 RD5 1 0 :1:5 
+`uc 1 RD6 1 0 :1:6 
+`uc 1 RD7 1 0 :1:7 
+]
+"8489
+[s S394 . 1 `uc 1 AD0 1 0 :1:0 
+`uc 1 AD1 1 0 :1:1 
+`uc 1 AD2 1 0 :1:2 
+`uc 1 AD3 1 0 :1:3 
+`uc 1 AD4 1 0 :1:4 
+`uc 1 AD5 1 0 :1:5 
+`uc 1 AD6 1 0 :1:6 
+`uc 1 AD7 1 0 :1:7 
+]
+[s S403 . 1 `uc 1 PSP0 1 0 :1:0 
+`uc 1 PSP1 1 0 :1:1 
+`uc 1 PSP2 1 0 :1:2 
+`uc 1 PSP3 1 0 :1:3 
+`uc 1 PSP4 1 0 :1:4 
+`uc 1 PSP5 1 0 :1:5 
+`uc 1 PSP6 1 0 :1:6 
+`uc 1 PSP7 1 0 :1:7 
+]
+[s S412 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_SS2 1 0 :1:7 
+]
+[s S415 . 1 `uc 1 CTPLS 1 0 :1:0 
+`uc 1 T5CKI 1 0 :1:1 
+`uc 1 . 1 0 :2:2 
+`uc 1 SDO2 1 0 :1:4 
+`uc 1 SDI2 1 0 :1:5 
+`uc 1 SCK2 1 0 :1:6 
+`uc 1 nSS2 1 0 :1:7 
+]
+[s S423 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 T7G 1 0 :1:1 
+`uc 1 . 1 0 :3:2 
+`uc 1 SDA2 1 0 :1:5 
+`uc 1 SCL2 1 0 :1:6 
+]
+[s S429 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 SS2 1 0 :1:7 
+]
+[u S432 . 1 `S385 1 . 1 0 `S394 1 . 1 0 `S403 1 . 1 0 `S412 1 . 1 0 `S415 1 . 1 0 `S423 1 . 1 0 `S429 1 . 1 0 ]
+[v _PORTDbits PORTDbits `VES432  1 e 1 @3971 ]
+"8668
+[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
+[s S504 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 RE4 1 0 :1:4 
+`uc 1 RE5 1 0 :1:5 
+`uc 1 RE6 1 0 :1:6 
+`uc 1 RE7 1 0 :1:7 
+]
+"8793
+[s S513 . 1 `uc 1 AD8 1 0 :1:0 
+`uc 1 AD9 1 0 :1:1 
+`uc 1 AD10 1 0 :1:2 
+`uc 1 AD11 1 0 :1:3 
+`uc 1 AD12 1 0 :1:4 
+`uc 1 AD13 1 0 :1:5 
+`uc 1 AD14 1 0 :1:6 
+`uc 1 AD15 1 0 :1:7 
+]
+[s S522 . 1 `uc 1 P2D 1 0 :1:0 
+`uc 1 P2C 1 0 :1:1 
+`uc 1 P2B 1 0 :1:2 
+`uc 1 P3C 1 0 :1:3 
+`uc 1 P3B 1 0 :1:4 
+`uc 1 P1C 1 0 :1:5 
+`uc 1 P1B 1 0 :1:6 
+`uc 1 P2A 1 0 :1:7 
+]
+[s S531 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9 1 0 :1:3 
+`uc 1 CCP8 1 0 :1:4 
+`uc 1 CCP7 1 0 :1:5 
+`uc 1 CCP6 1 0 :1:6 
+`uc 1 CCP2 1 0 :1:7 
+]
+[s S539 . 1 `uc 1 NOT_RD 1 0 :1:0 
+]
+[s S541 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_WR 1 0 :1:1 
+]
+[s S544 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_CS 1 0 :1:2 
+]
+[s S547 . 1 `uc 1 nRD 1 0 :1:0 
+`uc 1 nWR 1 0 :1:1 
+`uc 1 nCS 1 0 :1:2 
+`uc 1 REFO 1 0 :1:3 
+]
+[s S552 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S555 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CCP6E 1 0 :1:6 
+]
+[s S558 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 CCP7E 1 0 :1:5 
+]
+[s S561 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP8E 1 0 :1:4 
+]
+[s S564 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP9E 1 0 :1:3 
+]
+[s S567 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CS 1 0 :1:2 
+]
+[s S570 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S573 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PB1E 1 0 :1:6 
+]
+[s S576 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+]
+[s S579 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PB3E 1 0 :1:4 
+]
+[s S582 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 PC1E 1 0 :1:5 
+]
+[s S585 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+]
+[s S588 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 PC3E 1 0 :1:3 
+]
+[s S591 . 1 `uc 1 PD2 1 0 :1:0 
+]
+[s S593 . 1 `uc 1 RDE 1 0 :1:0 
+]
+[s S595 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+]
+[u S598 . 1 `S504 1 . 1 0 `S513 1 . 1 0 `S522 1 . 1 0 `S531 1 . 1 0 `S539 1 . 1 0 `S541 1 . 1 0 `S544 1 . 1 0 `S547 1 . 1 0 `S552 1 . 1 0 `S555 1 . 1 0 `S558 1 . 1 0 `S561 1 . 1 0 `S564 1 . 1 0 `S567 1 . 1 0 `S570 1 . 1 0 `S573 1 . 1 0 `S576 1 . 1 0 `S579 1 . 1 0 `S582 1 . 1 0 `S585 1 . 1 0 `S588 1 . 1 0 `S591 1 . 1 0 `S593 1 . 1 0 `S595 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES598  1 e 1 @3972 ]
+"9062
+[v _PORTF PORTF `VEuc  1 e 1 @3973 ]
+"9249
+[v _PORTG PORTG `VEuc  1 e 1 @3974 ]
+[s S99 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"10344
+[u S108 . 1 `S99 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES108  1 e 1 @3986 ]
+[s S21 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"10466
+[u S30 . 1 `S21 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES30  1 e 1 @3988 ]
+[s S42 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"10527
+[u S51 . 1 `S42 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES51  1 e 1 @3989 ]
+[s S63 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+`uc 1 TRISE3 1 0 :1:3 
+`uc 1 TRISE4 1 0 :1:4 
+`uc 1 TRISE5 1 0 :1:5 
+`uc 1 TRISE6 1 0 :1:6 
+`uc 1 TRISE7 1 0 :1:7 
+]
+"10588
+[u S72 . 1 `S63 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES72  1 e 1 @3990 ]
+[s S84 . 1 `uc 1 TRISG0 1 0 :1:0 
+`uc 1 TRISG1 1 0 :1:1 
+`uc 1 TRISG2 1 0 :1:2 
+`uc 1 TRISG3 1 0 :1:3 
+`uc 1 TRISG4 1 0 :1:4 
+]
+"10702
+[u S90 . 1 `S84 1 . 1 0 ]
+[v _TRISGbits TRISGbits `VES90  1 e 1 @3992 ]
+[s S1234 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR1GIE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"10922
+[s S1243 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S1248 . 1 `S1234 1 . 1 0 `S1243 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES1248  1 e 1 @3997 ]
+[s S1202 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR1GIF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"11004
+[s S1211 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S1216 . 1 `S1202 1 . 1 0 `S1211 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES1216  1 e 1 @3998 ]
+"13874
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"13944
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"14053
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S1085 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"14098
+[s S1088 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S1092 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S1100 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S1103 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S1106 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S1109 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S1112 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S1115 . 1 `S1085 1 . 1 0 `S1088 1 . 1 0 `S1092 1 . 1 0 `S1100 1 . 1 0 `S1103 1 . 1 0 `S1106 1 . 1 0 `S1109 1 . 1 0 `S1112 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES1115  1 e 1 @4034 ]
+"14183
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"14202
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+"16758
+[v _T0CON T0CON `VEuc  1 e 1 @4053 ]
+[s S1462 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"16778
+[s S1469 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S1473 . 1 `S1462 1 . 1 0 `S1469 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES1473  1 e 1 @4053 ]
+"16833
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"16852
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+"17521
+[v _INTCON INTCON `VEuc  1 e 1 @4082 ]
+[s S1266 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"17602
+[s S1275 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S1284 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S1301 . 1 `S1266 1 . 1 0 `S1275 1 . 1 0 `S1284 1 . 1 0 `S1275 1 . 1 0 `S1284 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1301  1 e 1 @4082 ]
+"18016
+[v _ADIF ADIF `VEb  1 e 0 @31990 ]
+"20212
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+[s S767 . 8 `VEuc 1 State_Flag 1 0 `VEuc 1 Key_Mode 1 1 `VEui 1 KeyCode_Pre 2 2 `VEui 1 KeyCode_Bef 2 4 `VEuc 1 Key_Num 1 6 `VEuc 1 Key_Count 1 7 ]
+"17 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/KeyState.c
+[v _Key_StateMachine_Local Key_StateMachine_Local `VES767  1 e 8 0 ]
+"16 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/message.c
+[v _Message Message `VEul  1 e 4 0 ]
+"18
+[v _MAGNE_Flag MAGNE_Flag `uc  1 e 1 0 ]
+[s S267 . 8 `ui 1 Value 2 0 `ui 1 Min 2 2 `ui 1 Max 2 4 `ui 1 Default 2 6 ]
+"18 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/parameter.c
+[v _Parameter Parameter `[17]S267  1 e 136 0 ]
+"16 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/pic18f67xx_it.c
+[v _Spacing_Count Spacing_Count `ui  1 e 2 0 ]
+"19 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/triac.c
+[v _Elec_Max Elec_Max `[40]ui  1 e 80 0 ]
+"20
+[v _Elec Elec `VE[16][40]uc  1 e 640 0 ]
+"21
+[v _Houwa_Cuont Houwa_Cuont `ui  1 e 2 0 ]
+"22
+[v _Magnet_Flag Magnet_Flag `uc  1 e 1 0 ]
+[v _Demag_Flag Demag_Flag `uc  1 e 1 0 ]
+"23
+[v _Gears_Timer Gears_Timer `[16]ui  1 e 32 0 ]
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"34
+[v main@i i `uc  1 a 1 30 ]
+"44
+} 0
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/timer.c
+[v _Timer_Init Timer_Init `(v  1 e 0 0 ]
+{
+"44
+} 0
+"16 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0write.c
+[v _WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
+{
+[u S1504 Timers 2 `ui 1 lt 2 0 `[2]uc 1 bt 2 0 ]
+"18
+[v WriteTimer0@timer timer `S1504  1 a 2 35 ]
+"16
+[v WriteTimer0@timer0 timer0 `ui  1 p 2 33 ]
+"24
+} 0
+"18 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0open.c
+[v _OpenTimer0 OpenTimer0 `(v  1 e 0 0 ]
+{
+[v OpenTimer0@config config `uc  1 a 1 wreg ]
+[v OpenTimer0@config config `uc  1 a 1 wreg ]
+"20
+[v OpenTimer0@config config `uc  1 a 1 33 ]
+"31
+} 0
+"34 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/parameter.c
+[v _Parameter_Init Parameter_Init `(v  1 e 0 0 ]
+{
+"36
+[v Parameter_Init@i i `uc  1 a 1 33 ]
+"116
+} 0
+"37 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/message.c
+[v _Message_Send Message_Send `(v  1 e 0 0 ]
+{
+"63
+} 0
+"74
+[v _Message_Manage Message_Manage `(v  1 e 0 0 ]
+{
+"146
+} 0
+"223 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/triac.c
+[v _Magne_Demag_Dispose Magne_Demag_Dispose `(v  1 e 0 0 ]
+{
+"224
+[v Magne_Demag_Dispose@EMCC_State EMCC_State `E8799  1 a 1 wreg ]
+"225
+[v Magne_Demag_Dispose@i i `uc  1 a 1 29 ]
+[v Magne_Demag_Dispose@j j `uc  1 a 1 28 ]
+"224
+[v Magne_Demag_Dispose@EMCC_State EMCC_State `E8799  1 a 1 wreg ]
+"226
+[v Magne_Demag_Dispose@EMCC_State EMCC_State `E8799  1 a 1 27 ]
+"314
+} 0
+"45 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/delay.c
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+{
+[v delay_ms@nms nms `ul  1 p 4 45 ]
+"49
+} 0
+"15 D:\Program Files\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+{
+"17
+[v ___lmul@product product `ul  1 a 4 41 ]
+"15
+[v ___lmul@multiplier multiplier `ul  1 p 4 33 ]
+[v ___lmul@multiplicand multiplicand `ul  1 p 4 37 ]
+"129
+} 0
+"8 D:\Program Files\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 38 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 37 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 33 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 35 ]
+"31
+} 0
+"41 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/triac.c
+[v _Trica_Mag Trica_Mag `(uc  1 s 1 Trica_Mag ]
+{
+"42
+[v Trica_Mag@EMCC_State EMCC_State `E8799  1 a 1 wreg ]
+"44
+[v Trica_Mag@i i `ui  1 a 2 21 ]
+"42
+[v Trica_Mag@Elec Elec `ui  1 a 2 19 ]
+"44
+[v Trica_Mag@k k `ui  1 a 2 17 ]
+[v Trica_Mag@j j `ui  1 a 2 15 ]
+"42
+[v Trica_Mag@EMCC_State EMCC_State `E8799  1 a 1 wreg ]
+[v Trica_Mag@EMCC_State EMCC_State `E8799  1 a 1 14 ]
+"175
+} 0
+"15 D:\Program Files\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 37 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 33 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 35 ]
+"53
+} 0
+"188 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/triac.c
+[v _Trica_Control Trica_Control `(v  1 s 0 Trica_Control ]
+{
+"189
+[v Trica_Control@EMCC_State EMCC_State `E8799  1 a 1 wreg ]
+"190
+[v Trica_Control@i i `uc  1 a 1 38 ]
+"189
+[v Trica_Control@EMCC_State EMCC_State `E8799  1 a 1 wreg ]
+"191
+[v Trica_Control@EMCC_State EMCC_State `E8799  1 a 1 37 ]
+"213
+} 0
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/delay.c
+[v _delay_us delay_us `(v  1 e 0 0 ]
+{
+[v delay_us@nus nus `ul  1 p 4 33 ]
+"35
+} 0
+"64 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/ADC.c
+[v _ADC_ElecGet ADC_ElecGet `(ui  1 e 2 0 ]
+{
+"66
+[v ADC_ElecGet@elec elec `ul  1 a 4 4 ]
+[v ADC_ElecGet@i i `ul  1 a 4 0 ]
+"79
+} 0
+"326 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/triac.c
+[v _Relay_Channel_SW Relay_Channel_SW `(v  1 e 0 0 ]
+{
+[v Relay_Channel_SW@Channel Channel `uc  1 a 1 wreg ]
+[v Relay_Channel_SW@Channel Channel `uc  1 a 1 wreg ]
+[v Relay_Channel_SW@Flag Flag `E8803  1 p 1 33 ]
+[v Relay_Channel_SW@Channel Channel `uc  1 a 1 34 ]
+"930
+} 0
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/gpio.c
+[v _GPIO_Init GPIO_Init `(v  1 e 0 0 ]
+{
+"116
+} 0
+"32 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/ADC.c
+[v _ADC_Init ADC_Init `(v  1 e 0 0 ]
+{
+"34
+[v ADC_Init@i i `ul  1 a 4 4 ]
+[v ADC_Init@elec elec `ul  1 a 4 0 ]
+"53
+} 0
+"8 D:\Program Files\Microchip\xc8\v1.34\sources\common\lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+{
+"11
+[v ___lldiv@quotient quotient `ul  1 a 4 41 ]
+"12
+[v ___lldiv@counter counter `uc  1 a 1 45 ]
+"8
+[v ___lldiv@dividend dividend `ul  1 p 4 33 ]
+[v ___lldiv@divisor divisor `ul  1 p 4 37 ]
+"31
+} 0
+"24 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+{
+"27
+} 0
+"305 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+{
+[v OpenADC@config config `uc  1 a 1 wreg ]
+[v OpenADC@config config `uc  1 a 1 wreg ]
+"306
+[v OpenADC@config2 config2 `uc  1 p 1 33 ]
+"307
+[v OpenADC@config3 config3 `uc  1 p 1 34 ]
+"309
+[v OpenADC@config config `uc  1 a 1 37 ]
+"328
+} 0
+"22 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+{
+"25
+} 0
+"26 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+{
+"29
+} 0
+"33 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/pic18f67xx_it.c
+[v _ISR ISR `II(v  1 e 0 0 ]
+{
+"47
+} 0
+"16 D:\Program Files\Microchip\xc8\v1.34\sources\pic18\plib\Timers\t0write.c
+[v i2_WriteTimer0 WriteTimer0 `(v  1 e 0 0 ]
+{
+[u S1504 Timers 2 `ui 1 lt 2 0 `[2]uc 1 bt 2 0 ]
+[v i2WriteTimer0@timer WriteTimer0 `S1504  1 a 2 2 ]
+[v i2WriteTimer0@timer0 timer0 `ui  1 p 2 0 ]
+"24
+} 0
+"33 F:\QinHao-PIC_test\Product_process\HalfWave\nbproject/private/KeyState.c
+[v _Key_State_Sweep Key_State_Sweep `(v  1 e 0 0 ]
+{
+[s S767 . 8 `VEuc 1 State_Flag 1 0 `VEuc 1 Key_Mode 1 1 `VEui 1 KeyCode_Pre 2 2 `VEui 1 KeyCode_Bef 2 4 `VEuc 1 Key_Num 1 6 `VEuc 1 Key_Count 1 7 ]
+[v Key_State_Sweep@Key_State Key_State `*.39VES767  1 p 2 7 ]
+"124
+} 0
+"134
+[v _Key_Num_Get Key_Num_Get `(v  1 s 0 Key_Num_Get ]
+{
+"136
+[v Key_Num_Get@i i `uc  1 a 1 6 ]
+[s S767 . 8 `VEuc 1 State_Flag 1 0 `VEuc 1 Key_Mode 1 1 `VEui 1 KeyCode_Pre 2 2 `VEui 1 KeyCode_Bef 2 4 `VEuc 1 Key_Num 1 6 `VEuc 1 Key_Count 1 7 ]
+"134
+[v Key_Num_Get@Key_State Key_State `*.39VES767  1 p 2 0 ]
+"142
+} 0

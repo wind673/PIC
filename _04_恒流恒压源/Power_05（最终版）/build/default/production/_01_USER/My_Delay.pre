@@ -1,0 +1,52 @@
+
+# 1 "_01_USER/My_Delay.c"
+
+# 23 "_01_USER/My_Delay.h"
+void delay_ms(unsigned int _ms);
+void delay_s(unsigned int _s);
+void Delay_1Khz(void);
+
+# 21 "_01_USER/My_Delay.c"
+static void delay1ms(void);
+static void delay1s(void);
+
+# 35
+void delay_ms(unsigned int _ms)
+{
+while(_ms--) delay1ms();
+}
+
+# 50
+void delay_s(unsigned int _s)
+{
+while(_s--) delay1s();
+}
+
+
+
+
+static void delay1ms(void)
+{
+unsigned char a,b,c;
+for(c=1;c>0;c--)
+for(b=94;b>0;b--)
+for(a=2;a>0;a--);
+}
+
+static void delay1s(void)
+{
+unsigned char a,b,c;
+for(c=205;c>0;c--)
+for(b=171;b>0;b--)
+for(a=8;a>0;a--);
+
+}
+
+void Delay_1Khz(void)
+{
+unsigned char a,b,c;
+for(c=1;c>0;c--)
+for(b=32;b>0;b--)
+for(a=2;a>0;a--);
+}
+

@@ -1,0 +1,636 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/debug\PIC18F67K22.debug.obj
+cinit CODE 0 1FADE 1FADE 26 1
+text0 CODE 0 1FA1E 1FA1E 16 1
+text1 CODE 0 1FC5A 1FC5A 3A6 1
+text2 CODE 0 1FB42 1FB42 82 1
+text3 CODE 0 1FBC4 1FBC4 96 1
+text4 CODE 0 1FA4E 1FA4E 22 1
+text5 CODE 0 1FA00 1FA00 E 1
+text6 CODE 0 1FAB8 1FAB8 26 1
+text7 CODE 0 1FB04 1FB04 3E 1
+text8 CODE 0 1FA94 1FA94 24 1
+text9 CODE 0 1FA70 1FA70 24 1
+text10 CODE 0 1FA34 1FA34 1A 1
+text11 CODE 0 1F9F2 1F9F2 E 1
+text12 CODE 0 1F9E6 1F9E6 C 1
+idataCOMRAM CODE 0 1FA0E 1FA0E 10 1
+cstackCOMRAM COMRAM 1 11 11 B 1
+dataCOMRAM COMRAM 1 1 1 10 1
+$C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+idloc IDLOC 0 200000 200000 8 1
+reset_vec CODE 0 0 0 2 1
+end_init CODE 0 2 2 4 1
+config CONFIG 0 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 60-F15 1
+SFR F16-FFC 1
+BANK0 60-FF 1
+BANK1 100-1FF 1
+BANK2 200-2FF 1
+BANK3 300-3FF 1
+BANK4 400-4FF 1
+BANK5 500-5FF 1
+BANK6 600-6FF 1
+BANK7 700-7FF 1
+BANK8 800-8FF 1
+BANK9 900-9FF 1
+CONST 6-1F9E5 1
+STACK 60-F15 1
+SMALLCONST 1000-1F9E5 1
+CODE 6-1F9E5 1
+BANK10 A00-AFF 1
+BANK11 B00-BFF 1
+BANK12 C00-CFF 1
+BANK13 D00-DFF 1
+BANK14 E00-EFF 1
+BANK15 F00-F15 1
+BIGRAM 1C-F15 1
+COMRAM 1C-5F 1
+EEDATA F00000-F003FF 1
+MEDIUMCONST 1000-FFFF 1
+MEDIUMCONST 11000-1F9E5 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/debug\PIC18F67K22.debug.obj
+1F9E6 text12 CODE >12:E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+1F9E6 text12 CODE >14:E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+1F9E8 text12 CODE >15:E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+1F9EA text12 CODE >16:E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+1F9EC text12 CODE >17:E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+1F9EE text12 CODE >18:E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+1F9F0 text12 CODE >19:E:\PIC单片机自编程序\PIC18F67K22\User/Key.c
+1F9F2 text11 CODE >12:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1F9F2 text11 CODE >14:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1F9F4 text11 CODE >15:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1F9F6 text11 CODE >16:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1F9F8 text11 CODE >18:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1F9FA text11 CODE >19:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1F9FC text11 CODE >20:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1F9FE text11 CODE >21:E:\PIC单片机自编程序\PIC18F67K22\User/LED.c
+1FA00 text5 CODE >30:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA00 text5 CODE >32:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA04 text5 CODE >33:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA08 text5 CODE >34:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA0C text5 CODE >35:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA1E text0 CODE >15:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA1E text0 CODE >17:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA22 text0 CODE >19:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA2E text0 CODE >24:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA2E text0 CODE >27:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA30 text0 CODE >28:E:\PIC单片机自编程序\PIC18F67K22\User/main.c
+1FA34 text10 CODE >152:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA36 text10 CODE >158:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA46 text10 CODE >159:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA4C text10 CODE >160:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA4E text4 CODE >109:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA50 text4 CODE >111:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA56 text4 CODE >113:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA5A text4 CODE >114:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA62 text4 CODE >115:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA68 text4 CODE >116:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA6E text4 CODE >118:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA70 text9 CODE >17:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA70 text9 CODE >19:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA72 text9 CODE >20:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA78 text9 CODE >21:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA7A text9 CODE >22:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA80 text9 CODE >23:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA82 text9 CODE >24:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA88 text9 CODE >25:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA8A text9 CODE >26:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA90 text9 CODE >27:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA92 text9 CODE >28:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA94 text8 CODE >30:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA94 text8 CODE >32:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA96 text8 CODE >33:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA9C text8 CODE >34:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FA9E text8 CODE >35:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAA4 text8 CODE >36:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAA6 text8 CODE >37:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAAC text8 CODE >38:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAAE text8 CODE >39:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAB4 text8 CODE >40:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAB6 text8 CODE >41:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAB8 text6 CODE >162:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAB8 text6 CODE >164:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FABA text6 CODE >165:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FABC text6 CODE >166:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAC0 text6 CODE >168:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAC4 text6 CODE >169:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FACA text6 CODE >170:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FACE text6 CODE >172:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAD2 text6 CODE >173:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FAD8 text6 CODE >174:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FADC text6 CODE >175:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FADE cinit CODE >2439:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FADE cinit CODE >2441:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FADE cinit CODE >2444:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FADE cinit CODE >2460:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAE0 cinit CODE >2461:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAE2 cinit CODE >2462:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAE4 cinit CODE >2463:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAE6 cinit CODE >2464:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAE8 cinit CODE >2465:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAEA cinit CODE >2466:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAEE cinit CODE >2467:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAF2 cinit CODE >2468:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAF2 cinit CODE >2469:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAF4 cinit CODE >2470:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAF8 cinit CODE >2471:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAFA cinit CODE >2472:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAFC cinit CODE >2473:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAFE cinit CODE >2479:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FAFE cinit CODE >2480:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FB00 cinit CODE >2481:C:\Users\SuiFeng\AppData\Local\Temp\scpo.
+1FB04 text7 CODE >120:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB06 text7 CODE >124:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB0C text7 CODE >125:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB0C text7 CODE >126:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB0E text7 CODE >127:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB14 text7 CODE >128:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB1E text7 CODE >129:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB22 text7 CODE >130:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB22 text7 CODE >131:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB26 text7 CODE >132:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB2C text7 CODE >133:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB2E text7 CODE >134:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB34 text7 CODE >124:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB40 text7 CODE >136:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FB42 text2 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB42 text2 CODE >13:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB46 text2 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB4A text2 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB52 text2 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB58 text2 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB5C text2 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB66 text2 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB6E text2 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB72 text2 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB74 text2 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB7A text2 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB7E text2 CODE >22:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB86 text2 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB92 text2 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FB9C text2 CODE >29:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FBA2 text2 CODE >30:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FBA8 text2 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FBAE text2 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FBB8 text2 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FBC2 text2 CODE >35:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+1FBC4 text3 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBC4 text3 CODE >14:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBC8 text3 CODE >15:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBCC text3 CODE >16:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBD4 text3 CODE >17:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBDA text3 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBDE text3 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBE6 text3 CODE >21:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBEC text3 CODE >23:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBF4 text3 CODE >24:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FBFC text3 CODE >25:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC00 text3 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC02 text3 CODE >27:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC08 text3 CODE >28:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC0C text3 CODE >26:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC14 text3 CODE >31:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC1A text3 CODE >32:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC26 text3 CODE >33:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC2E text3 CODE >34:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC32 text3 CODE >36:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC38 text3 CODE >37:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC3E text3 CODE >39:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC44 text3 CODE >40:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC4E text3 CODE >41:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC58 text3 CODE >42:C:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awdiv.c
+1FC5A text1 CODE >43:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC5A text1 CODE >45:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC5E text1 CODE >47:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC60 text1 CODE >49:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC62 text1 CODE >51:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC64 text1 CODE >53:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC70 text1 CODE >54:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC7C text1 CODE >55:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC88 text1 CODE >56:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FC94 text1 CODE >57:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FCA0 text1 CODE >58:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FCAC text1 CODE >59:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FCB8 text1 CODE >60:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FCC4 text1 CODE >61:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FCD0 text1 CODE >62:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FCDA text1 CODE >63:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FCDC text1 CODE >51:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD36 text1 CODE >63:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD38 text1 CODE >64:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD3A text1 CODE >66:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD46 text1 CODE >67:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD52 text1 CODE >68:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD5E text1 CODE >69:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD6A text1 CODE >70:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD76 text1 CODE >71:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD82 text1 CODE >72:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD8E text1 CODE >73:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FD9A text1 CODE >74:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FDA6 text1 CODE >75:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FDB0 text1 CODE >76:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FDB2 text1 CODE >64:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE0C text1 CODE >76:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE0E text1 CODE >77:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE10 text1 CODE >79:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE1C text1 CODE >80:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE28 text1 CODE >81:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE34 text1 CODE >82:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE40 text1 CODE >83:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE4C text1 CODE >84:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE58 text1 CODE >85:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE64 text1 CODE >86:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE70 text1 CODE >87:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE7C text1 CODE >88:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE86 text1 CODE >89:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FE88 text1 CODE >77:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FEE2 text1 CODE >89:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FEE4 text1 CODE >90:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FEE6 text1 CODE >92:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FEF2 text1 CODE >93:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FEFE text1 CODE >94:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF0A text1 CODE >95:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF16 text1 CODE >96:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF22 text1 CODE >97:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF2E text1 CODE >98:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF3A text1 CODE >99:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF46 text1 CODE >100:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF52 text1 CODE >101:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF5C text1 CODE >102:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FF5E text1 CODE >90:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FFB8 text1 CODE >103:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FFBA text1 CODE >49:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FFD6 text1 CODE >104:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FFD8 text1 CODE >105:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FFF6 text1 CODE >47:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+1FFFE text1 CODE >107:E:\PIC单片机自编程序\PIC18F67K22\User/TM1640.c
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+___awdiv@counter 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\PIC18F67K22.debug.obj
+__Hspace_0 30000E 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Hspace_1 1C 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Hspace_2 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Show_Numbers@Num 1B 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/debug\PIC18F67K22.debug.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\PIC18F67K22.debug.obj
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\PIC18F67K22.debug.obj
+___sp 0 0 STACK 2 stack C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+_main 1FA1E 0 CODE 0 text0 dist/default/debug\PIC18F67K22.debug.obj
+start 2 0 CODE 0 init C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+__size_of___awdiv 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__size_of___awmod 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__size_of_main 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_LED_Number 1 0 COMRAM 1 dataCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hpowerup 2 0 CODE 0 powerup dist/default/debug\PIC18F67K22.debug.obj
+___awmod@sign 16 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__end_of_TM1640_Stop 1FAB8 0 CODE 0 text8 dist/default/debug\PIC18F67K22.debug.obj
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__size_of_Init_TM1640 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__accesstop 60 0 ABS 0 - C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+intlevel0 0 0 CODE 0 text C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+intlevel1 0 0 CODE 0 text C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+intlevel2 0 0 CODE 0 text C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+intlevel3 0 0 CODE 0 text C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+__size_of_Init_System 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hifardata 0 0 CODE 0 ifardata dist/default/debug\PIC18F67K22.debug.obj
+___awdiv@sign 16 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hclrtext 0 0 ABS 0 clrtext dist/default/debug\PIC18F67K22.debug.obj
+__pidataCOMRAM 1FA0E 0 CODE 0 idataCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__size_of_TM1640_Writer_Dates 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+___awdiv@dividend 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/debug\PIC18F67K22.debug.obj
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\PIC18F67K22.debug.obj
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/debug\PIC18F67K22.debug.obj
+__Hintcodelo 2 0 CODE 0 intcodelo dist/default/debug\PIC18F67K22.debug.obj
+___awdiv@divisor 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__end_of___awdiv 1FC5A 0 CODE 0 text3 dist/default/debug\PIC18F67K22.debug.obj
+__end_of___awmod 1FBC4 0 CODE 0 text2 dist/default/debug\PIC18F67K22.debug.obj
+__end_of_TM1640_Writer_Byte 1FB42 0 CODE 0 text7 dist/default/debug\PIC18F67K22.debug.obj
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+_TM1640_Writer_Dates 1FA4E 0 CODE 0 text4 dist/default/debug\PIC18F67K22.debug.obj
+__Lintcodelo 2 0 CODE 0 intcodelo dist/default/debug\PIC18F67K22.debug.obj
+start_initialization 1FADE 0 CODE 0 cinit dist/default/debug\PIC18F67K22.debug.obj
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/debug\PIC18F67K22.debug.obj
+_TRISCbits F94 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+___rparam_used 1 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISD6 7CAE 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISD7 7CAF 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISE2 7CB2 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISE3 7CB3 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISE4 7CB4 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISE5 7CB5 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISE6 7CB6 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TRISE7 7CB7 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TM1640_Writer_Byte 1FB04 0 CODE 0 text7 dist/default/debug\PIC18F67K22.debug.obj
+__size_of_TM1640_Stop 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Hbank0 0 0 ABS 0 bank0 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank1 0 0 ABS 0 bank1 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank2 0 0 ABS 0 bank2 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank3 0 0 ABS 0 bank3 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank4 0 0 ABS 0 bank4 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank5 0 0 ABS 0 bank5 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank6 0 0 ABS 0 bank6 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank7 0 0 ABS 0 bank7 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank8 0 0 ABS 0 bank8 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank9 0 0 ABS 0 bank9 dist/default/debug\PIC18F67K22.debug.obj
+__Hcinit 0 0 ABS 0 cinit dist/default/debug\PIC18F67K22.debug.obj
+__Hconst 0 0 CODE 0 const dist/default/debug\PIC18F67K22.debug.obj
+__Hidata 0 0 CODE 0 idata dist/default/debug\PIC18F67K22.debug.obj
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/debug\PIC18F67K22.debug.obj
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/debug\PIC18F67K22.debug.obj
+__Hparam 0 0 COMRAM 1 rparam dist/default/debug\PIC18F67K22.debug.obj
+__Hrdata 0 0 COMRAM 1 rdata dist/default/debug\PIC18F67K22.debug.obj
+__Hstack 0 0 STACK 2 stack dist/default/debug\PIC18F67K22.debug.obj
+__Htext0 0 0 ABS 0 text0 dist/default/debug\PIC18F67K22.debug.obj
+__Htext1 0 0 ABS 0 text1 dist/default/debug\PIC18F67K22.debug.obj
+__Htext2 0 0 ABS 0 text2 dist/default/debug\PIC18F67K22.debug.obj
+__Htext3 0 0 ABS 0 text3 dist/default/debug\PIC18F67K22.debug.obj
+__Htext4 0 0 ABS 0 text4 dist/default/debug\PIC18F67K22.debug.obj
+__Htext5 0 0 ABS 0 text5 dist/default/debug\PIC18F67K22.debug.obj
+__Htext6 0 0 ABS 0 text6 dist/default/debug\PIC18F67K22.debug.obj
+__Htext7 0 0 ABS 0 text7 dist/default/debug\PIC18F67K22.debug.obj
+__Htext8 0 0 ABS 0 text8 dist/default/debug\PIC18F67K22.debug.obj
+__Htext9 0 0 ABS 0 text9 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank10 0 0 ABS 0 bank10 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank11 0 0 ABS 0 bank11 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank12 0 0 ABS 0 bank12 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank13 0 0 ABS 0 bank13 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank14 0 0 ABS 0 bank14 dist/default/debug\PIC18F67K22.debug.obj
+__Hbank15 0 0 ABS 0 bank15 dist/default/debug\PIC18F67K22.debug.obj
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\PIC18F67K22.debug.obj
+__Hbigram 0 0 ABS 0 bigram dist/default/debug\PIC18F67K22.debug.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+__Hcomram 0 0 ABS 0 comram dist/default/debug\PIC18F67K22.debug.obj
+__Hconfig 30000E 0 CONFIG 0 config dist/default/debug\PIC18F67K22.debug.obj
+__Lbank0 0 0 ABS 0 bank0 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank1 0 0 ABS 0 bank1 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank2 0 0 ABS 0 bank2 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank3 0 0 ABS 0 bank3 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank4 0 0 ABS 0 bank4 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank5 0 0 ABS 0 bank5 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank6 0 0 ABS 0 bank6 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank7 0 0 ABS 0 bank7 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank8 0 0 ABS 0 bank8 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank9 0 0 ABS 0 bank9 dist/default/debug\PIC18F67K22.debug.obj
+__Lcinit 0 0 ABS 0 cinit dist/default/debug\PIC18F67K22.debug.obj
+__Lconst 0 0 CODE 0 const dist/default/debug\PIC18F67K22.debug.obj
+__Lidata 0 0 CODE 0 idata dist/default/debug\PIC18F67K22.debug.obj
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/debug\PIC18F67K22.debug.obj
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/debug\PIC18F67K22.debug.obj
+__Lparam 0 0 COMRAM 1 rparam dist/default/debug\PIC18F67K22.debug.obj
+__Lrdata 0 0 COMRAM 1 rdata dist/default/debug\PIC18F67K22.debug.obj
+__Lstack 0 0 STACK 2 stack dist/default/debug\PIC18F67K22.debug.obj
+__Ltext0 0 0 ABS 0 text0 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext1 0 0 ABS 0 text1 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext2 0 0 ABS 0 text2 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext3 0 0 ABS 0 text3 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext4 0 0 ABS 0 text4 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext5 0 0 ABS 0 text5 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext6 0 0 ABS 0 text6 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext7 0 0 ABS 0 text7 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext8 0 0 ABS 0 text8 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext9 0 0 ABS 0 text9 dist/default/debug\PIC18F67K22.debug.obj
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/debug\PIC18F67K22.debug.obj
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/debug\PIC18F67K22.debug.obj
+_Init_TM1640 1FAB8 0 CODE 0 text6 dist/default/debug\PIC18F67K22.debug.obj
+_Init_System 1FA00 0 CODE 0 text5 dist/default/debug\PIC18F67K22.debug.obj
+__Habs1 0 0 ABS 0 abs1 dist/default/debug\PIC18F67K22.debug.obj
+__Hdata 0 0 ABS 0 data dist/default/debug\PIC18F67K22.debug.obj
+__Hinit 2 0 CODE 0 init dist/default/debug\PIC18F67K22.debug.obj
+__Hrbit 0 0 COMRAM 1 rbit dist/default/debug\PIC18F67K22.debug.obj
+__Hrbss 0 0 COMRAM 1 rbss dist/default/debug\PIC18F67K22.debug.obj
+__Htemp 0 0 COMRAM 1 temp dist/default/debug\PIC18F67K22.debug.obj
+__Htext 0 0 ABS 0 text dist/default/debug\PIC18F67K22.debug.obj
+__Labs1 0 0 ABS 0 abs1 dist/default/debug\PIC18F67K22.debug.obj
+__Ldata 0 0 ABS 0 data dist/default/debug\PIC18F67K22.debug.obj
+__Linit 2 0 CODE 0 init dist/default/debug\PIC18F67K22.debug.obj
+__Lrbit 0 0 COMRAM 1 rbit dist/default/debug\PIC18F67K22.debug.obj
+__Lrbss 0 0 COMRAM 1 rbss dist/default/debug\PIC18F67K22.debug.obj
+__Ltemp 0 0 COMRAM 1 temp dist/default/debug\PIC18F67K22.debug.obj
+__Ltext 0 0 ABS 0 text dist/default/debug\PIC18F67K22.debug.obj
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hintret 0 0 ABS 0 intret dist/default/debug\PIC18F67K22.debug.obj
+__Hirdata 0 0 CODE 0 irdata dist/default/debug\PIC18F67K22.debug.obj
+__size_of_Init_LED 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__size_of_Init_Key 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RC3 7C13 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RC4 7C14 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RD6 7C1E 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RD7 7C1F 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RE2 7C22 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RE3 7C23 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RE4 7C24 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RE5 7C25 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RE6 7C26 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_RE7 7C27 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__S0 30000E 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__S1 1C 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__S2 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__end_of_TM1640_Writer_Dates 1FA70 0 CODE 0 text4 dist/default/debug\PIC18F67K22.debug.obj
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Show_Numbers@Numbers 19 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__size_of_TM1640_Show_Numbers 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/debug\PIC18F67K22.debug.obj
+__Lintentry 0 0 ABS 0 intentry dist/default/debug\PIC18F67K22.debug.obj
+__Hramtop 1000 0 RAM 0 ramtop dist/default/debug\PIC18F67K22.debug.obj
+__Hrparam 0 0 COMRAM 1 rparam dist/default/debug\PIC18F67K22.debug.obj
+__activetblptr 3 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Hstruct 0 0 COMRAM 1 struct dist/default/debug\PIC18F67K22.debug.obj
+__Htext10 0 0 ABS 0 text10 dist/default/debug\PIC18F67K22.debug.obj
+__Htext11 0 0 ABS 0 text11 dist/default/debug\PIC18F67K22.debug.obj
+__Htext12 0 0 ABS 0 text12 dist/default/debug\PIC18F67K22.debug.obj
+___awmod@counter 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Delay@i 12 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+_Init_LED 1F9F2 0 CODE 0 text11 dist/default/debug\PIC18F67K22.debug.obj
+_Init_Key 1F9E6 0 CODE 0 text12 dist/default/debug\PIC18F67K22.debug.obj
+__ptext10 1FA34 0 CODE 0 text10 dist/default/debug\PIC18F67K22.debug.obj
+__ptext11 1F9F2 0 CODE 0 text11 dist/default/debug\PIC18F67K22.debug.obj
+__ptext12 1F9E6 0 CODE 0 text12 dist/default/debug\PIC18F67K22.debug.obj
+___awdiv 1FBC4 0 CODE 0 text3 dist/default/debug\PIC18F67K22.debug.obj
+___awmod 1FB42 0 CODE 0 text2 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank10 0 0 ABS 0 bank10 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank11 0 0 ABS 0 bank11 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank12 0 0 ABS 0 bank12 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank13 0 0 ABS 0 bank13 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank14 0 0 ABS 0 bank14 dist/default/debug\PIC18F67K22.debug.obj
+__Lbank15 0 0 ABS 0 bank15 dist/default/debug\PIC18F67K22.debug.obj
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/debug\PIC18F67K22.debug.obj
+__Lbigram 0 0 ABS 0 bigram dist/default/debug\PIC18F67K22.debug.obj
+__Lcomram 0 0 ABS 0 comram dist/default/debug\PIC18F67K22.debug.obj
+__Lconfig 300000 0 CONFIG 0 config dist/default/debug\PIC18F67K22.debug.obj
+_TM1640_Show_Numbers 1FC5A 0 CODE 0 text1 dist/default/debug\PIC18F67K22.debug.obj
+__end_of_Init_LED 1FA00 0 CODE 0 text11 dist/default/debug\PIC18F67K22.debug.obj
+__end_of_Init_Key 1F9F2 0 CODE 0 text12 dist/default/debug\PIC18F67K22.debug.obj
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/debug\PIC18F67K22.debug.obj
+__Lfardata 0 0 FARRAM 0 fardata dist/default/debug\PIC18F67K22.debug.obj
+stackhi F15 0 ABS 0 - C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+stacklo 60 0 ABS 0 - C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+__Lintcode 2 0 CODE 0 intcode dist/default/debug\PIC18F67K22.debug.obj
+__Lintret 0 0 ABS 0 intret dist/default/debug\PIC18F67K22.debug.obj
+__Lirdata 0 0 CODE 0 irdata dist/default/debug\PIC18F67K22.debug.obj
+__Lspace_0 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Lspace_1 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Lspace_2 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+_TM1640_Delay 1FA34 0 CODE 0 text10 dist/default/debug\PIC18F67K22.debug.obj
+_TM1640_Start 1FA70 0 CODE 0 text9 dist/default/debug\PIC18F67K22.debug.obj
+__Lend_init 2 0 CODE 0 end_init dist/default/debug\PIC18F67K22.debug.obj
+_TM1640_Stop 1FA94 0 CODE 0 text8 dist/default/debug\PIC18F67K22.debug.obj
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+end_of_initialization 1FAFE 0 CODE 0 cinit dist/default/debug\PIC18F67K22.debug.obj
+__size_of_TM1640_Writer_Byte 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/debug\PIC18F67K22.debug.obj
+__Hintentry 0 0 ABS 0 intentry dist/default/debug\PIC18F67K22.debug.obj
+___awdiv@quotient 17 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+?___awdiv 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+?___awmod 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hreset_vec 2 0 CODE 0 reset_vec dist/default/debug\PIC18F67K22.debug.obj
+___awmod@dividend 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Lramtop 1000 0 RAM 0 ramtop dist/default/debug\PIC18F67K22.debug.obj
+__Lrparam 0 0 COMRAM 1 rparam dist/default/debug\PIC18F67K22.debug.obj
+__pcinit 1FADE 0 CODE 0 cinit dist/default/debug\PIC18F67K22.debug.obj
+__ptext0 1FA1E 0 CODE 0 text0 dist/default/debug\PIC18F67K22.debug.obj
+__ptext1 1FC5A 0 CODE 0 text1 dist/default/debug\PIC18F67K22.debug.obj
+__ptext2 1FB42 0 CODE 0 text2 dist/default/debug\PIC18F67K22.debug.obj
+__ptext3 1FBC4 0 CODE 0 text3 dist/default/debug\PIC18F67K22.debug.obj
+__ptext4 1FA4E 0 CODE 0 text4 dist/default/debug\PIC18F67K22.debug.obj
+__ptext5 1FA00 0 CODE 0 text5 dist/default/debug\PIC18F67K22.debug.obj
+__ptext6 1FAB8 0 CODE 0 text6 dist/default/debug\PIC18F67K22.debug.obj
+__ptext7 1FB04 0 CODE 0 text7 dist/default/debug\PIC18F67K22.debug.obj
+__ptext8 1FA94 0 CODE 0 text8 dist/default/debug\PIC18F67K22.debug.obj
+__ptext9 1FA70 0 CODE 0 text9 dist/default/debug\PIC18F67K22.debug.obj
+__Lstruct 0 0 COMRAM 1 struct dist/default/debug\PIC18F67K22.debug.obj
+__Ltext10 0 0 ABS 0 text10 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext11 0 0 ABS 0 text11 dist/default/debug\PIC18F67K22.debug.obj
+__Ltext12 0 0 ABS 0 text12 dist/default/debug\PIC18F67K22.debug.obj
+__ramtop 1000 0 RAM 0 ramtop C:\Users\SuiFeng\AppData\Local\Temp\scpo.obj
+__Lpowerup 2 0 CODE 0 powerup dist/default/debug\PIC18F67K22.debug.obj
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/debug\PIC18F67K22.debug.obj
+__size_of_TM1640_Delay 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__size_of_TM1640_Start 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/debug\PIC18F67K22.debug.obj
+__end_of_TM1640_Show_Numbers 20000 0 CODE 0 text1 dist/default/debug\PIC18F67K22.debug.obj
+___param_bank 10 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/debug\PIC18F67K22.debug.obj
+__end_of__initialization 1FAFE 0 CODE 0 cinit dist/default/debug\PIC18F67K22.debug.obj
+___awmod@divisor 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Libigdata 0 0 CODE 0 ibigdata dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Delay@Time 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Writer_Byte@Date 13 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__end_of_Init_TM1640 1FADE 0 CODE 0 text6 dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Writer_Byte@mask 14 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Lclrtext 0 0 ABS 0 clrtext dist/default/debug\PIC18F67K22.debug.obj
+__end_of_Init_System 1FA0E 0 CODE 0 text5 dist/default/debug\PIC18F67K22.debug.obj
+__end_of_TM1640_Delay 1FA4E 0 CODE 0 text10 dist/default/debug\PIC18F67K22.debug.obj
+__end_of_TM1640_Start 1FA94 0 CODE 0 text9 dist/default/debug\PIC18F67K22.debug.obj
+__pcstackCOMRAM 11 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hend_init 6 0 CODE 0 end_init dist/default/debug\PIC18F67K22.debug.obj
+__end_of_main 1FA34 0 CODE 0 text0 dist/default/debug\PIC18F67K22.debug.obj
+__HRAM 0 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Hbss 0 0 RAM 1 bss dist/default/debug\PIC18F67K22.debug.obj
+__Hram 0 0 ABS 0 ram dist/default/debug\PIC18F67K22.debug.obj
+__Hsfr 0 0 ABS 0 sfr dist/default/debug\PIC18F67K22.debug.obj
+__LRAM 1 0 ABS 0 - dist/default/debug\PIC18F67K22.debug.obj
+__Lbss 0 0 RAM 1 bss dist/default/debug\PIC18F67K22.debug.obj
+__Lram 0 0 ABS 0 ram dist/default/debug\PIC18F67K22.debug.obj
+__Lsfr 0 0 ABS 0 sfr dist/default/debug\PIC18F67K22.debug.obj
+__initialization 1FADE 0 CODE 0 cinit dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Writer_Dates@Addr 16 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+TM1640_Writer_Dates@Date 15 0 COMRAM 1 cstackCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__pdataCOMRAM 1 0 COMRAM 1 dataCOMRAM dist/default/debug\PIC18F67K22.debug.obj
+__Hfardata 0 0 FARRAM 0 fardata dist/default/debug\PIC18F67K22.debug.obj
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/debug\PIC18F67K22.debug.obj
+__Lifardata 0 0 CODE 0 ifardata dist/default/debug\PIC18F67K22.debug.obj
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/debug\PIC18F67K22.debug.obj
+__Hintcode 2 0 CODE 0 intcode dist/default/debug\PIC18F67K22.debug.obj
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 1FADE 1FADE 26 1
+idloc 0 200000 200000 8 1
+text0 0 1FA1E 1FA1E 16 1
+text1 0 1FC5A 1FC5A 3A6 1
+text2 0 1FB42 1FB42 82 1
+text3 0 1FBC4 1FBC4 96 1
+text4 0 1FA4E 1FA4E 22 1
+text5 0 1FA00 1FA00 E 1
+text6 0 1FAB8 1FAB8 26 1
+text7 0 1FB04 1FB04 3E 1
+text8 0 1FA94 1FA94 24 1
+text9 0 1FA70 1FA70 24 1
+text10 0 1FA34 1FA34 1A 1
+text11 0 1F9F2 1F9F2 E 1
+text12 0 1F9E6 1F9E6 C 1
+idataCOMRAM 0 1FA0E 1FA0E 10 1
+reset_vec 0 0 0 6 1
+dataCOMRAM 1 1 1 1B 1
+config 0 300000 300000 E 1

@@ -1,0 +1,505 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F67K22 ]
+[d frameptr 4065 ]
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Key.c
+[e E8334 __KEY_TYPE__ `uc
+KEY_default 0
+KEY_short 1
+KEY_double 2
+KEY_hold 3
+KEY_busy 4
+KEY_long 5
+]
+"55 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Run.c
+[e E8370 __KEY_TYPE__ `uc
+KEY_default 0
+KEY_short 1
+KEY_double 2
+KEY_hold 3
+KEY_busy 4
+KEY_long 5
+]
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(i  1 e 2 0 ]
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/IR2184.c
+[v _IR2184_Init IR2184_Init `(v  1 e 0 0 ]
+"39 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+"54
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+"76
+[v _Key_FSM_Scan Key_FSM_Scan `(v  1 e 0 0 ]
+"97
+[v _Key_FSM_Read Key_FSM_Read `(v  1 e 0 0 ]
+"147
+[v _Key_FSM_Reset Key_FSM_Reset `(v  1 e 0 0 ]
+"35 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+"58 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_Delay.c
+[v _delay1ms delay1ms `(v  1 s 0 delay1ms ]
+"66
+[v _delay1s delay1s `(v  1 s 0 delay1s ]
+"75
+[v _Delay_1Khz Delay_1Khz `(v  1 e 0 0 ]
+"41 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(v  1 e 0 0 ]
+"79
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+"98
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+"146 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_USART.c
+[v _CRC_Verify CRC_Verify `(v  1 s 0 CRC_Verify ]
+"27 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Nixie.c
+[v _Nixie_Init Nixie_Init `(i  1 e 2 0 ]
+"42
+[v _Nixie_ShowBit Nixie_ShowBit `(v  1 e 0 0 ]
+"50 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Run.c
+[v _Manage_Message Manage_Message `(v  1 e 0 0 ]
+"79
+[v _Run Run `(v  1 e 0 0 ]
+"94
+[v _Show_Result Show_Result `(v  1 e 0 0 ]
+"63 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"28 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"26 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+"22 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+"305 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+"24 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+"118 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\USART\u2open.c
+[v _Open2USART Open2USART `(v  1 e 0 0 ]
+[s S74 Key_Struct 18 `VEuc 1 key_BUS 1 0 `VEuc 1 key_group 1 1 `VEuc 1 key_group_state 1 2 `VE[5]ui 1 key_count 10 3 `VE[5]uc 1 key_state 5 13 ]
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Key.c
+[v _Local_Key_FSM Local_Key_FSM `VES74  1 e 18 0 ]
+"26
+[v _Local_Key_User Local_Key_User `VES74  1 e 18 0 ]
+"24 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_ADC.c
+[v _ADC6_Buff ADC6_Buff `VEf  1 e 3 0 ]
+"26 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_Timer.c
+[v _Timer_Cyc Timer_Cyc `ul  1 e 4 0 ]
+"28 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_USART.c
+[v _RS485_SendBuff RS485_SendBuff `[10]uc  1 e 10 0 ]
+"29
+[v _RS485_ReceiveBuff RS485_ReceiveBuff `[10]uc  1 e 10 0 ]
+"30
+[v _RS485_Receive_Flag RS485_Receive_Flag `uc  1 e 1 0 ]
+"31
+[v _RS485_Num RS485_Num `uc  1 e 1 0 ]
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Nixie.c
+[v _LED_Number LED_Number `C[10]uc  1 e 10 0 ]
+"31 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Run.c
+[v _g_Addr g_Addr `uc  1 e 1 0 ]
+"32
+[v _Receive_Flag Receive_Flag `uc  1 e 1 0 ]
+[s S474 __Switch 4 `uc 1 _1Khz 1 0 `uc 1 ADC6 1 1 `uc 1 Usart_OneDate 1 2 `uc 1 Show_Send_Receive 1 3 ]
+"36
+[v _Handle_Switch Handle_Switch `S474  1 e 4 0 ]
+"666 c:/Program Files (x86)/Microchip/xc8/v1.34/include\pic18f67k22.h
+[v _TXREG2 TXREG2 `VEuc  1 e 1 @3868 ]
+"685
+[v _RCREG2 RCREG2 `VEuc  1 e 1 @3869 ]
+[s S136 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"921
+[s S145 . 1 `uc 1 TX9D2 1 0 :1:0 
+`uc 1 TRMT2 1 0 :1:1 
+`uc 1 BRGH2 1 0 :1:2 
+`uc 1 SENDB2 1 0 :1:3 
+`uc 1 SYNC2 1 0 :1:4 
+`uc 1 TXEN2 1 0 :1:5 
+`uc 1 TX92 1 0 :1:6 
+`uc 1 CSRC2 1 0 :1:7 
+]
+[s S154 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_92 1 0 :1:6 
+]
+[s S157 . 1 `uc 1 TXD82 1 0 :1:0 
+]
+[u S159 . 1 `S136 1 . 1 0 `S145 1 . 1 0 `S154 1 . 1 0 `S157 1 . 1 0 ]
+[v _TXSTA2bits TXSTA2bits `VES159  1 e 1 @3873 ]
+"1152
+[v _ANCON2 ANCON2 `VEuc  1 e 1 @3875 ]
+"1296
+[v _ANCON0 ANCON0 `VEuc  1 e 1 @3877 ]
+"8244
+[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
+[s S198 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 RE4 1 0 :1:4 
+`uc 1 RE5 1 0 :1:5 
+`uc 1 RE6 1 0 :1:6 
+`uc 1 RE7 1 0 :1:7 
+]
+"8793
+[s S207 . 1 `uc 1 AD8 1 0 :1:0 
+`uc 1 AD9 1 0 :1:1 
+`uc 1 AD10 1 0 :1:2 
+`uc 1 AD11 1 0 :1:3 
+`uc 1 AD12 1 0 :1:4 
+`uc 1 AD13 1 0 :1:5 
+`uc 1 AD14 1 0 :1:6 
+`uc 1 AD15 1 0 :1:7 
+]
+[s S216 . 1 `uc 1 P2D 1 0 :1:0 
+`uc 1 P2C 1 0 :1:1 
+`uc 1 P2B 1 0 :1:2 
+`uc 1 P3C 1 0 :1:3 
+`uc 1 P3B 1 0 :1:4 
+`uc 1 P1C 1 0 :1:5 
+`uc 1 P1B 1 0 :1:6 
+`uc 1 P2A 1 0 :1:7 
+]
+[s S225 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9 1 0 :1:3 
+`uc 1 CCP8 1 0 :1:4 
+`uc 1 CCP7 1 0 :1:5 
+`uc 1 CCP6 1 0 :1:6 
+`uc 1 CCP2 1 0 :1:7 
+]
+[s S233 . 1 `uc 1 NOT_RD 1 0 :1:0 
+]
+[s S235 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_WR 1 0 :1:1 
+]
+[s S238 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_CS 1 0 :1:2 
+]
+[s S241 . 1 `uc 1 nRD 1 0 :1:0 
+`uc 1 nWR 1 0 :1:1 
+`uc 1 nCS 1 0 :1:2 
+`uc 1 REFO 1 0 :1:3 
+]
+[s S246 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S249 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CCP6E 1 0 :1:6 
+]
+[s S252 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 CCP7E 1 0 :1:5 
+]
+[s S255 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP8E 1 0 :1:4 
+]
+[s S258 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP9E 1 0 :1:3 
+]
+[s S261 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CS 1 0 :1:2 
+]
+[s S264 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S267 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PB1E 1 0 :1:6 
+]
+[s S270 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+]
+[s S273 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PB3E 1 0 :1:4 
+]
+[s S276 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 PC1E 1 0 :1:5 
+]
+[s S279 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+]
+[s S282 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 PC3E 1 0 :1:3 
+]
+[s S285 . 1 `uc 1 PD2 1 0 :1:0 
+]
+[s S287 . 1 `uc 1 RDE 1 0 :1:0 
+]
+[s S289 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+]
+[u S292 . 1 `S198 1 . 1 0 `S207 1 . 1 0 `S216 1 . 1 0 `S225 1 . 1 0 `S233 1 . 1 0 `S235 1 . 1 0 `S238 1 . 1 0 `S241 1 . 1 0 `S246 1 . 1 0 `S249 1 . 1 0 `S252 1 . 1 0 `S255 1 . 1 0 `S258 1 . 1 0 `S261 1 . 1 0 `S264 1 . 1 0 `S267 1 . 1 0 `S270 1 . 1 0 `S273 1 . 1 0 `S276 1 . 1 0 `S279 1 . 1 0 `S282 1 . 1 0 `S285 1 . 1 0 `S287 1 . 1 0 `S289 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES292  1 e 1 @3972 ]
+[s S770 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"10378
+[u S779 . 1 `S770 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES779  1 e 1 @3986 ]
+"10483
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S808 . 1 `uc 1 TRISD0 1 0 :1:0 
+`uc 1 TRISD1 1 0 :1:1 
+`uc 1 TRISD2 1 0 :1:2 
+`uc 1 TRISD3 1 0 :1:3 
+`uc 1 TRISD4 1 0 :1:4 
+`uc 1 TRISD5 1 0 :1:5 
+`uc 1 TRISD6 1 0 :1:6 
+`uc 1 TRISD7 1 0 :1:7 
+]
+"10561
+[u S817 . 1 `S808 1 . 1 0 ]
+[v _TRISDbits TRISDbits `VES817  1 e 1 @3989 ]
+[s S635 . 1 `uc 1 TRISE0 1 0 :1:0 
+`uc 1 TRISE1 1 0 :1:1 
+`uc 1 TRISE2 1 0 :1:2 
+`uc 1 TRISE3 1 0 :1:3 
+`uc 1 TRISE4 1 0 :1:4 
+`uc 1 TRISE5 1 0 :1:5 
+`uc 1 TRISE6 1 0 :1:6 
+`uc 1 TRISE7 1 0 :1:7 
+]
+"10622
+[u S644 . 1 `S635 1 . 1 0 ]
+[v _TRISEbits TRISEbits `VES644  1 e 1 @3990 ]
+[s S119 . 1 `uc 1 TRISG0 1 0 :1:0 
+`uc 1 TRISG1 1 0 :1:1 
+`uc 1 TRISG2 1 0 :1:2 
+`uc 1 TRISG3 1 0 :1:3 
+`uc 1 TRISG4 1 0 :1:4 
+]
+"10736
+[u S125 . 1 `S119 1 . 1 0 ]
+[v _TRISGbits TRISGbits `VES125  1 e 1 @3992 ]
+[s S676 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR1GIE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"10922
+[s S685 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S690 . 1 `S676 1 . 1 0 `S685 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES690  1 e 1 @3997 ]
+"16833
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"16852
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+"18897
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"19015
+[v _IPEN IPEN `VEb  1 e 0 @32391 ]
+"19555
+[v _PSA PSA `VEb  1 e 0 @32427 ]
+"19615
+[v _RA4 RA4 `VEb  1 e 0 @31748 ]
+"19617
+[v _RA5 RA5 `VEb  1 e 0 @31749 ]
+"19661
+[v _RC2IF RC2IF `VEb  1 e 0 @32037 ]
+"19719
+[v _RD2 RD2 `VEb  1 e 0 @31770 ]
+"19721
+[v _RD3 RD3 `VEb  1 e 0 @31771 ]
+"19727
+[v _RD6 RD6 `VEb  1 e 0 @31774 ]
+"19729
+[v _RD7 RD7 `VEb  1 e 0 @31775 ]
+"19739
+[v _RE2 RE2 `VEb  1 e 0 @31778 ]
+"19741
+[v _RE3 RE3 `VEb  1 e 0 @31779 ]
+"19743
+[v _RE4 RE4 `VEb  1 e 0 @31780 ]
+"19745
+[v _RE5 RE5 `VEb  1 e 0 @31781 ]
+"19747
+[v _RE6 RE6 `VEb  1 e 0 @31782 ]
+"19749
+[v _RE7 RE7 `VEb  1 e 0 @31783 ]
+"19781
+[v _RG3 RG3 `VEb  1 e 0 @31795 ]
+"20063
+[v _T08BIT T08BIT `VEb  1 e 0 @32430 ]
+"20067
+[v _T0CS T0CS `VEb  1 e 0 @32429 ]
+"20075
+[v _T0PS0 T0PS0 `VEb  1 e 0 @32424 ]
+"20077
+[v _T0PS1 T0PS1 `VEb  1 e 0 @32425 ]
+"20079
+[v _T0PS2 T0PS2 `VEb  1 e 0 @32426 ]
+"20081
+[v _T0SE T0SE `VEb  1 e 0 @32428 ]
+"20267
+[v _TMR0IE TMR0IE `VEb  1 e 0 @32661 ]
+"20269
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"20273
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"35 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"55
+} 0
+"41 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(v  1 e 0 0 ]
+{
+"67
+} 0
+"79
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v SetTimer0@_tmr _tmr `ui  1 p 2 0 ]
+"86
+} 0
+"94 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Run.c
+[v _Show_Result Show_Result `(v  1 e 0 0 ]
+{
+"100
+} 0
+"42 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Nixie.c
+[v _Nixie_ShowBit Nixie_ShowBit `(v  1 e 0 0 ]
+{
+[v Nixie_ShowBit@_bit _bit `uc  1 a 1 wreg ]
+[v Nixie_ShowBit@_bit _bit `uc  1 a 1 wreg ]
+[v Nixie_ShowBit@_num _num `uc  1 p 1 0 ]
+"44
+[v Nixie_ShowBit@_bit _bit `uc  1 a 1 1 ]
+"48
+} 0
+"79 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Run.c
+[v _Run Run `(v  1 e 0 0 ]
+{
+"82
+} 0
+"27 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Nixie.c
+[v _Nixie_Init Nixie_Init `(i  1 e 2 0 ]
+{
+"38
+} 0
+"39 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+{
+"42
+} 0
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/IR2184.c
+[v _IR2184_Init IR2184_Init `(v  1 e 0 0 ]
+{
+"35
+} 0
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(i  1 e 2 0 ]
+{
+"47
+} 0
+"98 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_Timer.c
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+{
+"102
+[v Sys_Cyc@_pulse _pulse `uc  1 a 1 23 ]
+"101
+[v Sys_Cyc@_overturn_1Khz _overturn_1Khz `uc  1 s 1 overturn_1Khz ]
+[v Sys_Cyc@_overturn_LED _overturn_LED `uc  1 s 1 overturn_LED ]
+"103
+[v Sys_Cyc@_RS485_Receive_Num _RS485_Receive_Num `uc  1 s 1 RS485_Receive_Num ]
+[v Sys_Cyc@RS485_Timer RS485_Timer `uc  1 s 1 RS485_Timer ]
+"156
+} 0
+"79
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v i2SetTimer0@_tmr _tmr `ui  1 p 2 0 ]
+"86
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"8
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"26
+} 0
+"50 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Run.c
+[v _Manage_Message Manage_Message `(v  1 e 0 0 ]
+{
+"67
+} 0
+"147 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/Key.c
+[v _Key_FSM_Reset Key_FSM_Reset `(v  1 e 0 0 ]
+{
+"149
+[v Key_FSM_Reset@t t `uc  1 a 1 0 ]
+"155
+} 0
+"97
+[v _Key_FSM_Read Key_FSM_Read `(v  1 e 0 0 ]
+{
+"99
+[v Key_FSM_Read@key_num key_num `uc  1 a 1 5 ]
+[v Key_FSM_Read@key_num_mate key_num_mate `uc  1 a 1 4 ]
+"136
+} 0
+"76
+[v _Key_FSM_Scan Key_FSM_Scan `(v  1 e 0 0 ]
+{
+"85
+} 0
+"54
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+{
+"64
+} 0
+"75 D:\_05_PIC\_03_程序\_02_MyWork\_04_恒流恒压源\Power_01\_01_USER/My_Delay.c
+[v _Delay_1Khz Delay_1Khz `(v  1 e 0 0 ]
+{
+"77
+[v Delay_1Khz@c c `uc  1 a 1 2 ]
+[v Delay_1Khz@b b `uc  1 a 1 1 ]
+[v Delay_1Khz@a a `uc  1 a 1 0 ]
+"81
+} 0

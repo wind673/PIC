@@ -1,0 +1,2029 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.34 build -361300703 
+                                                                                               Sat Dec 05 18:05:10 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
+     1                           	processor	18F67K22
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	idataCOMRAM,global,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	bssCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	dataCOMRAM,global,class=COMRAM,space=1,delta=1
+     9                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+    10                           	psect	text0,global,reloc=2,class=CODE,delta=1
+    11                           	psect	text1,global,reloc=2,class=CODE,delta=1
+    12                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    13                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    14                           	psect	text4,global,reloc=2,class=CODE,delta=1
+    15                           	psect	text5,global,reloc=2,class=CODE,delta=1
+    16                           	psect	intcode,global,reloc=2,class=CODE,delta=1
+    17                           	psect	text7,global,reloc=2,class=CODE,delta=1
+    18                           	psect	text8,global,reloc=2,class=CODE,delta=1
+    19                           	psect	text9,global,reloc=2,class=CODE,delta=1
+    20                           	psect	text10,global,reloc=2,class=CODE,delta=1
+    21                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    22                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    23  0000                     
+    24                           	psect	idataCOMRAM
+    25  000436                     __pidataCOMRAM:
+    26                           	opt stack 0
+    27                           
+    28                           ;initializer for _LED_Number
+    29  000436  3F                 	db	63
+    30  000437  06                 	db	6
+    31  000438  5B                 	db	91
+    32  000439  4F                 	db	79
+    33  00043A  66                 	db	102
+    34  00043B  6D                 	db	109
+    35  00043C  7D                 	db	125
+    36  00043D  07                 	db	7
+    37  00043E  7F                 	db	127
+    38  00043F  6F                 	db	111
+    39  000440  77                 	db	119
+    40  000441  7C                 	db	124
+    41  000442  39                 	db	57
+    42  000443  5E                 	db	94
+    43  000444  79                 	db	121
+    44  000445  71                 	db	113
+    45  0000                     _PORTEbits	set	3972
+    46  0000                     _TMR0H	set	4055
+    47  0000                     _TMR0L	set	4054
+    48  0000                     _TRISCbits	set	3988
+    49  0000                     _TRISD	set	3989
+    50  0000                     _TRISE	set	3990
+    51  0000                     _GIE	set	32663
+    52  0000                     _IPEN	set	32391
+    53  0000                     _PSA	set	32427
+    54  0000                     _RC3	set	31763
+    55  0000                     _RC4	set	31764
+    56  0000                     _RD6	set	31774
+    57  0000                     _RD7	set	31775
+    58  0000                     _RE2	set	31778
+    59  0000                     _RE3	set	31779
+    60  0000                     _RE4	set	31780
+    61  0000                     _RE5	set	31781
+    62  0000                     _RE6	set	31782
+    63  0000                     _RE7	set	31783
+    64  0000                     _T08BIT	set	32430
+    65  0000                     _T0CS	set	32429
+    66  0000                     _T0PS0	set	32424
+    67  0000                     _T0PS1	set	32425
+    68  0000                     _T0PS2	set	32426
+    69  0000                     _T0SE	set	32428
+    70  0000                     _TMR0IE	set	32661
+    71  0000                     _TMR0IF	set	32658
+    72  0000                     _TMR0ON	set	32431
+    73                           
+    74                           ; #config settings
+    75  0000                     
+    76                           	psect	cinit
+    77  000352                     __pcinit:
+    78                           	opt stack 0
+    79  000352                     start_initialization:
+    80                           	opt stack 0
+    81  000352                     __initialization:
+    82                           	opt stack 0
+    83                           
+    84                           ; Clear objects allocated to COMRAM (16 bytes)
+    85  000352  EE00  F01F         	lfsr	0,__pbssCOMRAM
+    86  000356  0E10               	movlw	16
+    87  000358                     clear_0:
+    88  000358  6AEE               	clrf	postinc0,c
+    89  00035A  06E8               	decf	wreg,f,c
+    90  00035C  E1FD               	bnz	clear_0
+    91                           
+    92                           ; Initialize objects allocated to COMRAM (16 bytes)
+    93                           ; load TBLPTR registers with __pidataCOMRAM
+    94  00035E  0E36               	movlw	low __pidataCOMRAM
+    95  000360  6EF6               	movwf	tblptrl,c
+    96  000362  0E04               	movlw	high __pidataCOMRAM
+    97  000364  6EF7               	movwf	tblptrh,c
+    98  000366  0E00               	movlw	low (__pidataCOMRAM shr (0+16))
+    99  000368  6EF8               	movwf	tblptru,c
+   100  00036A  EE00  F02F         	lfsr	0,__pdataCOMRAM
+   101  00036E  EE10 F010          	lfsr	1,16
+   102  000372                     copy_data0:
+   103  000372  0009               	tblrd		*+
+   104  000374  CFF5 FFEE          	movff	tablat,postinc0
+   105  000378  50E5               	movf	postdec1,w,c
+   106  00037A  50E1               	movf	fsr1l,w,c
+   107  00037C  E1FA               	bnz	copy_data0
+   108  00037E                     end_of_initialization:
+   109                           	opt stack 0
+   110  00037E                     __end_of__initialization:
+   111                           	opt stack 0
+   112  00037E  0100               	movlb	0
+   113  000380  EF89  F001         	goto	_main	;jump to C main() function
+   114                           tblptru	equ	0xFF8
+   115                           tblptrh	equ	0xFF7
+   116                           tblptrl	equ	0xFF6
+   117                           tablat	equ	0xFF5
+   118                           postinc0	equ	0xFEE
+   119                           wreg	equ	0xFE8
+   120                           postdec1	equ	0xFE5
+   121                           fsr1l	equ	0xFE1
+   122                           
+   123                           	psect	bssCOMRAM
+   124  00001F                     __pbssCOMRAM:
+   125                           	opt stack 0
+   126  00001F                     _Timer_Cyc:
+   127                           	opt stack 0
+   128  00001F                     	ds	4
+   129  000023                     Sys_Cyc@t:
+   130                           	opt stack 0
+   131  000023                     	ds	1
+   132  000024                     _LED2_switch:
+   133                           	opt stack 0
+   134  000024                     	ds	1
+   135  000025                     _Local_Key_FSM:
+   136                           	opt stack 0
+   137  000025                     	ds	10
+   138                           tblptru	equ	0xFF8
+   139                           tblptrh	equ	0xFF7
+   140                           tblptrl	equ	0xFF6
+   141                           tablat	equ	0xFF5
+   142                           postinc0	equ	0xFEE
+   143                           wreg	equ	0xFE8
+   144                           postdec1	equ	0xFE5
+   145                           fsr1l	equ	0xFE1
+   146                           
+   147                           	psect	dataCOMRAM
+   148  00002F                     __pdataCOMRAM:
+   149                           	opt stack 0
+   150  00002F                     _LED_Number:
+   151                           	opt stack 0
+   152  00002F                     	ds	16
+   153                           tblptru	equ	0xFF8
+   154                           tblptrh	equ	0xFF7
+   155                           tblptrl	equ	0xFF6
+   156                           tablat	equ	0xFF5
+   157                           postinc0	equ	0xFEE
+   158                           wreg	equ	0xFE8
+   159                           postdec1	equ	0xFE5
+   160                           fsr1l	equ	0xFE1
+   161                           
+   162                           	psect	cstackCOMRAM
+   163  000001                     __pcstackCOMRAM:
+   164                           	opt stack 0
+   165  000001                     ?___llmod:
+   166                           	opt stack 0
+   167  000001                     i2SetTimer0@_tmr:
+   168                           	opt stack 0
+   169  000001                     ___llmod@dividend:
+   170                           	opt stack 0
+   171                           
+   172                           ; 4 bytes @ 0x0
+   173  000001                     	ds	2
+   174  000003                     ??i2_SetTimer0:
+   175                           
+   176                           ; 0 bytes @ 0x2
+   177  000003                     	ds	2
+   178  000005                     ___llmod@divisor:
+   179                           	opt stack 0
+   180                           
+   181                           ; 4 bytes @ 0x4
+   182  000005                     	ds	4
+   183  000009                     ___llmod@counter:
+   184                           	opt stack 0
+   185                           
+   186                           ; 1 bytes @ 0x8
+   187  000009                     	ds	1
+   188  00000A                     ??_Sys_Cyc:
+   189                           
+   190                           ; 0 bytes @ 0x9
+   191  00000A                     	ds	14
+   192  000018                     ??_Key_FSM_Read:
+   193  000018                     SetTimer0@_tmr:
+   194                           	opt stack 0
+   195                           
+   196                           ; 2 bytes @ 0x17
+   197  000018                     	ds	2
+   198  00001A                     ??_SetTimer0:
+   199                           
+   200                           ; 0 bytes @ 0x19
+   201  00001A                     	ds	2
+   202  00001C                     Key_FSM_Read@temp:
+   203                           	opt stack 0
+   204                           
+   205                           ; 1 bytes @ 0x1B
+   206  00001C                     	ds	1
+   207  00001D                     Key_FSM_Read@key_num:
+   208                           	opt stack 0
+   209                           
+   210                           ; 1 bytes @ 0x1C
+   211  00001D                     	ds	1
+   212  00001E                     main@LED3_switch:
+   213                           	opt stack 0
+   214                           
+   215                           ; 1 bytes @ 0x1D
+   216  00001E                     	ds	1
+   217                           tblptru	equ	0xFF8
+   218                           tblptrh	equ	0xFF7
+   219                           tblptrl	equ	0xFF6
+   220                           tablat	equ	0xFF5
+   221                           postinc0	equ	0xFEE
+   222                           wreg	equ	0xFE8
+   223                           postdec1	equ	0xFE5
+   224                           fsr1l	equ	0xFE1
+   225                           
+   226 ;;
+   227 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+   228 ;;
+   229 ;; *************** function _main *****************
+   230 ;; Defined at:
+   231 ;;		line 31 in file "_01_USER/main.c"
+   232 ;; Parameters:    Size  Location     Type
+   233 ;;		None
+   234 ;; Auto vars:     Size  Location     Type
+   235 ;;  LED3_switch     1   29[COMRAM] unsigned char 
+   236 ;; Return value:  Size  Location     Type
+   237 ;;                  2   14[None  ] int 
+   238 ;; Registers used:
+   239 ;;		wreg, fsr2l, fsr2h, status,2, status,0, cstack
+   240 ;; Tracked objects:
+   241 ;;		On entry : 0/0
+   242 ;;		On exit  : 0/0
+   243 ;;		Unchanged: 0/0
+   244 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   245 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   246 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   247 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   248 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   249 ;;Total ram usage:        1 bytes
+   250 ;; Hardware stack levels required when called:    5
+   251 ;; This function calls:
+   252 ;;		_GPIO_Config
+   253 ;;		_Key_FSM_Read
+   254 ;;		_Key_Init
+   255 ;;		_Timer0_Init
+   256 ;; This function is called by:
+   257 ;;		Startup code after reset
+   258 ;; This function uses a non-reentrant model
+   259 ;;
+   260                           
+   261                           	psect	text0
+   262  000312                     __ptext0:
+   263                           	opt stack 0
+   264  000312                     _main:
+   265                           	opt stack 26
+   266                           
+   267                           ;main.c: 33: char LED3_switch;
+   268                           ;main.c: 34: GPIO_Config();
+   269                           
+   270                           ;incstack = 0
+   271  000312  EC23  F002         	call	_GPIO_Config	;wreg free
+   272                           
+   273                           ;main.c: 35: Key_Init();
+   274  000316  EC29  F002         	call	_Key_Init	;wreg free
+   275                           
+   276                           ;main.c: 36: Timer0_Init();
+   277  00031A  EC09  F002         	call	_Timer0_Init	;wreg free
+   278  00031E  D000               	goto	l1444
+   279  000320                     l1444:
+   280                           
+   281                           ;main.c: 39: {
+   282                           ;main.c: 40: if( Key_FSM_Read(1) == 0x01 ) LED3_switch = ~LED3_switch;
+   283  000320  0E01               	movlw	1
+   284  000322  EC11  F001         	call	_Key_FSM_Read
+   285  000326  06E8               	decf	wreg,f,c
+   286  000328  A4D8               	btfss	status,2,c
+   287  00032A  D002               	goto	l1448
+   288  00032C  1E1E               	comf	main@LED3_switch,f,c
+   289  00032E  D000               	goto	l1448
+   290  000330                     l1448:
+   291                           
+   292                           ;main.c: 41: if( LED3_switch ) PORTEbits.RE5=0; else PORTEbits.RE5=1;
+   293  000330  501E               	movf	main@LED3_switch,w,c
+   294  000332  B4D8               	btfsc	status,2,c
+   295  000334  D002               	goto	l17
+   296  000336  9A84               	bcf	3972,5,c	;volatile
+   297  000338  D002               	goto	l1452
+   298  00033A                     l17:
+   299  00033A  8A84               	bsf	3972,5,c	;volatile
+   300  00033C  D000               	goto	l1452
+   301  00033E                     l1452:
+   302                           
+   303                           ;main.c: 43: if( Key_FSM_Read( 0xff ) == ((0x01<<2)|(0x01<<4)) ) LED2_switch = ~LED2_swi
+      +                          tch;
+   304  00033E  0EFF               	movlw	255
+   305  000340  EC11  F001         	call	_Key_FSM_Read
+   306  000344  0A14               	xorlw	20
+   307  000346  A4D8               	btfss	status,2,c
+   308  000348  D7EB               	goto	l1444
+   309  00034A  1E24               	comf	_LED2_switch,f,c
+   310  00034C  D7E9               	goto	l1444
+   311                           
+   312                           ;main.c: 46: }
+   313                           ;main.c: 49: return 0;
+   314                           ;	Return value of _main is never used
+   315  00034E  EF8E  F000         	goto	start
+   316  000352                     __end_of_main:
+   317                           	opt stack 0
+   318                           tblptru	equ	0xFF8
+   319                           tblptrh	equ	0xFF7
+   320                           tblptrl	equ	0xFF6
+   321                           tablat	equ	0xFF5
+   322                           postinc0	equ	0xFEE
+   323                           wreg	equ	0xFE8
+   324                           postdec1	equ	0xFE5
+   325                           fsr1l	equ	0xFE1
+   326                           status	equ	0xFD8
+   327                           
+   328 ;; *************** function _Timer0_Init *****************
+   329 ;; Defined at:
+   330 ;;		line 36 in file "_01_USER/My_Timer.c"
+   331 ;; Parameters:    Size  Location     Type
+   332 ;;		None
+   333 ;; Auto vars:     Size  Location     Type
+   334 ;;		None
+   335 ;; Return value:  Size  Location     Type
+   336 ;;                  2    6[None  ] int 
+   337 ;; Registers used:
+   338 ;;		wreg, status,2, status,0, cstack
+   339 ;; Tracked objects:
+   340 ;;		On entry : 0/0
+   341 ;;		On exit  : 0/0
+   342 ;;		Unchanged: 0/0
+   343 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   344 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   345 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   346 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   347 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   348 ;;Total ram usage:        0 bytes
+   349 ;; Hardware stack levels used:    1
+   350 ;; Hardware stack levels required when called:    4
+   351 ;; This function calls:
+   352 ;;		_SetTimer0
+   353 ;; This function is called by:
+   354 ;;		_main
+   355 ;; This function uses a non-reentrant model
+   356 ;;
+   357                           
+   358                           	psect	text1
+   359  000412                     __ptext1:
+   360                           	opt stack 0
+   361  000412                     _Timer0_Init:
+   362                           	opt stack 26
+   363                           
+   364                           ;My_Timer.c: 38: T08BIT = 0;
+   365                           
+   366                           ;incstack = 0
+   367  000412  9CD5               	bcf	4053,6,c	;volatile
+   368                           
+   369                           ;My_Timer.c: 39: T0CS = 0;
+   370  000414  9AD5               	bcf	4053,5,c	;volatile
+   371                           
+   372                           ;My_Timer.c: 40: T0SE = 0;
+   373  000416  98D5               	bcf	4053,4,c	;volatile
+   374                           
+   375                           ;My_Timer.c: 41: PSA = 0;
+   376  000418  96D5               	bcf	4053,3,c	;volatile
+   377                           
+   378                           ;My_Timer.c: 42: T0PS2 = 1;
+   379  00041A  84D5               	bsf	4053,2,c	;volatile
+   380                           
+   381                           ;My_Timer.c: 43: T0PS1 = 1;
+   382  00041C  82D5               	bsf	4053,1,c	;volatile
+   383                           
+   384                           ;My_Timer.c: 44: T0PS0 = 1;
+   385  00041E  80D5               	bsf	4053,0,c	;volatile
+   386                           
+   387                           ;My_Timer.c: 58: SetTimer0(1);
+   388  000420  0E00               	movlw	0
+   389  000422  6E19               	movwf	SetTimer0@_tmr+1,c
+   390  000424  0E01               	movlw	1
+   391  000426  6E18               	movwf	SetTimer0@_tmr,c
+   392  000428  ECC2  F001         	call	_SetTimer0	;wreg free
+   393                           
+   394                           ;My_Timer.c: 59: TMR0ON = 1;
+   395  00042C  8ED5               	bsf	4053,7,c	;volatile
+   396                           
+   397                           ;My_Timer.c: 60: TMR0IE = 1;
+   398  00042E  8AF2               	bsf	intcon,5,c	;volatile
+   399                           
+   400                           ;My_Timer.c: 61: IPEN = 0;GIE = 1;
+   401  000430  9ED0               	bcf	4048,7,c	;volatile
+   402  000432  8EF2               	bsf	intcon,7,c	;volatile
+   403  000434  0012               	return		;funcret
+   404  000436                     __end_of_Timer0_Init:
+   405                           	opt stack 0
+   406                           tblptru	equ	0xFF8
+   407                           tblptrh	equ	0xFF7
+   408                           tblptrl	equ	0xFF6
+   409                           tablat	equ	0xFF5
+   410                           intcon	equ	0xFF2
+   411                           postinc0	equ	0xFEE
+   412                           wreg	equ	0xFE8
+   413                           postdec1	equ	0xFE5
+   414                           fsr1l	equ	0xFE1
+   415                           status	equ	0xFD8
+   416                           
+   417 ;; *************** function _SetTimer0 *****************
+   418 ;; Defined at:
+   419 ;;		line 74 in file "_01_USER/My_Timer.c"
+   420 ;; Parameters:    Size  Location     Type
+   421 ;;  _tmr            2   23[COMRAM] unsigned int 
+   422 ;; Auto vars:     Size  Location     Type
+   423 ;;		None
+   424 ;; Return value:  Size  Location     Type
+   425 ;;		None               void
+   426 ;; Registers used:
+   427 ;;		wreg, status,2, status,0
+   428 ;; Tracked objects:
+   429 ;;		On entry : 0/0
+   430 ;;		On exit  : 0/0
+   431 ;;		Unchanged: 0/0
+   432 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   433 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   434 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   435 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   436 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   437 ;;Total ram usage:        4 bytes
+   438 ;; Hardware stack levels used:    1
+   439 ;; Hardware stack levels required when called:    3
+   440 ;; This function calls:
+   441 ;;		Nothing
+   442 ;; This function is called by:
+   443 ;;		_Timer0_Init
+   444 ;; This function uses a non-reentrant model
+   445 ;;
+   446                           
+   447                           	psect	text2
+   448  000384                     __ptext2:
+   449                           	opt stack 0
+   450  000384                     _SetTimer0:
+   451                           	opt stack 26
+   452                           
+   453                           ;My_Timer.c: 76: if(_tmr > 0xffff) _tmr = 0xffff;
+   454                           
+   455                           ;incstack = 0
+   456  000384  D003               	goto	l1394
+   457  000386  6818               	setf	SetTimer0@_tmr,c
+   458  000388  6819               	setf	SetTimer0@_tmr+1,c
+   459  00038A  D000               	goto	l1394
+   460  00038C                     l1394:
+   461                           
+   462                           ;My_Timer.c: 77: _tmr=0xffff-_tmr;
+   463  00038C  C018  F01A         	movff	SetTimer0@_tmr,??_SetTimer0
+   464  000390  C019  F01B         	movff	SetTimer0@_tmr+1,??_SetTimer0+1
+   465  000394  1E1A               	comf	??_SetTimer0,f,c
+   466  000396  1E1B               	comf	??_SetTimer0+1,f,c
+   467  000398  4A1A               	infsnz	??_SetTimer0,f,c
+   468  00039A  2A1B               	incf	??_SetTimer0+1,f,c
+   469  00039C  0EFF               	movlw	255
+   470  00039E  241A               	addwf	??_SetTimer0,w,c
+   471  0003A0  6E18               	movwf	SetTimer0@_tmr,c
+   472  0003A2  0EFF               	movlw	255
+   473  0003A4  201B               	addwfc	??_SetTimer0+1,w,c
+   474  0003A6  6E19               	movwf	SetTimer0@_tmr+1,c
+   475                           
+   476                           ;My_Timer.c: 78: TMR0H = _tmr/256;
+   477  0003A8  5019               	movf	SetTimer0@_tmr+1,w,c
+   478  0003AA  6ED7               	movwf	4055,c	;volatile
+   479                           
+   480                           ;My_Timer.c: 79: TMR0L = _tmr%256;
+   481  0003AC  C018  FFD6         	movff	SetTimer0@_tmr,4054	;volatile
+   482                           
+   483                           ;My_Timer.c: 80: TMR0IF = 0;
+   484  0003B0  94F2               	bcf	intcon,2,c	;volatile
+   485  0003B2  0012               	return		;funcret
+   486  0003B4                     __end_of_SetTimer0:
+   487                           	opt stack 0
+   488                           tblptru	equ	0xFF8
+   489                           tblptrh	equ	0xFF7
+   490                           tblptrl	equ	0xFF6
+   491                           tablat	equ	0xFF5
+   492                           intcon	equ	0xFF2
+   493                           postinc0	equ	0xFEE
+   494                           wreg	equ	0xFE8
+   495                           postdec1	equ	0xFE5
+   496                           fsr1l	equ	0xFE1
+   497                           status	equ	0xFD8
+   498                           
+   499 ;; *************** function _Key_Init *****************
+   500 ;; Defined at:
+   501 ;;		line 38 in file "_01_USER/Key.c"
+   502 ;; Parameters:    Size  Location     Type
+   503 ;;		None
+   504 ;; Auto vars:     Size  Location     Type
+   505 ;;		None
+   506 ;; Return value:  Size  Location     Type
+   507 ;;		None               void
+   508 ;; Registers used:
+   509 ;;		wreg, status,2, status,0
+   510 ;; Tracked objects:
+   511 ;;		On entry : 0/0
+   512 ;;		On exit  : 0/0
+   513 ;;		Unchanged: 0/0
+   514 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   515 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   516 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   517 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   518 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   519 ;;Total ram usage:        0 bytes
+   520 ;; Hardware stack levels used:    1
+   521 ;; Hardware stack levels required when called:    3
+   522 ;; This function calls:
+   523 ;;		Nothing
+   524 ;; This function is called by:
+   525 ;;		_main
+   526 ;; This function uses a non-reentrant model
+   527 ;;
+   528                           
+   529                           	psect	text3
+   530  000452                     __ptext3:
+   531                           	opt stack 0
+   532  000452                     _Key_Init:
+   533                           	opt stack 27
+   534                           
+   535                           ;Key.c: 40: TRISE |= 0x1e;
+   536                           
+   537                           ;incstack = 0
+   538  000452  0E1E               	movlw	30
+   539  000454  1296               	iorwf	3990,f,c	;volatile
+   540                           
+   541                           ;Key.c: 41: TRISD |= 0xc0;
+   542  000456  0EC0               	movlw	192
+   543  000458  1295               	iorwf	3989,f,c	;volatile
+   544  00045A  0012               	return		;funcret
+   545  00045C                     __end_of_Key_Init:
+   546                           	opt stack 0
+   547                           tblptru	equ	0xFF8
+   548                           tblptrh	equ	0xFF7
+   549                           tblptrl	equ	0xFF6
+   550                           tablat	equ	0xFF5
+   551                           intcon	equ	0xFF2
+   552                           postinc0	equ	0xFEE
+   553                           wreg	equ	0xFE8
+   554                           postdec1	equ	0xFE5
+   555                           fsr1l	equ	0xFE1
+   556                           status	equ	0xFD8
+   557                           
+   558 ;; *************** function _Key_FSM_Read *****************
+   559 ;; Defined at:
+   560 ;;		line 155 in file "_01_USER/Key.c"
+   561 ;; Parameters:    Size  Location     Type
+   562 ;;  key_num         1    wreg     unsigned char 
+   563 ;; Auto vars:     Size  Location     Type
+   564 ;;  key_num         1   28[COMRAM] unsigned char 
+   565 ;;  temp            1   27[COMRAM] unsigned char 
+   566 ;; Return value:  Size  Location     Type
+   567 ;;                  1    wreg      unsigned char 
+   568 ;; Registers used:
+   569 ;;		wreg, fsr2l, fsr2h, status,2, status,0
+   570 ;; Tracked objects:
+   571 ;;		On entry : 0/0
+   572 ;;		On exit  : 0/0
+   573 ;;		Unchanged: 0/0
+   574 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   575 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   576 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   577 ;;      Temps:          4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   578 ;;      Totals:         6       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   579 ;;Total ram usage:        6 bytes
+   580 ;; Hardware stack levels used:    1
+   581 ;; Hardware stack levels required when called:    3
+   582 ;; This function calls:
+   583 ;;		Nothing
+   584 ;; This function is called by:
+   585 ;;		_main
+   586 ;; This function uses a non-reentrant model
+   587 ;;
+   588                           
+   589                           	psect	text4
+   590  000222                     __ptext4:
+   591                           	opt stack 0
+   592  000222                     _Key_FSM_Read:
+   593                           	opt stack 27
+   594                           
+   595                           ;incstack = 0
+   596                           ;Key_FSM_Read@key_num stored from wreg
+   597  000222  6E1D               	movwf	Key_FSM_Read@key_num,c
+   598                           
+   599                           ;Key.c: 157: unsigned char temp;
+   600                           ;Key.c: 158: if( key_num != 0xff )
+   601  000224  281D               	incf	Key_FSM_Read@key_num,w,c
+   602  000226  B4D8               	btfsc	status,2,c
+   603  000228  D02D               	goto	l982
+   604                           
+   605                           ;Key.c: 159: {
+   606                           ;Key.c: 160: if( Local_Key_FSM.key_state == 0x00 )
+   607  00022A  5025               	movf	_Local_Key_FSM,w,c	;volatile
+   608  00022C  A4D8               	btfss	status,2,c
+   609  00022E  D028               	goto	l978
+   610                           
+   611                           ;Key.c: 161: {
+   612                           ;Key.c: 162: temp = Local_Key_FSM.key_FSM[key_num-1];
+   613  000230  0EFF               	movlw	255
+   614  000232  6E18               	movwf	??_Key_FSM_Read& (0+255),c
+   615  000234  0EFF               	movlw	255
+   616  000236  6E19               	movwf	(??_Key_FSM_Read+1)& (0+255),c
+   617  000238  501D               	movf	Key_FSM_Read@key_num,w,c
+   618  00023A  6E1A               	movwf	(??_Key_FSM_Read+2)& (0+255),c
+   619  00023C  6A1B               	clrf	(??_Key_FSM_Read+3)& (0+255),c
+   620  00023E  5018               	movf	??_Key_FSM_Read,w,c
+   621  000240  261A               	addwf	??_Key_FSM_Read+2,f,c
+   622  000242  5019               	movf	??_Key_FSM_Read+1,w,c
+   623  000244  221B               	addwfc	??_Key_FSM_Read+3,f,c
+   624  000246  0E26               	movlw	low (_Local_Key_FSM+1)
+   625  000248  241A               	addwf	??_Key_FSM_Read+2,w,c
+   626  00024A  6ED9               	movwf	fsr2l,c
+   627  00024C  0E00               	movlw	high (_Local_Key_FSM+1)
+   628  00024E  201B               	addwfc	??_Key_FSM_Read+3,w,c
+   629  000250  6EDA               	movwf	fsr2h,c
+   630  000252  50DF               	movf	indf2,w,c
+   631  000254  6E1C               	movwf	Key_FSM_Read@temp,c
+   632                           
+   633                           ;Key.c: 163: Local_Key_FSM.key_FSM[key_num-1] = 0x00;
+   634  000256  0EFF               	movlw	255
+   635  000258  6E18               	movwf	??_Key_FSM_Read& (0+255),c
+   636  00025A  0EFF               	movlw	255
+   637  00025C  6E19               	movwf	(??_Key_FSM_Read+1)& (0+255),c
+   638  00025E  501D               	movf	Key_FSM_Read@key_num,w,c
+   639  000260  6E1A               	movwf	(??_Key_FSM_Read+2)& (0+255),c
+   640  000262  6A1B               	clrf	(??_Key_FSM_Read+3)& (0+255),c
+   641  000264  5018               	movf	??_Key_FSM_Read,w,c
+   642  000266  261A               	addwf	??_Key_FSM_Read+2,f,c
+   643  000268  5019               	movf	??_Key_FSM_Read+1,w,c
+   644  00026A  221B               	addwfc	??_Key_FSM_Read+3,f,c
+   645  00026C  0E26               	movlw	low (_Local_Key_FSM+1)
+   646  00026E  241A               	addwf	??_Key_FSM_Read+2,w,c
+   647  000270  6ED9               	movwf	fsr2l,c
+   648  000272  0E00               	movlw	high (_Local_Key_FSM+1)
+   649  000274  201B               	addwfc	??_Key_FSM_Read+3,w,c
+   650  000276  6EDA               	movwf	fsr2h,c
+   651  000278  0E00               	movlw	0
+   652  00027A  6EDF               	movwf	indf2,c
+   653                           
+   654                           ;Key.c: 164: return temp;
+   655  00027C  501C               	movf	Key_FSM_Read@temp,w,c
+   656                           
+   657                           ;Key.c: 165: }
+   658  00027E  0012               	return	
+   659  000280                     l978:
+   660                           
+   661                           ;Key.c: 167: else return 0x04;
+   662  000280  0E04               	movlw	4
+   663                           
+   664                           ;Key.c: 168: }
+   665  000282  0012               	return	
+   666  000284                     l982:
+   667                           
+   668                           ;Key.c: 169: else if ( key_num == 0xff )
+   669  000284  281D               	incf	Key_FSM_Read@key_num,w,c
+   670  000286  A4D8               	btfss	status,2,c
+   671  000288  0012               	return	
+   672                           
+   673                           ;Key.c: 170: {
+   674                           ;Key.c: 171: if( Local_Key_FSM.key_state == 0x00 )
+   675  00028A  5025               	movf	_Local_Key_FSM,w,c	;volatile
+   676  00028C  A4D8               	btfss	status,2,c
+   677  00028E  D006               	goto	l994
+   678                           
+   679                           ;Key.c: 172: {
+   680                           ;Key.c: 173: temp = Local_Key_FSM.key_group;
+   681  000290  C02A  F01C         	movff	_Local_Key_FSM+5,Key_FSM_Read@temp	;volatile
+   682                           
+   683                           ;Key.c: 174: Local_Key_FSM.key_group = 0x00;
+   684  000294  0E00               	movlw	0
+   685  000296  6E2A               	movwf	_Local_Key_FSM+5,c	;volatile
+   686                           
+   687                           ;Key.c: 175: return temp;
+   688  000298  501C               	movf	Key_FSM_Read@temp,w,c
+   689                           
+   690                           ;Key.c: 176: }
+   691  00029A  0012               	return	
+   692  00029C                     l994:
+   693                           
+   694                           ;Key.c: 178: else return 0x04;
+   695  00029C  0E04               	movlw	4
+   696  00029E  0012               	return	
+   697  0002A0  0012               	return		;funcret
+   698  0002A2                     __end_of_Key_FSM_Read:
+   699                           	opt stack 0
+   700                           tblptru	equ	0xFF8
+   701                           tblptrh	equ	0xFF7
+   702                           tblptrl	equ	0xFF6
+   703                           tablat	equ	0xFF5
+   704                           intcon	equ	0xFF2
+   705                           postinc0	equ	0xFEE
+   706                           wreg	equ	0xFE8
+   707                           postdec1	equ	0xFE5
+   708                           fsr1l	equ	0xFE1
+   709                           indf2	equ	0xFDF
+   710                           fsr2h	equ	0xFDA
+   711                           fsr2l	equ	0xFD9
+   712                           status	equ	0xFD8
+   713                           
+   714 ;; *************** function _GPIO_Config *****************
+   715 ;; Defined at:
+   716 ;;		line 38 in file "_01_USER/GPIO.c"
+   717 ;; Parameters:    Size  Location     Type
+   718 ;;		None
+   719 ;; Auto vars:     Size  Location     Type
+   720 ;;		None
+   721 ;; Return value:  Size  Location     Type
+   722 ;;		None               void
+   723 ;; Registers used:
+   724 ;;		wreg, status,2, status,0
+   725 ;; Tracked objects:
+   726 ;;		On entry : 0/0
+   727 ;;		On exit  : 0/0
+   728 ;;		Unchanged: 0/0
+   729 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   730 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   731 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   732 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   733 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   734 ;;Total ram usage:        0 bytes
+   735 ;; Hardware stack levels used:    1
+   736 ;; Hardware stack levels required when called:    3
+   737 ;; This function calls:
+   738 ;;		Nothing
+   739 ;; This function is called by:
+   740 ;;		_main
+   741 ;; This function uses a non-reentrant model
+   742 ;;
+   743                           
+   744                           	psect	text5
+   745  000446                     __ptext5:
+   746                           	opt stack 0
+   747  000446                     _GPIO_Config:
+   748                           	opt stack 27
+   749                           
+   750                           ;GPIO.c: 41: TRISE &= 0x1f;
+   751                           
+   752                           ;incstack = 0
+   753  000446  0E1F               	movlw	31
+   754  000448  1696               	andwf	3990,f,c	;volatile
+   755                           
+   756                           ;GPIO.c: 43: RE5 = 0;
+   757  00044A  9A84               	bcf	3972,5,c	;volatile
+   758                           
+   759                           ;GPIO.c: 44: RE6 = 0;
+   760  00044C  9C84               	bcf	3972,6,c	;volatile
+   761                           
+   762                           ;GPIO.c: 45: RE7 = 0;
+   763  00044E  9E84               	bcf	3972,7,c	;volatile
+   764  000450  0012               	return		;funcret
+   765  000452                     __end_of_GPIO_Config:
+   766                           	opt stack 0
+   767                           tblptru	equ	0xFF8
+   768                           tblptrh	equ	0xFF7
+   769                           tblptrl	equ	0xFF6
+   770                           tablat	equ	0xFF5
+   771                           intcon	equ	0xFF2
+   772                           postinc0	equ	0xFEE
+   773                           wreg	equ	0xFE8
+   774                           postdec1	equ	0xFE5
+   775                           fsr1l	equ	0xFE1
+   776                           indf2	equ	0xFDF
+   777                           fsr2h	equ	0xFDA
+   778                           fsr2l	equ	0xFD9
+   779                           status	equ	0xFD8
+   780                           
+   781 ;; *************** function _Sys_Cyc *****************
+   782 ;; Defined at:
+   783 ;;		line 93 in file "_01_USER/My_Timer.c"
+   784 ;; Parameters:    Size  Location     Type
+   785 ;;		None
+   786 ;; Auto vars:     Size  Location     Type
+   787 ;;		None
+   788 ;; Return value:  Size  Location     Type
+   789 ;;		None               void
+   790 ;; Registers used:
+   791 ;;		wreg, status,2, status,0, cstack
+   792 ;; Tracked objects:
+   793 ;;		On entry : 0/0
+   794 ;;		On exit  : 0/0
+   795 ;;		Unchanged: 0/0
+   796 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   797 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   798 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   799 ;;      Temps:         14       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   800 ;;      Totals:        14       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   801 ;;Total ram usage:       14 bytes
+   802 ;; Hardware stack levels used:    1
+   803 ;; Hardware stack levels required when called:    2
+   804 ;; This function calls:
+   805 ;;		_Key_FSM_Scan
+   806 ;;		___llmod
+   807 ;;		i2_SetTimer0
+   808 ;; This function is called by:
+   809 ;;		Interrupt level 2
+   810 ;; This function uses a non-reentrant model
+   811 ;;
+   812                           
+   813                           	psect	intcode
+   814  000008                     __pintcode:
+   815                           	opt stack 0
+   816  000008                     _Sys_Cyc:
+   817                           	opt stack 26
+   818                           
+   819                           ;incstack = 0
+   820  000008  CFFA F00A          	movff	pclath,??_Sys_Cyc
+   821  00000C  CFFB F00B          	movff	pclatu,??_Sys_Cyc+1
+   822  000010  CFE9 F00C          	movff	fsr0l,??_Sys_Cyc+2
+   823  000014  CFEA F00D          	movff	fsr0h,??_Sys_Cyc+3
+   824  000018  CFE1 F00E          	movff	fsr1l,??_Sys_Cyc+4
+   825  00001C  CFE2 F00F          	movff	fsr1h,??_Sys_Cyc+5
+   826  000020  CFD9 F010          	movff	fsr2l,??_Sys_Cyc+6
+   827  000024  CFDA F011          	movff	fsr2h,??_Sys_Cyc+7
+   828  000028  CFF3 F012          	movff	prodl,??_Sys_Cyc+8
+   829  00002C  CFF4 F013          	movff	prodh,??_Sys_Cyc+9
+   830  000030  CFF6 F014          	movff	tblptrl,??_Sys_Cyc+10
+   831  000034  CFF7 F015          	movff	tblptrh,??_Sys_Cyc+11
+   832  000038  CFF8 F016          	movff	tblptru,??_Sys_Cyc+12
+   833  00003C  CFF5 F017          	movff	tablat,??_Sys_Cyc+13
+   834                           
+   835                           ;My_Timer.c: 95: static unsigned char t = 0;
+   836                           ;My_Timer.c: 96: if(TMR0IF && TMR0IE)
+   837  000040  B4F2               	btfsc	intcon,2,c	;volatile
+   838  000042  AAF2               	btfss	intcon,5,c	;volatile
+   839  000044  D04E               	goto	i2l189
+   840                           
+   841                           ;My_Timer.c: 97: {
+   842                           ;My_Timer.c: 98: if( Timer_Cyc%50 == 0 )
+   843  000046  C01F  F001         	movff	_Timer_Cyc,___llmod@dividend
+   844  00004A  C020  F002         	movff	_Timer_Cyc+1,___llmod@dividend+1
+   845  00004E  C021  F003         	movff	_Timer_Cyc+2,___llmod@dividend+2
+   846  000052  C022  F004         	movff	_Timer_Cyc+3,___llmod@dividend+3
+   847  000056  0E32               	movlw	50
+   848  000058  6E05               	movwf	___llmod@divisor,c
+   849  00005A  0E00               	movlw	0
+   850  00005C  6E06               	movwf	___llmod@divisor+1,c
+   851  00005E  0E00               	movlw	0
+   852  000060  6E07               	movwf	___llmod@divisor+2,c
+   853  000062  0E00               	movlw	0
+   854  000064  6E08               	movwf	___llmod@divisor+3,c
+   855  000066  EC51  F001         	call	___llmod	;wreg free
+   856  00006A  5001               	movf	?___llmod,w,c
+   857  00006C  1002               	iorwf	?___llmod+1,w,c
+   858  00006E  1003               	iorwf	?___llmod+2,w,c
+   859  000070  1004               	iorwf	?___llmod+3,w,c
+   860  000072  A4D8               	btfss	status,2,c
+   861  000074  D00F               	goto	i2l1472
+   862                           
+   863                           ;My_Timer.c: 99: {
+   864                           ;My_Timer.c: 100: t = ( t + 1 ) % 2;
+   865  000076  2823               	incf	Sys_Cyc@t,w,c
+   866  000078  0B01               	andlw	1
+   867  00007A  6E23               	movwf	Sys_Cyc@t,c
+   868                           
+   869                           ;My_Timer.c: 101: if(t) { PORTEbits.RE7=0; if( LED2_switch ) PORTEbits.RE6=0;}
+   870  00007C  5023               	movf	Sys_Cyc@t,w,c
+   871  00007E  B4D8               	btfsc	status,2,c
+   872  000080  D006               	goto	i2l186
+   873  000082  9E84               	bcf	3972,7,c	;volatile
+   874  000084  5024               	movf	_LED2_switch,w,c
+   875  000086  B4D8               	btfsc	status,2,c
+   876  000088  D005               	goto	i2l1472
+   877  00008A  9C84               	bcf	3972,6,c	;volatile
+   878  00008C  D003               	goto	i2l1472
+   879  00008E                     i2l186:
+   880                           
+   881                           ;My_Timer.c: 102: else { PORTEbits.RE7=1; PORTEbits.RE6=1; }
+   882  00008E  8E84               	bsf	3972,7,c	;volatile
+   883  000090  8C84               	bsf	3972,6,c	;volatile
+   884  000092  D000               	goto	i2l1472
+   885  000094                     i2l1472:
+   886                           
+   887                           ;My_Timer.c: 103: }
+   888                           ;My_Timer.c: 107: Key_FSM_Scan();
+   889  000094  EC90  F000         	call	_Key_FSM_Scan	;wreg free
+   890                           
+   891                           ;My_Timer.c: 108: SetTimer0(78);
+   892  000098  0E00               	movlw	0
+   893  00009A  6E02               	movwf	i2SetTimer0@_tmr+1,c
+   894  00009C  0E4E               	movlw	78
+   895  00009E  6E01               	movwf	i2SetTimer0@_tmr,c
+   896  0000A0  ECDA  F001         	call	i2_SetTimer0	;wreg free
+   897                           
+   898                           ;My_Timer.c: 109: Timer_Cyc = (Timer_Cyc+1) % 1000000000;
+   899  0000A4  0E01               	movlw	1
+   900  0000A6  241F               	addwf	_Timer_Cyc,w,c
+   901  0000A8  6E01               	movwf	___llmod@dividend,c
+   902  0000AA  0E00               	movlw	0
+   903  0000AC  2020               	addwfc	_Timer_Cyc+1,w,c
+   904  0000AE  6E02               	movwf	___llmod@dividend+1,c
+   905  0000B0  0E00               	movlw	0
+   906  0000B2  2021               	addwfc	_Timer_Cyc+2,w,c
+   907  0000B4  6E03               	movwf	___llmod@dividend+2,c
+   908  0000B6  0E00               	movlw	0
+   909  0000B8  2022               	addwfc	_Timer_Cyc+3,w,c
+   910  0000BA  6E04               	movwf	___llmod@dividend+3,c
+   911  0000BC  0E00               	movlw	0
+   912  0000BE  6E05               	movwf	___llmod@divisor,c
+   913  0000C0  0ECA               	movlw	202
+   914  0000C2  6E06               	movwf	___llmod@divisor+1,c
+   915  0000C4  0E9A               	movlw	154
+   916  0000C6  6E07               	movwf	___llmod@divisor+2,c
+   917  0000C8  0E3B               	movlw	59
+   918  0000CA  6E08               	movwf	___llmod@divisor+3,c
+   919  0000CC  EC51  F001         	call	___llmod	;wreg free
+   920  0000D0  C001  F01F         	movff	?___llmod,_Timer_Cyc
+   921  0000D4  C002  F020         	movff	?___llmod+1,_Timer_Cyc+1
+   922  0000D8  C003  F021         	movff	?___llmod+2,_Timer_Cyc+2
+   923  0000DC  C004  F022         	movff	?___llmod+3,_Timer_Cyc+3
+   924  0000E0  D000               	goto	i2l189
+   925  0000E2                     i2l189:
+   926  0000E2  C017  FFF5         	movff	??_Sys_Cyc+13,tablat
+   927  0000E6  C016  FFF8         	movff	??_Sys_Cyc+12,tblptru
+   928  0000EA  C015  FFF7         	movff	??_Sys_Cyc+11,tblptrh
+   929  0000EE  C014  FFF6         	movff	??_Sys_Cyc+10,tblptrl
+   930  0000F2  C013  FFF4         	movff	??_Sys_Cyc+9,prodh
+   931  0000F6  C012  FFF3         	movff	??_Sys_Cyc+8,prodl
+   932  0000FA  C011  FFDA         	movff	??_Sys_Cyc+7,fsr2h
+   933  0000FE  C010  FFD9         	movff	??_Sys_Cyc+6,fsr2l
+   934  000102  C00F  FFE2         	movff	??_Sys_Cyc+5,fsr1h
+   935  000106  C00E  FFE1         	movff	??_Sys_Cyc+4,fsr1l
+   936  00010A  C00D  FFEA         	movff	??_Sys_Cyc+3,fsr0h
+   937  00010E  C00C  FFE9         	movff	??_Sys_Cyc+2,fsr0l
+   938  000112  C00B  FFFB         	movff	??_Sys_Cyc+1,pclatu
+   939  000116  C00A  FFFA         	movff	??_Sys_Cyc,pclath
+   940  00011A  0011               	retfie		f
+   941  00011C                     __end_of_Sys_Cyc:
+   942                           	opt stack 0
+   943                           pclatu	equ	0xFFB
+   944                           pclath	equ	0xFFA
+   945                           tblptru	equ	0xFF8
+   946                           tblptrh	equ	0xFF7
+   947                           tblptrl	equ	0xFF6
+   948                           tablat	equ	0xFF5
+   949                           prodh	equ	0xFF4
+   950                           prodl	equ	0xFF3
+   951                           intcon	equ	0xFF2
+   952                           postinc0	equ	0xFEE
+   953                           fsr0h	equ	0xFEA
+   954                           fsr0l	equ	0xFE9
+   955                           wreg	equ	0xFE8
+   956                           postdec1	equ	0xFE5
+   957                           fsr1h	equ	0xFE2
+   958                           fsr1l	equ	0xFE1
+   959                           indf2	equ	0xFDF
+   960                           fsr2h	equ	0xFDA
+   961                           fsr2l	equ	0xFD9
+   962                           status	equ	0xFD8
+   963                           
+   964 ;; *************** function i2_SetTimer0 *****************
+   965 ;; Defined at:
+   966 ;;		line 74 in file "_01_USER/My_Timer.c"
+   967 ;; Parameters:    Size  Location     Type
+   968 ;;  _tmr            2    0[COMRAM] unsigned int 
+   969 ;; Auto vars:     Size  Location     Type
+   970 ;;		None
+   971 ;; Return value:  Size  Location     Type
+   972 ;;		None               void
+   973 ;; Registers used:
+   974 ;;		wreg, status,2, status,0
+   975 ;; Tracked objects:
+   976 ;;		On entry : 0/0
+   977 ;;		On exit  : 0/0
+   978 ;;		Unchanged: 0/0
+   979 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   980 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   981 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   982 ;;      Temps:          2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   983 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   984 ;;Total ram usage:        4 bytes
+   985 ;; Hardware stack levels used:    1
+   986 ;; This function calls:
+   987 ;;		Nothing
+   988 ;; This function is called by:
+   989 ;;		_Sys_Cyc
+   990 ;; This function uses a non-reentrant model
+   991 ;;
+   992                           
+   993                           	psect	text7
+   994  0003B4                     __ptext7:
+   995                           	opt stack 0
+   996  0003B4                     i2_SetTimer0:
+   997                           	opt stack 27
+   998                           
+   999                           ;My_Timer.c: 76: if(_tmr > 0xffff) _tmr = 0xffff;
+  1000                           
+  1001                           ;incstack = 0
+  1002  0003B4  D003               	goto	i2l1434
+  1003  0003B6  6801               	setf	i2SetTimer0@_tmr,c
+  1004  0003B8  6802               	setf	i2SetTimer0@_tmr+1,c
+  1005  0003BA  D000               	goto	i2l1434
+  1006  0003BC                     i2l1434:
+  1007                           
+  1008                           ;My_Timer.c: 77: _tmr=0xffff-_tmr;
+  1009  0003BC  C001  F003         	movff	i2SetTimer0@_tmr,??i2_SetTimer0
+  1010  0003C0  C002  F004         	movff	i2SetTimer0@_tmr+1,??i2_SetTimer0+1
+  1011  0003C4  1E03               	comf	??i2_SetTimer0,f,c
+  1012  0003C6  1E04               	comf	??i2_SetTimer0+1,f,c
+  1013  0003C8  4A03               	infsnz	??i2_SetTimer0,f,c
+  1014  0003CA  2A04               	incf	??i2_SetTimer0+1,f,c
+  1015  0003CC  0EFF               	movlw	255
+  1016  0003CE  2403               	addwf	??i2_SetTimer0,w,c
+  1017  0003D0  6E01               	movwf	i2SetTimer0@_tmr,c
+  1018  0003D2  0EFF               	movlw	255
+  1019  0003D4  2004               	addwfc	??i2_SetTimer0+1,w,c
+  1020  0003D6  6E02               	movwf	i2SetTimer0@_tmr+1,c
+  1021                           
+  1022                           ;My_Timer.c: 78: TMR0H = _tmr/256;
+  1023  0003D8  5002               	movf	i2SetTimer0@_tmr+1,w,c
+  1024  0003DA  6ED7               	movwf	4055,c	;volatile
+  1025                           
+  1026                           ;My_Timer.c: 79: TMR0L = _tmr%256;
+  1027  0003DC  C001  FFD6         	movff	i2SetTimer0@_tmr,4054	;volatile
+  1028                           
+  1029                           ;My_Timer.c: 80: TMR0IF = 0;
+  1030  0003E0  94F2               	bcf	intcon,2,c	;volatile
+  1031  0003E2  0012               	return		;funcret
+  1032  0003E4                     __end_ofi2_SetTimer0:
+  1033                           	opt stack 0
+  1034                           pclatu	equ	0xFFB
+  1035                           pclath	equ	0xFFA
+  1036                           tblptru	equ	0xFF8
+  1037                           tblptrh	equ	0xFF7
+  1038                           tblptrl	equ	0xFF6
+  1039                           tablat	equ	0xFF5
+  1040                           prodh	equ	0xFF4
+  1041                           prodl	equ	0xFF3
+  1042                           intcon	equ	0xFF2
+  1043                           postinc0	equ	0xFEE
+  1044                           fsr0h	equ	0xFEA
+  1045                           fsr0l	equ	0xFE9
+  1046                           wreg	equ	0xFE8
+  1047                           postdec1	equ	0xFE5
+  1048                           fsr1h	equ	0xFE2
+  1049                           fsr1l	equ	0xFE1
+  1050                           indf2	equ	0xFDF
+  1051                           fsr2h	equ	0xFDA
+  1052                           fsr2l	equ	0xFD9
+  1053                           status	equ	0xFD8
+  1054                           
+  1055 ;; *************** function ___llmod *****************
+  1056 ;; Defined at:
+  1057 ;;		line 8 in file "F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c"
+  1058 ;; Parameters:    Size  Location     Type
+  1059 ;;  dividend        4    0[COMRAM] unsigned long 
+  1060 ;;  divisor         4    4[COMRAM] unsigned long 
+  1061 ;; Auto vars:     Size  Location     Type
+  1062 ;;  counter         1    8[COMRAM] unsigned char 
+  1063 ;; Return value:  Size  Location     Type
+  1064 ;;                  4    0[COMRAM] unsigned long 
+  1065 ;; Registers used:
+  1066 ;;		wreg, status,2, status,0
+  1067 ;; Tracked objects:
+  1068 ;;		On entry : 0/0
+  1069 ;;		On exit  : 0/0
+  1070 ;;		Unchanged: 0/0
+  1071 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  1072 ;;      Params:         8       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1073 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1074 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1075 ;;      Totals:         9       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1076 ;;Total ram usage:        9 bytes
+  1077 ;; Hardware stack levels used:    1
+  1078 ;; This function calls:
+  1079 ;;		Nothing
+  1080 ;; This function is called by:
+  1081 ;;		_Sys_Cyc
+  1082 ;; This function uses a non-reentrant model
+  1083 ;;
+  1084                           
+  1085                           	psect	text8
+  1086  0002A2                     __ptext8:
+  1087                           	opt stack 0
+  1088  0002A2                     ___llmod:
+  1089                           	opt stack 27
+  1090                           
+  1091                           ;incstack = 0
+  1092  0002A2  5005               	movf	___llmod@divisor,w,c
+  1093  0002A4  1006               	iorwf	___llmod@divisor+1,w,c
+  1094  0002A6  1007               	iorwf	___llmod@divisor+2,w,c
+  1095  0002A8  1008               	iorwf	___llmod@divisor+3,w,c
+  1096  0002AA  B4D8               	btfsc	status,2,c
+  1097  0002AC  D029               	goto	i2l778
+  1098  0002AE  0E01               	movlw	1
+  1099  0002B0  6E09               	movwf	___llmod@counter,c
+  1100  0002B2  D007               	goto	i2l1420
+  1101  0002B4                     i2l1418:
+  1102  0002B4  90D8               	bcf	status,0,c
+  1103  0002B6  3605               	rlcf	___llmod@divisor,f,c
+  1104  0002B8  3606               	rlcf	___llmod@divisor+1,f,c
+  1105  0002BA  3607               	rlcf	___llmod@divisor+2,f,c
+  1106  0002BC  3608               	rlcf	___llmod@divisor+3,f,c
+  1107  0002BE  2A09               	incf	___llmod@counter,f,c
+  1108  0002C0  D000               	goto	i2l1420
+  1109  0002C2                     i2l1420:
+  1110  0002C2  BE08               	btfsc	___llmod@divisor+3,7,c
+  1111  0002C4  D002               	goto	i2l1422
+  1112  0002C6  D7F6               	goto	i2l1418
+  1113  0002C8  D000               	goto	i2l1422
+  1114  0002CA                     i2l1422:
+  1115  0002CA  5005               	movf	___llmod@divisor,w,c
+  1116  0002CC  5C01               	subwf	___llmod@dividend,w,c
+  1117  0002CE  5006               	movf	___llmod@divisor+1,w,c
+  1118  0002D0  5802               	subwfb	___llmod@dividend+1,w,c
+  1119  0002D2  5007               	movf	___llmod@divisor+2,w,c
+  1120  0002D4  5803               	subwfb	___llmod@dividend+2,w,c
+  1121  0002D6  5008               	movf	___llmod@divisor+3,w,c
+  1122  0002D8  5804               	subwfb	___llmod@dividend+3,w,c
+  1123  0002DA  A0D8               	btfss	status,0,c
+  1124  0002DC  D009               	goto	i2l1426
+  1125  0002DE  5005               	movf	___llmod@divisor,w,c
+  1126  0002E0  5E01               	subwf	___llmod@dividend,f,c
+  1127  0002E2  5006               	movf	___llmod@divisor+1,w,c
+  1128  0002E4  5A02               	subwfb	___llmod@dividend+1,f,c
+  1129  0002E6  5007               	movf	___llmod@divisor+2,w,c
+  1130  0002E8  5A03               	subwfb	___llmod@dividend+2,f,c
+  1131  0002EA  5008               	movf	___llmod@divisor+3,w,c
+  1132  0002EC  5A04               	subwfb	___llmod@dividend+3,f,c
+  1133  0002EE  D000               	goto	i2l1426
+  1134  0002F0                     i2l1426:
+  1135  0002F0  90D8               	bcf	status,0,c
+  1136  0002F2  3208               	rrcf	___llmod@divisor+3,f,c
+  1137  0002F4  3207               	rrcf	___llmod@divisor+2,f,c
+  1138  0002F6  3206               	rrcf	___llmod@divisor+1,f,c
+  1139  0002F8  3205               	rrcf	___llmod@divisor,f,c
+  1140  0002FA  2E09               	decfsz	___llmod@counter,f,c
+  1141  0002FC  D7E6               	goto	i2l1422
+  1142  0002FE  D000               	goto	i2l778
+  1143  000300                     i2l778:
+  1144  000300  C001  F001         	movff	___llmod@dividend,?___llmod
+  1145  000304  C002  F002         	movff	___llmod@dividend+1,?___llmod+1
+  1146  000308  C003  F003         	movff	___llmod@dividend+2,?___llmod+2
+  1147  00030C  C004  F004         	movff	___llmod@dividend+3,?___llmod+3
+  1148  000310  0012               	return		;funcret
+  1149  000312                     __end_of___llmod:
+  1150                           	opt stack 0
+  1151                           pclatu	equ	0xFFB
+  1152                           pclath	equ	0xFFA
+  1153                           tblptru	equ	0xFF8
+  1154                           tblptrh	equ	0xFF7
+  1155                           tblptrl	equ	0xFF6
+  1156                           tablat	equ	0xFF5
+  1157                           prodh	equ	0xFF4
+  1158                           prodl	equ	0xFF3
+  1159                           intcon	equ	0xFF2
+  1160                           postinc0	equ	0xFEE
+  1161                           fsr0h	equ	0xFEA
+  1162                           fsr0l	equ	0xFE9
+  1163                           wreg	equ	0xFE8
+  1164                           postdec1	equ	0xFE5
+  1165                           fsr1h	equ	0xFE2
+  1166                           fsr1l	equ	0xFE1
+  1167                           indf2	equ	0xFDF
+  1168                           fsr2h	equ	0xFDA
+  1169                           fsr2l	equ	0xFD9
+  1170                           status	equ	0xFD8
+  1171                           
+  1172 ;; *************** function _Key_FSM_Scan *****************
+  1173 ;; Defined at:
+  1174 ;;		line 75 in file "_01_USER/Key.c"
+  1175 ;; Parameters:    Size  Location     Type
+  1176 ;;		None
+  1177 ;; Auto vars:     Size  Location     Type
+  1178 ;;		None
+  1179 ;; Return value:  Size  Location     Type
+  1180 ;;		None               void
+  1181 ;; Registers used:
+  1182 ;;		wreg, status,2, status,0, cstack
+  1183 ;; Tracked objects:
+  1184 ;;		On entry : 0/0
+  1185 ;;		On exit  : 0/0
+  1186 ;;		Unchanged: 0/0
+  1187 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  1188 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1189 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1190 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1191 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1192 ;;Total ram usage:        0 bytes
+  1193 ;; Hardware stack levels used:    1
+  1194 ;; Hardware stack levels required when called:    1
+  1195 ;; This function calls:
+  1196 ;;		_Key_Scan
+  1197 ;; This function is called by:
+  1198 ;;		_Sys_Cyc
+  1199 ;; This function uses a non-reentrant model
+  1200 ;;
+  1201                           
+  1202                           	psect	text9
+  1203  000120                     __ptext9:
+  1204                           	opt stack 0
+  1205  000120                     _Key_FSM_Scan:
+  1206                           	opt stack 26
+  1207                           
+  1208                           ;Key.c: 77: Key_Scan();
+  1209                           
+  1210                           ;incstack = 0
+  1211  000120  ECF2  F001         	call	_Key_Scan	;wreg free
+  1212                           
+  1213                           ;Key.c: 78: if( Local_Key_FSM.key_state & 0x01 ) Local_Key_FSM.key[0]++;
+  1214  000124  A025               	btfss	_Local_Key_FSM,0,c	;volatile
+  1215  000126  D002               	goto	i2l1004
+  1216  000128  2A2B               	incf	_Local_Key_FSM+6,f,c	;volatile
+  1217  00012A  D000               	goto	i2l1004
+  1218  00012C                     i2l1004:
+  1219                           
+  1220                           ;Key.c: 79: if( Local_Key_FSM.key_state & 0x02 ) Local_Key_FSM.key[1]++;
+  1221  00012C  A225               	btfss	_Local_Key_FSM,1,c	;volatile
+  1222  00012E  D002               	goto	i2l1008
+  1223  000130  2A2C               	incf	_Local_Key_FSM+7,f,c	;volatile
+  1224  000132  D000               	goto	i2l1008
+  1225  000134                     i2l1008:
+  1226                           
+  1227                           ;Key.c: 80: if( Local_Key_FSM.key_state & 0x04 ) Local_Key_FSM.key[2]++;
+  1228  000134  A425               	btfss	_Local_Key_FSM,2,c	;volatile
+  1229  000136  D002               	goto	i2l1012
+  1230  000138  2A2D               	incf	_Local_Key_FSM+8,f,c	;volatile
+  1231  00013A  D000               	goto	i2l1012
+  1232  00013C                     i2l1012:
+  1233                           
+  1234                           ;Key.c: 81: if( Local_Key_FSM.key_state & 0x08 ) Local_Key_FSM.key[3]++;
+  1235  00013C  A625               	btfss	_Local_Key_FSM,3,c	;volatile
+  1236  00013E  D002               	goto	i2l1016
+  1237  000140  2A2E               	incf	_Local_Key_FSM+9,f,c	;volatile
+  1238  000142  D000               	goto	i2l1016
+  1239  000144                     i2l1016:
+  1240                           
+  1241                           ;Key.c: 82: if( Local_Key_FSM.key_state & 0x10 ) Local_Key_FSM.key[4]++;
+  1242  000144  A825               	btfss	_Local_Key_FSM,4,c	;volatile
+  1243  000146  D002               	goto	i2l1020
+  1244  000148  2A2F               	incf	_Local_Key_FSM+10,f,c	;volatile
+  1245  00014A  D000               	goto	i2l1020
+  1246  00014C                     i2l1020:
+  1247                           
+  1248                           ;Key.c: 84: if( Local_Key_FSM.key_state == 0x00 )
+  1249  00014C  5025               	movf	_Local_Key_FSM,w,c	;volatile
+  1250  00014E  A4D8               	btfss	status,2,c
+  1251  000150  D00B               	goto	i2l1024
+  1252                           
+  1253                           ;Key.c: 85: {
+  1254                           ;Key.c: 86: Local_Key_FSM.key[0] = 0;
+  1255  000152  0E00               	movlw	0
+  1256  000154  6E2B               	movwf	_Local_Key_FSM+6,c	;volatile
+  1257                           
+  1258                           ;Key.c: 87: Local_Key_FSM.key[1] = 0;
+  1259  000156  0E00               	movlw	0
+  1260  000158  6E2C               	movwf	_Local_Key_FSM+7,c	;volatile
+  1261                           
+  1262                           ;Key.c: 88: Local_Key_FSM.key[2] = 0;
+  1263  00015A  0E00               	movlw	0
+  1264  00015C  6E2D               	movwf	_Local_Key_FSM+8,c	;volatile
+  1265                           
+  1266                           ;Key.c: 89: Local_Key_FSM.key[3] = 0;
+  1267  00015E  0E00               	movlw	0
+  1268  000160  6E2E               	movwf	_Local_Key_FSM+9,c	;volatile
+  1269                           
+  1270                           ;Key.c: 90: Local_Key_FSM.key[4] = 0;
+  1271  000162  0E00               	movlw	0
+  1272  000164  6E2F               	movwf	_Local_Key_FSM+10,c	;volatile
+  1273                           
+  1274                           ;Key.c: 91: }
+  1275  000166  0012               	return	
+  1276  000168                     i2l1024:
+  1277                           
+  1278                           ;Key.c: 92: else
+  1279                           ;Key.c: 93: {
+  1280                           ;Key.c: 95: if( Local_Key_FSM.key[0] < 5 ) Local_Key_FSM.key_FSM[0] = 0x00;
+  1281  000168  0E05               	movlw	5
+  1282  00016A  602B               	cpfslt	_Local_Key_FSM+6,c	;volatile
+  1283  00016C  D002               	goto	i2l1028
+  1284  00016E  0E00               	movlw	0
+  1285  000170  D006               	goto	L2
+  1286  000172                     i2l1028:
+  1287                           
+  1288                           ;Key.c: 96: else if( Local_Key_FSM.key[0] < 50 ) Local_Key_FSM.key_FSM[0] = 0x01;
+  1289  000172  0E32               	movlw	50
+  1290  000174  602B               	cpfslt	_Local_Key_FSM+6,c	;volatile
+  1291  000176  D002               	goto	i2l1032
+  1292  000178  0E01               	movlw	1
+  1293  00017A  D001               	goto	L2
+  1294  00017C                     i2l1032:
+  1295                           
+  1296                           ;Key.c: 97: else Local_Key_FSM.key_FSM[0] = 0x03;
+  1297  00017C  0E03               	movlw	3
+  1298  00017E                     L2:
+  1299  00017E  6E26               	movwf	_Local_Key_FSM+1,c	;volatile
+  1300  000180  D000               	goto	i2l1034
+  1301  000182                     i2l1034:
+  1302                           
+  1303                           ;Key.c: 99: if( Local_Key_FSM.key[1] < 5 ) Local_Key_FSM.key_FSM[1] = 0x00;
+  1304  000182  0E05               	movlw	5
+  1305  000184  602C               	cpfslt	_Local_Key_FSM+7,c	;volatile
+  1306  000186  D002               	goto	i2l1038
+  1307  000188  0E00               	movlw	0
+  1308  00018A  D006               	goto	L4
+  1309  00018C                     i2l1038:
+  1310                           
+  1311                           ;Key.c: 100: else if( Local_Key_FSM.key[1] < 50 ) Local_Key_FSM.key_FSM[1] = 0x01;
+  1312  00018C  0E32               	movlw	50
+  1313  00018E  602C               	cpfslt	_Local_Key_FSM+7,c	;volatile
+  1314  000190  D002               	goto	i2l1042
+  1315  000192  0E01               	movlw	1
+  1316  000194  D001               	goto	L4
+  1317  000196                     i2l1042:
+  1318                           
+  1319                           ;Key.c: 101: else Local_Key_FSM.key_FSM[1] = 0x03;
+  1320  000196  0E03               	movlw	3
+  1321  000198                     L4:
+  1322  000198  6E27               	movwf	_Local_Key_FSM+2,c	;volatile
+  1323  00019A  D000               	goto	i2l1044
+  1324  00019C                     i2l1044:
+  1325                           
+  1326                           ;Key.c: 103: if( Local_Key_FSM.key[2] < 5 ) Local_Key_FSM.key_FSM[2] = 0x00;
+  1327  00019C  0E05               	movlw	5
+  1328  00019E  602D               	cpfslt	_Local_Key_FSM+8,c	;volatile
+  1329  0001A0  D002               	goto	i2l1048
+  1330  0001A2  0E00               	movlw	0
+  1331  0001A4  D006               	goto	L6
+  1332  0001A6                     i2l1048:
+  1333                           
+  1334                           ;Key.c: 104: else if( Local_Key_FSM.key[2] < 50 ) Local_Key_FSM.key_FSM[2] = 0x01;
+  1335  0001A6  0E32               	movlw	50
+  1336  0001A8  602D               	cpfslt	_Local_Key_FSM+8,c	;volatile
+  1337  0001AA  D002               	goto	i2l1052
+  1338  0001AC  0E01               	movlw	1
+  1339  0001AE  D001               	goto	L6
+  1340  0001B0                     i2l1052:
+  1341                           
+  1342                           ;Key.c: 105: else Local_Key_FSM.key_FSM[2] = 0x03;
+  1343  0001B0  0E03               	movlw	3
+  1344  0001B2                     L6:
+  1345  0001B2  6E28               	movwf	_Local_Key_FSM+3,c	;volatile
+  1346  0001B4  D000               	goto	i2l1054
+  1347  0001B6                     i2l1054:
+  1348                           
+  1349                           ;Key.c: 107: if( Local_Key_FSM.key[3] < 5 ) Local_Key_FSM.key_FSM[3] = 0x00;
+  1350  0001B6  0E05               	movlw	5
+  1351  0001B8  602E               	cpfslt	_Local_Key_FSM+9,c	;volatile
+  1352  0001BA  D002               	goto	i2l1058
+  1353  0001BC  0E00               	movlw	0
+  1354  0001BE  D006               	goto	L8
+  1355  0001C0                     i2l1058:
+  1356                           
+  1357                           ;Key.c: 108: else if( Local_Key_FSM.key[3] < 50 ) Local_Key_FSM.key_FSM[3] = 0x01;
+  1358  0001C0  0E32               	movlw	50
+  1359  0001C2  602E               	cpfslt	_Local_Key_FSM+9,c	;volatile
+  1360  0001C4  D002               	goto	i2l1062
+  1361  0001C6  0E01               	movlw	1
+  1362  0001C8  D001               	goto	L8
+  1363  0001CA                     i2l1062:
+  1364                           
+  1365                           ;Key.c: 109: else Local_Key_FSM.key_FSM[3] = 0x03;
+  1366  0001CA  0E03               	movlw	3
+  1367  0001CC                     L8:
+  1368  0001CC  6E29               	movwf	_Local_Key_FSM+4,c	;volatile
+  1369  0001CE  D000               	goto	i2l1064
+  1370  0001D0                     i2l1064:
+  1371                           
+  1372                           ;Key.c: 111: if( Local_Key_FSM.key[4] < 5 ) Local_Key_FSM.key_FSM[4] = 0x00;
+  1373  0001D0  0E05               	movlw	5
+  1374  0001D2  602F               	cpfslt	_Local_Key_FSM+10,c	;volatile
+  1375  0001D4  D002               	goto	i2l1068
+  1376  0001D6  0E00               	movlw	0
+  1377  0001D8  D006               	goto	L10
+  1378  0001DA                     i2l1068:
+  1379                           
+  1380                           ;Key.c: 112: else if( Local_Key_FSM.key[4] < 50 ) Local_Key_FSM.key_FSM[4] = 0x01;
+  1381  0001DA  0E32               	movlw	50
+  1382  0001DC  602F               	cpfslt	_Local_Key_FSM+10,c	;volatile
+  1383  0001DE  D002               	goto	i2l1072
+  1384  0001E0  0E01               	movlw	1
+  1385  0001E2  D001               	goto	L10
+  1386  0001E4                     i2l1072:
+  1387                           
+  1388                           ;Key.c: 113: else Local_Key_FSM.key_FSM[4] = 0x03;
+  1389  0001E4  0E03               	movlw	3
+  1390  0001E6                     L10:
+  1391  0001E6  6E2A               	movwf	_Local_Key_FSM+5,c	;volatile
+  1392  0001E8  D000               	goto	i2l110
+  1393  0001EA                     i2l110:
+  1394                           
+  1395                           ;Key.c: 116: Local_Key_FSM.key_group = 0x00;
+  1396  0001EA  0E00               	movlw	0
+  1397  0001EC  6E2A               	movwf	_Local_Key_FSM+5,c	;volatile
+  1398                           
+  1399                           ;Key.c: 117: if( Local_Key_FSM.key_FSM[0] != 0x00 ) Local_Key_FSM.key_group |= 0x01<<0;
+  1400  0001EE  5026               	movf	_Local_Key_FSM+1,w,c	;volatile
+  1401  0001F0  B4D8               	btfsc	status,2,c
+  1402  0001F2  D002               	goto	i2l1076
+  1403  0001F4  802A               	bsf	_Local_Key_FSM+5,0,c	;volatile
+  1404  0001F6  D000               	goto	i2l1076
+  1405  0001F8                     i2l1076:
+  1406                           
+  1407                           ;Key.c: 118: if( Local_Key_FSM.key_FSM[1] != 0x00 ) Local_Key_FSM.key_group |= 0x01<<1;
+  1408  0001F8  5027               	movf	_Local_Key_FSM+2,w,c	;volatile
+  1409  0001FA  B4D8               	btfsc	status,2,c
+  1410  0001FC  D002               	goto	i2l1080
+  1411  0001FE  822A               	bsf	_Local_Key_FSM+5,1,c	;volatile
+  1412  000200  D000               	goto	i2l1080
+  1413  000202                     i2l1080:
+  1414                           
+  1415                           ;Key.c: 119: if( Local_Key_FSM.key_FSM[2] != 0x00 ) Local_Key_FSM.key_group |= 0x01<<2;
+  1416  000202  5028               	movf	_Local_Key_FSM+3,w,c	;volatile
+  1417  000204  B4D8               	btfsc	status,2,c
+  1418  000206  D002               	goto	i2l1084
+  1419  000208  842A               	bsf	_Local_Key_FSM+5,2,c	;volatile
+  1420  00020A  D000               	goto	i2l1084
+  1421  00020C                     i2l1084:
+  1422                           
+  1423                           ;Key.c: 120: if( Local_Key_FSM.key_FSM[3] != 0x00 ) Local_Key_FSM.key_group |= 0x01<<3;
+  1424  00020C  5029               	movf	_Local_Key_FSM+4,w,c	;volatile
+  1425  00020E  B4D8               	btfsc	status,2,c
+  1426  000210  D002               	goto	i2l1088
+  1427  000212  862A               	bsf	_Local_Key_FSM+5,3,c	;volatile
+  1428  000214  D000               	goto	i2l1088
+  1429  000216                     i2l1088:
+  1430                           
+  1431                           ;Key.c: 121: if( Local_Key_FSM.key_FSM[4] != 0x00 ) Local_Key_FSM.key_group |= 0x01<<4;
+  1432  000216  502A               	movf	_Local_Key_FSM+5,w,c	;volatile
+  1433  000218  B4D8               	btfsc	status,2,c
+  1434  00021A  0012               	return	
+  1435  00021C  882A               	bsf	_Local_Key_FSM+5,4,c	;volatile
+  1436  00021E  0012               	return	
+  1437  000220  0012               	return		;funcret
+  1438  000222                     __end_of_Key_FSM_Scan:
+  1439                           	opt stack 0
+  1440                           pclatu	equ	0xFFB
+  1441                           pclath	equ	0xFFA
+  1442                           tblptru	equ	0xFF8
+  1443                           tblptrh	equ	0xFF7
+  1444                           tblptrl	equ	0xFF6
+  1445                           tablat	equ	0xFF5
+  1446                           prodh	equ	0xFF4
+  1447                           prodl	equ	0xFF3
+  1448                           intcon	equ	0xFF2
+  1449                           postinc0	equ	0xFEE
+  1450                           fsr0h	equ	0xFEA
+  1451                           fsr0l	equ	0xFE9
+  1452                           wreg	equ	0xFE8
+  1453                           postdec1	equ	0xFE5
+  1454                           fsr1h	equ	0xFE2
+  1455                           fsr1l	equ	0xFE1
+  1456                           indf2	equ	0xFDF
+  1457                           fsr2h	equ	0xFDA
+  1458                           fsr2l	equ	0xFD9
+  1459                           status	equ	0xFD8
+  1460                           
+  1461 ;; *************** function _Key_Scan *****************
+  1462 ;; Defined at:
+  1463 ;;		line 54 in file "_01_USER/Key.c"
+  1464 ;; Parameters:    Size  Location     Type
+  1465 ;;		None
+  1466 ;; Auto vars:     Size  Location     Type
+  1467 ;;		None
+  1468 ;; Return value:  Size  Location     Type
+  1469 ;;		None               void
+  1470 ;; Registers used:
+  1471 ;;		wreg, status,2, status,0
+  1472 ;; Tracked objects:
+  1473 ;;		On entry : 0/0
+  1474 ;;		On exit  : 0/0
+  1475 ;;		Unchanged: 0/0
+  1476 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+  1477 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1478 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1479 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1480 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+  1481 ;;Total ram usage:        0 bytes
+  1482 ;; Hardware stack levels used:    1
+  1483 ;; This function calls:
+  1484 ;;		Nothing
+  1485 ;; This function is called by:
+  1486 ;;		_Key_FSM_Scan
+  1487 ;; This function uses a non-reentrant model
+  1488 ;;
+  1489                           
+  1490                           	psect	text10
+  1491  0003E4                     __ptext10:
+  1492                           	opt stack 0
+  1493  0003E4                     _Key_Scan:
+  1494                           	opt stack 26
+  1495                           
+  1496                           ;Key.c: 56: Local_Key_FSM.key_state = 0x00;
+  1497                           
+  1498                           ;incstack = 0
+  1499  0003E4  0E00               	movlw	0
+  1500  0003E6  6E25               	movwf	_Local_Key_FSM,c	;volatile
+  1501                           
+  1502                           ;Key.c: 58: if( RE3 == 0 ) Local_Key_FSM.key_state |= (0x01 << 0) ;
+  1503  0003E8  B684               	btfsc	3972,3,c	;volatile
+  1504  0003EA  D002               	goto	i2l906
+  1505  0003EC  8025               	bsf	_Local_Key_FSM,0,c	;volatile
+  1506  0003EE  D000               	goto	i2l906
+  1507  0003F0                     i2l906:
+  1508                           
+  1509                           ;Key.c: 59: if( RE2 == 0 ) Local_Key_FSM.key_state |= (0x01 << 1) ;
+  1510  0003F0  B484               	btfsc	3972,2,c	;volatile
+  1511  0003F2  D002               	goto	i2l910
+  1512  0003F4  8225               	bsf	_Local_Key_FSM,1,c	;volatile
+  1513  0003F6  D000               	goto	i2l910
+  1514  0003F8                     i2l910:
+  1515                           
+  1516                           ;Key.c: 60: if( RD6 == 0 ) Local_Key_FSM.key_state |= (0x01 << 2) ;
+  1517  0003F8  BC83               	btfsc	3971,6,c	;volatile
+  1518  0003FA  D002               	goto	i2l914
+  1519  0003FC  8425               	bsf	_Local_Key_FSM,2,c	;volatile
+  1520  0003FE  D000               	goto	i2l914
+  1521  000400                     i2l914:
+  1522                           
+  1523                           ;Key.c: 61: if( RE4 == 0 ) Local_Key_FSM.key_state |= (0x01 << 3) ;
+  1524  000400  B884               	btfsc	3972,4,c	;volatile
+  1525  000402  D002               	goto	i2l918
+  1526  000404  8625               	bsf	_Local_Key_FSM,3,c	;volatile
+  1527  000406  D000               	goto	i2l918
+  1528  000408                     i2l918:
+  1529                           
+  1530                           ;Key.c: 62: if( RD7 == 0 ) Local_Key_FSM.key_state |= (0x01 << 4) ;
+  1531  000408  BE83               	btfsc	3971,7,c	;volatile
+  1532  00040A  0012               	return	
+  1533  00040C  8825               	bsf	_Local_Key_FSM,4,c	;volatile
+  1534  00040E  0012               	return	
+  1535  000410  0012               	return		;funcret
+  1536  000412                     __end_of_Key_Scan:
+  1537                           	opt stack 0
+  1538  0000                     pclatu	equ	0xFFB
+  1539                           pclath	equ	0xFFA
+  1540                           tblptru	equ	0xFF8
+  1541                           tblptrh	equ	0xFF7
+  1542                           tblptrl	equ	0xFF6
+  1543                           tablat	equ	0xFF5
+  1544                           prodh	equ	0xFF4
+  1545                           prodl	equ	0xFF3
+  1546                           intcon	equ	0xFF2
+  1547                           postinc0	equ	0xFEE
+  1548                           fsr0h	equ	0xFEA
+  1549                           fsr0l	equ	0xFE9
+  1550                           wreg	equ	0xFE8
+  1551                           postdec1	equ	0xFE5
+  1552                           fsr1h	equ	0xFE2
+  1553                           fsr1l	equ	0xFE1
+  1554                           indf2	equ	0xFDF
+  1555                           fsr2h	equ	0xFDA
+  1556                           fsr2l	equ	0xFD9
+  1557                           status	equ	0xFD8
+  1558                           pclatu	equ	0xFFB
+  1559                           pclath	equ	0xFFA
+  1560                           tblptru	equ	0xFF8
+  1561                           tblptrh	equ	0xFF7
+  1562                           tblptrl	equ	0xFF6
+  1563                           tablat	equ	0xFF5
+  1564                           prodh	equ	0xFF4
+  1565                           prodl	equ	0xFF3
+  1566                           intcon	equ	0xFF2
+  1567                           postinc0	equ	0xFEE
+  1568                           fsr0h	equ	0xFEA
+  1569                           fsr0l	equ	0xFE9
+  1570                           wreg	equ	0xFE8
+  1571                           postdec1	equ	0xFE5
+  1572                           fsr1h	equ	0xFE2
+  1573                           fsr1l	equ	0xFE1
+  1574                           indf2	equ	0xFDF
+  1575                           fsr2h	equ	0xFDA
+  1576                           fsr2l	equ	0xFD9
+  1577                           status	equ	0xFD8
+  1578                           
+  1579                           	psect	rparam
+  1580  0000                     pclatu	equ	0xFFB
+  1581                           pclath	equ	0xFFA
+  1582                           tblptru	equ	0xFF8
+  1583                           tblptrh	equ	0xFF7
+  1584                           tblptrl	equ	0xFF6
+  1585                           tablat	equ	0xFF5
+  1586                           prodh	equ	0xFF4
+  1587                           prodl	equ	0xFF3
+  1588                           intcon	equ	0xFF2
+  1589                           postinc0	equ	0xFEE
+  1590                           fsr0h	equ	0xFEA
+  1591                           fsr0l	equ	0xFE9
+  1592                           wreg	equ	0xFE8
+  1593                           postdec1	equ	0xFE5
+  1594                           fsr1h	equ	0xFE2
+  1595                           fsr1l	equ	0xFE1
+  1596                           indf2	equ	0xFDF
+  1597                           fsr2h	equ	0xFDA
+  1598                           fsr2l	equ	0xFD9
+  1599                           status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        16
+    BSS         16
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95     30      62
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15           22      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_Key_FSM_Read
+    _Timer0_Init->_SetTimer0
+
+Critical Paths under _Sys_Cyc in COMRAM
+
+    _Sys_Cyc->___llmod
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Critical Paths under _Sys_Cyc in BANK15
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0     283
+                                             29 COMRAM     1     1      0
+                        _GPIO_Config
+                       _Key_FSM_Read
+                           _Key_Init
+                        _Timer0_Init
+ ---------------------------------------------------------------------------------
+ (1) _Timer0_Init                                          0     0      0     148
+                          _SetTimer0
+ ---------------------------------------------------------------------------------
+ (2) _SetTimer0                                            4     2      2     148
+                                             23 COMRAM     4     2      2
+ ---------------------------------------------------------------------------------
+ (1) _Key_Init                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ (1) _Key_FSM_Read                                         6     6      0      90
+                                             23 COMRAM     6     6      0
+ ---------------------------------------------------------------------------------
+ (1) _GPIO_Config                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (3) _Sys_Cyc                                             14    14      0     465
+                                              9 COMRAM    14    14      0
+                       _Key_FSM_Scan
+                            ___llmod
+                        i2_SetTimer0
+ ---------------------------------------------------------------------------------
+ (4) i2_SetTimer0                                          4     2      2      94
+                                              0 COMRAM     4     2      2
+ ---------------------------------------------------------------------------------
+ (4) ___llmod                                              9     1      8     371
+                                              0 COMRAM     9     1      8
+ ---------------------------------------------------------------------------------
+ (4) _Key_FSM_Scan                                         0     0      0       0
+                           _Key_Scan
+ ---------------------------------------------------------------------------------
+ (5) _Key_Scan                                             0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 5
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _GPIO_Config
+   _Key_FSM_Read
+   _Key_Init
+   _Timer0_Init
+     _SetTimer0
+
+ _Sys_Cyc (ROOT)
+   _Key_FSM_Scan
+     _Key_Scan
+   ___llmod
+   i2_SetTimer0
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BIGRAM             F15      0       0      37        0.0%
+EEDATA             400      0       0       0        0.0%
+BITBANK14          100      0       0      33        0.0%
+BANK14             100      0       0      34        0.0%
+BITBANK13          100      0       0      31        0.0%
+BANK13             100      0       0      32        0.0%
+BITBANK12          100      0       0      29        0.0%
+BANK12             100      0       0      30        0.0%
+BITBANK11          100      0       0      27        0.0%
+BANK11             100      0       0      28        0.0%
+BITBANK10          100      0       0      25        0.0%
+BANK10             100      0       0      26        0.0%
+BITBANK9           100      0       0      23        0.0%
+BANK9              100      0       0      24        0.0%
+BITBANK8           100      0       0      21        0.0%
+BANK8              100      0       0      22        0.0%
+BITBANK7           100      0       0      19        0.0%
+BANK7              100      0       0      20        0.0%
+BITBANK6           100      0       0      17        0.0%
+BANK6              100      0       0      18        0.0%
+BITBANK5           100      0       0      15        0.0%
+BANK5              100      0       0      16        0.0%
+BITBANK4           100      0       0      13        0.0%
+BANK4              100      0       0      14        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITCOMRAM           5F      0       0       0        0.0%
+COMRAM              5F     1E      3E       1       65.3%
+BITBANK15           16      0       0      35        0.0%
+BANK15              16      0       0      36        0.0%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+STACK                0      0       0       2        0.0%
+NULL                 0      0       0       0        0.0%
+ABS                  0      0      3E      12        0.0%
+DATA                 0      0      3E       3        0.0%
+CODE                 0      0       0       0        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.34 build -361300703 
+Symbol Table                                                                                   Sat Dec 05 18:05:10 2015
+
+                     l17 033A              __CFG_BORV$3 000000             __CFG_CP0$OFF 000000  
+           __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000         Key_FSM_Read@temp 001C  
+           __CFG_CP3$OFF 000000             __CFG_CP4$OFF 000000             __CFG_CP5$OFF 000000  
+           __CFG_CP6$OFF 000000             __CFG_CP7$OFF 000000                      l982 0284  
+                    l994 029C                      l978 0280                      _GIE 007F97  
+           __CFG_CPB$OFF 000000                      _RC3 007C13                      _RC4 007C14  
+                    _RE2 007C22                      _RE3 007C23                      _RE4 007C24  
+                    _RD6 007C1E                      _RE5 007C25                      _RD7 007C1F  
+                    _RE6 007C26                      _RE7 007C27             __CFG_CPD$OFF 000000  
+                    _PSA 007EAB           ??_Key_FSM_Read 0018           ??_Key_FSM_Scan 0001  
+                    wreg 000FE8             ?_GPIO_Config 0001                     l1452 033E  
+                   l1444 0320                     l1448 0330                     l1394 038C  
+                   _T0CS 007EAD                     _T0SE 007EAC                     _IPEN 007E87  
+                   _main 0312                     fsr0h 000FEA                     fsr1h 000FE2  
+                   fsr0l 000FE9                     fsr2h 000FDA                     fsr1l 000FE1  
+                   indf2 000FDF                     fsr2l 000FD9                     pclat 000FFA  
+                   prodh 000FF4                     prodl 000FF3                     start 011C  
+          __CFG_IESO$OFF 000000            __CFG_FOSC$HS1 000000            __CFG_MCLRE$ON 000000  
+           ___param_bank 000010            __CFG_RETEN$ON 000000                    ?_main 0001  
+        __end_of_Sys_Cyc 011C          __end_of___llmod 0312                    _T0PS0 007EA8  
+                  _T0PS1 007EA9                    _T0PS2 007EAA                    i2l110 01EA  
+                  i2l186 008E                    i2l189 00E2                    i2l910 03F8  
+                  i2l914 0400                    i2l906 03F0                    i2l918 0408  
+                  i2l778 0300                    _TMR0H 000FD7                    _TMR0L 000FD6  
+                  _TRISD 000F95                    _TRISE 000F96            __CFG_WRT0$OFF 000000  
+          __CFG_WRT1$OFF 000000            __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000  
+          __CFG_WRT4$OFF 000000           __CFG_EBRT0$OFF 000000            __CFG_WRT5$OFF 000000  
+         __CFG_EBRT1$OFF 000000            __CFG_WRT6$OFF 000000           __CFG_EBRT2$OFF 000000  
+          __CFG_WRT7$OFF 000000           __CFG_EBRT3$OFF 000000           __CFG_EBRT4$OFF 000000  
+         __CFG_FCMEN$OFF 000000           __CFG_EBRT5$OFF 000000           __CFG_EBRT6$OFF 000000  
+         __CFG_EBRT7$OFF 000000            __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000  
+          __CFG_WRTD$OFF 000000           __CFG_EBRTB$OFF 000000            _Local_Key_FSM 0025  
+                  tablat 000FF5                    status 000FD8          __initialization 0352  
+           __end_of_main 0352         __end_of_Key_Init 045C      Key_FSM_Read@key_num 001D  
+       __end_of_Key_Scan 0412                   ??_main 001E            __activetblptr 000003  
+       ___llmod@dividend 0001                   _T08BIT 007EAE                   i2l1020 014C  
+                 i2l1012 013C                   i2l1004 012C                   i2l1032 017C  
+                 i2l1024 0168                   i2l1016 0144                   i2l1008 0134  
+                 i2l1042 0196                   i2l1034 0182                   i2l1052 01B0  
+                 i2l1044 019C                   i2l1028 0172                   i2l1062 01CA  
+                 i2l1054 01B6                   i2l1038 018C          __CFG_BBSIZ$BB2K 000000  
+                 i2l1080 0202                   i2l1072 01E4                   i2l1064 01D0  
+                 i2l1048 01A6                   i2l1058 01C0                   i2l1084 020C  
+                 i2l1076 01F8                   i2l1068 01DA                   i2l1420 02C2  
+                 i2l1422 02CA                   i2l1088 0216                   i2l1426 02F0  
+                 i2l1418 02B4                   i2l1434 03BC                   i2l1472 0094  
+          SetTimer0@_tmr 0018                   _TMR0IE 007F95                   _TMR0IF 007F92  
+                 _TMR0ON 007EAF            ??_Timer0_Init 001C           __CFG_XINST$OFF 000000  
+   __end_of_Key_FSM_Read 02A2     __end_of_Key_FSM_Scan 0222           __CFG_STVREN$ON 000000  
+              ??_Sys_Cyc 000A                ??___llmod 0009       __size_of_SetTimer0 0030  
+                 clear_0 0358             __pdataCOMRAM 002F                   tblptrh 000FF7  
+                 tblptrl 000FF6                   tblptru 000FF8     __size_of_GPIO_Config 000C  
+             __accesstop 0060  __end_of__initialization 037E             ?i2_SetTimer0 0001  
+          ___rparam_used 000001           __pcstackCOMRAM 0001      __end_of_Timer0_Init 0436  
+      __end_of_SetTimer0 03B4                ?_Key_Init 0001                ?_Key_Scan 0001  
+        __CFG_PLLCFG$OFF 000000               ??_Key_Init 0018               ??_Key_Scan 0001  
+  __size_of_Key_FSM_Read 0080    __size_of_Key_FSM_Scan 0102          __CFG_PWRTEN$OFF 000000  
+                __Hparam 0000              _Timer0_Init 0412                  __Lparam 0000  
+                _Sys_Cyc 0008                  ___llmod 02A2                  __pcinit 0352  
+                __ramtop 1000                  __ptext0 0312                  __ptext1 0412  
+                __ptext2 0384                  __ptext3 0452                  __ptext4 0222  
+                __ptext5 0446                  __ptext7 03B4                  __ptext8 02A2  
+                __ptext9 0120        __CFG_MSSPMSK$MSK7 000000             _Key_FSM_Read 0222  
+           _Key_FSM_Scan 0120     end_of_initialization 037E     __size_ofi2_SetTimer0 0030  
+                postdec1 000FE5                  postinc0 000FEE                _PORTEbits 000F84  
+              _TRISCbits 000F94        __CFG_SOSCSEL$HIGH 000000            __pidataCOMRAM 0436  
+          ??_GPIO_Config 0018      start_initialization 0352          ___llmod@divisor 0005  
+      __size_of_Key_Init 000A        __size_of_Key_Scan 002E          ___llmod@counter 0009  
+              _SetTimer0 0384          i2SetTimer0@_tmr 0001                _Timer_Cyc 001F  
+            __pbssCOMRAM 001F          main@LED3_switch 001E      __end_of_GPIO_Config 0452  
+             ?_SetTimer0 0018             ?_Timer0_Init 0001        __CFG_CCP2MX$PORTC 000000  
+              __pintcode 0008                 ?_Sys_Cyc 0001                 ?___llmod 0001  
+            _LED2_switch 0024              _GPIO_Config 0446                copy_data0 0372  
+               _Key_Init 0452                 _Key_Scan 03E4            ??i2_SetTimer0 0003  
+            ??_SetTimer0 001A                 __Hrparam 0000                 __Lrparam 0000  
+     __CFG_BOREN$SBORDIS 000000         __size_of_Sys_Cyc 0114         __size_of___llmod 0070  
+               Sys_Cyc@t 0023                 __ptext10 03E4            __size_of_main 0040  
+    __CFG_RTCOSC$SOSCREF 000000     __size_of_Timer0_Init 0024      __end_ofi2_SetTimer0 03E4  
+    __CFG_INTOSCSEL$HIGH 000000               _LED_Number 002F       __CFG_WDTEN$SWDTDIS 000000  
+               intlevel2 0000       __CFG_WDTPS$1048576 000000            ?_Key_FSM_Read 0001  
+          ?_Key_FSM_Scan 0001      __CFG_BORPWR$ZPBORMV 000000              i2_SetTimer0 03B4  

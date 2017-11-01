@@ -1,0 +1,13 @@
+ build/default/production/_01_USER/main.d  \
+ build/default/production/_01_USER/main.p1:  \
+ _01_USER/main.c  \
+_01_USER/My_ADC.h  \
+_01_USER/Run.h  \
+_01_USER/My_Timer.h  \
+_01_USER/TM1640.h  \
+_01_USER/Key.h  \
+_01_USER/Config_18F167K22.h  \
+_01_USER/My_Types.h  \
+_01_USER/My_Delay.h  \
+_01_USER/GPIO.h  \
+_01_USER/My_USART.h  \

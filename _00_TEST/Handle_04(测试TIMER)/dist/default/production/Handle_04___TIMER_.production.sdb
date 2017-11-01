@@ -1,0 +1,549 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F67K22 ]
+[d frameptr 4065 ]
+"38 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+"38 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+"54
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+"34 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+"37 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_ADC.c
+[v _ADC6_Init ADC6_Init `(v  1 e 0 0 ]
+"35 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_Delay.c
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+"58
+[v _delay1ms delay1ms `(v  1 s 0 delay1ms ]
+"66
+[v _delay1s delay1s `(v  1 s 0 delay1s ]
+"40 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(i  1 e 2 0 ]
+"78
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+"97
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+"19 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/TM1640.c
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+"32
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+"45
+[v _TM1640_Show_Decimal TM1640_Show_Decimal `(v  1 e 0 0 ]
+"66
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+"77
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+"109
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+"119
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"63 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"26 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+"22 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+"305 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+"24 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+[s S74 . 10 `VEuc 1 key_state 1 0 `VE[4]uc 1 key_FSM 4 1 `VEuc 1 key_group 1 5 `VE[4]uc 1 key 4 6 ]
+"25 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/Key.c
+[v _Local_Key_FSM Local_Key_FSM `VES74  1 e 10 0 ]
+"24 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_ADC.c
+[v _ADC6_Buff ADC6_Buff `VEf  1 e 3 0 ]
+"25 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_Timer.c
+[v _Timer_Cyc Timer_Cyc `ul  1 e 4 0 ]
+"16 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/TM1640.c
+[v _LED_Number LED_Number `C[16]uc  1 e 16 0 ]
+[s S119 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 RE4 1 0 :1:4 
+`uc 1 RE5 1 0 :1:5 
+`uc 1 RE6 1 0 :1:6 
+`uc 1 RE7 1 0 :1:7 
+]
+"8793 F:/Program Files (x86)/Microchip/xc8/v1.34/include\pic18f67k22.h
+[s S128 . 1 `uc 1 AD8 1 0 :1:0 
+`uc 1 AD9 1 0 :1:1 
+`uc 1 AD10 1 0 :1:2 
+`uc 1 AD11 1 0 :1:3 
+`uc 1 AD12 1 0 :1:4 
+`uc 1 AD13 1 0 :1:5 
+`uc 1 AD14 1 0 :1:6 
+`uc 1 AD15 1 0 :1:7 
+]
+[s S137 . 1 `uc 1 P2D 1 0 :1:0 
+`uc 1 P2C 1 0 :1:1 
+`uc 1 P2B 1 0 :1:2 
+`uc 1 P3C 1 0 :1:3 
+`uc 1 P3B 1 0 :1:4 
+`uc 1 P1C 1 0 :1:5 
+`uc 1 P1B 1 0 :1:6 
+`uc 1 P2A 1 0 :1:7 
+]
+[s S146 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9 1 0 :1:3 
+`uc 1 CCP8 1 0 :1:4 
+`uc 1 CCP7 1 0 :1:5 
+`uc 1 CCP6 1 0 :1:6 
+`uc 1 CCP2 1 0 :1:7 
+]
+[s S154 . 1 `uc 1 NOT_RD 1 0 :1:0 
+]
+[s S156 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_WR 1 0 :1:1 
+]
+[s S159 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_CS 1 0 :1:2 
+]
+[s S162 . 1 `uc 1 nRD 1 0 :1:0 
+`uc 1 nWR 1 0 :1:1 
+`uc 1 nCS 1 0 :1:2 
+`uc 1 REFO 1 0 :1:3 
+]
+[s S167 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S170 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CCP6E 1 0 :1:6 
+]
+[s S173 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 CCP7E 1 0 :1:5 
+]
+[s S176 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP8E 1 0 :1:4 
+]
+[s S179 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP9E 1 0 :1:3 
+]
+[s S182 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CS 1 0 :1:2 
+]
+[s S185 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S188 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PB1E 1 0 :1:6 
+]
+[s S191 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+]
+[s S194 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PB3E 1 0 :1:4 
+]
+[s S197 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 PC1E 1 0 :1:5 
+]
+[s S200 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+]
+[s S203 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 PC3E 1 0 :1:3 
+]
+[s S206 . 1 `uc 1 PD2 1 0 :1:0 
+]
+[s S208 . 1 `uc 1 RDE 1 0 :1:0 
+]
+[s S210 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+]
+[u S213 . 1 `S119 1 . 1 0 `S128 1 . 1 0 `S137 1 . 1 0 `S146 1 . 1 0 `S154 1 . 1 0 `S156 1 . 1 0 `S159 1 . 1 0 `S162 1 . 1 0 `S167 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 `S176 1 . 1 0 `S179 1 . 1 0 `S182 1 . 1 0 `S185 1 . 1 0 `S188 1 . 1 0 `S191 1 . 1 0 `S194 1 . 1 0 `S197 1 . 1 0 `S200 1 . 1 0 `S203 1 . 1 0 `S206 1 . 1 0 `S208 1 . 1 0 `S210 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES213  1 e 1 @3972 ]
+[s S372 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"10500
+[u S381 . 1 `S372 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES381  1 e 1 @3988 ]
+"10544
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"10605
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S429 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR1GIE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"10922
+[s S438 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S443 . 1 `S429 1 . 1 0 `S438 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES443  1 e 1 @3997 ]
+"16833
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"16852
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+"18897
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"19015
+[v _IPEN IPEN `VEb  1 e 0 @32391 ]
+"19555
+[v _PSA PSA `VEb  1 e 0 @32427 ]
+"19665
+[v _RC3 RC3 `VEb  1 e 0 @31763 ]
+"19667
+[v _RC4 RC4 `VEb  1 e 0 @31764 ]
+"19727
+[v _RD6 RD6 `VEb  1 e 0 @31774 ]
+"19729
+[v _RD7 RD7 `VEb  1 e 0 @31775 ]
+"19739
+[v _RE2 RE2 `VEb  1 e 0 @31778 ]
+"19741
+[v _RE3 RE3 `VEb  1 e 0 @31779 ]
+"19743
+[v _RE4 RE4 `VEb  1 e 0 @31780 ]
+"19745
+[v _RE5 RE5 `VEb  1 e 0 @31781 ]
+"19747
+[v _RE6 RE6 `VEb  1 e 0 @31782 ]
+"19749
+[v _RE7 RE7 `VEb  1 e 0 @31783 ]
+"20063
+[v _T08BIT T08BIT `VEb  1 e 0 @32430 ]
+"20067
+[v _T0CS T0CS `VEb  1 e 0 @32429 ]
+"20075
+[v _T0PS0 T0PS0 `VEb  1 e 0 @32424 ]
+"20077
+[v _T0PS1 T0PS1 `VEb  1 e 0 @32425 ]
+"20079
+[v _T0PS2 T0PS2 `VEb  1 e 0 @32426 ]
+"20081
+[v _T0SE T0SE `VEb  1 e 0 @32428 ]
+"20267
+[v _TMR0IE TMR0IE `VEb  1 e 0 @32661 ]
+"20269
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"20273
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+[s S601 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR1GIF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"11004 F:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f67k22.h
+[s S610 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S615 . 1 `S601 1 . 1 0 `S610 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES615  1 e 1 @3998 ]
+"13874
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"13944
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"14053
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S484 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"14098
+[s S487 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S491 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S499 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S502 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S505 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S508 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S511 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S514 . 1 `S484 1 . 1 0 `S487 1 . 1 0 `S491 1 . 1 0 `S499 1 . 1 0 `S502 1 . 1 0 `S505 1 . 1 0 `S508 1 . 1 0 `S511 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES514  1 e 1 @4034 ]
+[s S651 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"17602
+[s S660 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S669 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S686 . 1 `S651 1 . 1 0 `S660 1 . 1 0 `S669 1 . 1 0 `S660 1 . 1 0 `S669 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES686  1 e 1 @4082 ]
+"34 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"36
+[v main@num num `f  1 a 3 49 ]
+"52
+} 0
+"35 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_Delay.c
+[v _delay_ms delay_ms `(v  1 e 0 0 ]
+{
+[v delay_ms@_ms _ms `ui  1 p 2 26 ]
+"38
+} 0
+"58
+[v _delay1ms delay1ms `(v  1 s 0 delay1ms ]
+{
+"60
+[v delay1ms@c c `uc  1 a 1 25 ]
+[v delay1ms@b b `uc  1 a 1 24 ]
+[v delay1ms@a a `uc  1 a 1 23 ]
+"64
+} 0
+"40 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(i  1 e 2 0 ]
+{
+"66
+} 0
+"78
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v SetTimer0@_tmr _tmr `ui  1 p 2 23 ]
+"85
+} 0
+"45 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/TM1640.c
+[v _TM1640_Show_Decimal TM1640_Show_Decimal `(v  1 e 0 0 ]
+{
+[v TM1640_Show_Decimal@Numbers Numbers `f  1 p 3 46 ]
+"53
+} 0
+"44 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 33 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 37 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 32 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 23 ]
+"73
+} 0
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 41 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 45 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 44 ]
+[v ___ftmul@exp exp `uc  1 a 1 40 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 31 ]
+[v ___ftmul@f2 f2 `f  1 p 3 34 ]
+"157
+} 0
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 41 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 45 ]
+[v ___ftdiv@exp exp `uc  1 a 1 44 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 40 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 31 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 34 ]
+"86
+} 0
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 23 ]
+[v ___ftpack@exp exp `uc  1 p 1 26 ]
+[v ___ftpack@sign sign `uc  1 p 1 27 ]
+"86
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+{
+"11
+[v ___awmod@sign sign `uc  1 a 1 43 ]
+[v ___awmod@counter counter `uc  1 a 1 42 ]
+"8
+[v ___awmod@dividend dividend `i  1 p 2 38 ]
+[v ___awmod@divisor divisor `i  1 p 2 40 ]
+"35
+} 0
+"66 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/TM1640.c
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Date Date `uc  1 p 1 44 ]
+"68
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 45 ]
+"75
+} 0
+"38 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+{
+"42
+} 0
+"119 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/TM1640.c
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+{
+"132
+} 0
+"77
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 wreg ]
+"79
+[v TM1640_Writer_Byte@mask mask `uc  1 a 1 26 ]
+"77
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 wreg ]
+"81
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 25 ]
+"93
+} 0
+"32
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+{
+"43
+} 0
+"19
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+{
+"30
+} 0
+"109
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+{
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+"111
+[v TM1640_Delay@i i `uc  1 a 1 24 ]
+"109
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+[v TM1640_Delay@Time Time `uc  1 a 1 23 ]
+"117
+} 0
+"38 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+{
+"46
+} 0
+"37 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_ADC.c
+[v _ADC6_Init ADC6_Init `(v  1 e 0 0 ]
+{
+"56
+} 0
+"305 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+{
+[v OpenADC@config config `uc  1 a 1 wreg ]
+[v OpenADC@config config `uc  1 a 1 wreg ]
+"306
+[v OpenADC@config2 config2 `uc  1 p 1 23 ]
+"307
+[v OpenADC@config3 config3 `uc  1 p 1 24 ]
+"309
+[v OpenADC@config config `uc  1 a 1 27 ]
+"328
+} 0
+"97 D:\_05_PIC\_03_≥Ã–Ú\_02_MyWork\_00_TEST\Handle_04(≤‚ ‘TIMER)\_01_USER/My_Timer.c
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+{
+"99
+[v Sys_Cyc@_overturn _overturn `uc  1 s 1 overturn ]
+"114
+} 0
+"78
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v i2SetTimer0@_tmr _tmr `ui  1 p 2 0 ]
+"85
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"8
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"26
+} 0

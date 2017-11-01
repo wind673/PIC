@@ -1,0 +1,1040 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F67K22 ]
+[d frameptr 4065 ]
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Key.c
+[e E8334 __KEY_TYPE__ `uc
+KEY_default 0
+KEY_short 1
+KEY_double 2
+KEY_hold 3
+KEY_busy 4
+KEY_long 5
+]
+"53 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Run.c
+[e E8370 __KEY_TYPE__ `uc
+KEY_default 0
+KEY_short 1
+KEY_double 2
+KEY_hold 3
+KEY_busy 4
+KEY_long 5
+]
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+"39 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+"55
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+"77
+[v _Key_FSM_Scan Key_FSM_Scan `(v  1 e 0 0 ]
+"98
+[v _Key_FSM_Read Key_FSM_Read `(v  1 e 0 0 ]
+"148
+[v _Key_FSM_Reset Key_FSM_Reset `(v  1 e 0 0 ]
+"37 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+"37 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_ADC.c
+[v _ADC6_Init ADC6_Init `(v  1 e 0 0 ]
+"67
+[v _Get_ADC6 Get_ADC6 `(v  1 e 0 0 ]
+"58 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_Delay.c
+[v _delay1ms delay1ms `(v  1 s 0 delay1ms ]
+"66
+[v _delay1s delay1s `(v  1 s 0 delay1s ]
+"75
+[v _Delay_1Khz Delay_1Khz `(v  1 e 0 0 ]
+"41 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(v  1 e 0 0 ]
+"79
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+"98
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+"44 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_USART.c
+[v _RS485_Init RS485_Init `(v  1 e 0 0 ]
+"74
+[v _RS485_Send_Date RS485_Send_Date `(v  1 e 0 0 ]
+"138
+[v _CRC_Verify CRC_Verify `(ui  1 s 2 CRC_Verify ]
+"49 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Run.c
+[v _Manage_Message Manage_Message `(v  1 e 0 0 ]
+"92
+[v _Run Run `(v  1 e 0 0 ]
+"118
+[v _Show_Result Show_Result `(v  1 e 0 0 ]
+"19 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/TM1640.c
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+"32
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+"55
+[v _TM1640_Show_integer TM1640_Show_integer `(v  1 e 0 0 ]
+"66
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+"77
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+"109
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+"119
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+"42 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awmod.c
+[v ___awmod __awmod `(i  1 e 2 0 ]
+"32 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+"63 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"4 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+"12 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\exp.c
+[v _exp exp `(d  1 e 3 0 ]
+"88 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"13 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\floor.c
+[v _floor floor `(d  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"254 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
+"277
+[v _ldexp ldexp `(d  1 e 3 0 ]
+"86 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"4 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"44 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+"4 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+"27 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+[v i2___llmod __llmod `(ul  1 e 4 0 ]
+"35 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+"5 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\log.c
+[v _log log `(d  1 e 3 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"28 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+"5 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\pow.c
+[v _pow pow `(d  1 e 3 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"26 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+"22 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+"305 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+"24 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+"118 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\USART\u2open.c
+[v _Open2USART Open2USART `(v  1 e 0 0 ]
+[s S79 Key_Struct 18 `VEuc 1 key_BUS 1 0 `VEuc 1 key_group 1 1 `VEuc 1 key_group_state 1 2 `VE[5]ui 1 key_count 10 3 `VE[5]uc 1 key_state 5 13 ]
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Key.c
+[v _Local_Key_FSM Local_Key_FSM `VES79  1 e 18 0 ]
+"26
+[v _Local_Key_User Local_Key_User `VES79  1 e 18 0 ]
+"24 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_ADC.c
+[v _ADC6_Buff ADC6_Buff `VEf  1 e 3 0 ]
+"26 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_Timer.c
+[v _Timer_Cyc Timer_Cyc `ul  1 e 4 0 ]
+"27 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_USART.c
+[v _RS485_SendBuff RS485_SendBuff `[10]uc  1 e 10 0 ]
+"28
+[v _RS485_ReceiveBuff RS485_ReceiveBuff `[10]uc  1 e 10 0 ]
+"29
+[v _RS485_Receive_Flag RS485_Receive_Flag `uc  1 e 1 0 ]
+"30
+[v _RS485_Num RS485_Num `uc  1 e 1 0 ]
+[s S256 __Switch 4 `uc 1 _1Khz 1 0 `uc 1 ADC6 1 1 `uc 1 Usart_OneDate 1 2 `uc 1 Show_Send_Receive 1 3 ]
+"35 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Run.c
+[v _Handle_Switch Handle_Switch `S256  1 e 4 0 ]
+"16 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/TM1640.c
+[v _LED_Number LED_Number `C[16]uc  1 e 16 0 ]
+"666 F:/Program Files (x86)/Microchip/xc8/v1.34/include\pic18f67k22.h
+[v _TXREG2 TXREG2 `VEuc  1 e 1 @3868 ]
+"685
+[v _RCREG2 RCREG2 `VEuc  1 e 1 @3869 ]
+[s S143 . 1 `uc 1 TX9D 1 0 :1:0 
+`uc 1 TRMT 1 0 :1:1 
+`uc 1 BRGH 1 0 :1:2 
+`uc 1 SENDB 1 0 :1:3 
+`uc 1 SYNC 1 0 :1:4 
+`uc 1 TXEN 1 0 :1:5 
+`uc 1 TX9 1 0 :1:6 
+`uc 1 CSRC 1 0 :1:7 
+]
+"921
+[s S152 . 1 `uc 1 TX9D2 1 0 :1:0 
+`uc 1 TRMT2 1 0 :1:1 
+`uc 1 BRGH2 1 0 :1:2 
+`uc 1 SENDB2 1 0 :1:3 
+`uc 1 SYNC2 1 0 :1:4 
+`uc 1 TXEN2 1 0 :1:5 
+`uc 1 TX92 1 0 :1:6 
+`uc 1 CSRC2 1 0 :1:7 
+]
+[s S161 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 TX8_92 1 0 :1:6 
+]
+[s S164 . 1 `uc 1 TXD82 1 0 :1:0 
+]
+[u S166 . 1 `S143 1 . 1 0 `S152 1 . 1 0 `S161 1 . 1 0 `S164 1 . 1 0 ]
+[v _TXSTA2bits TXSTA2bits `VES166  1 e 1 @3873 ]
+"1152
+[v _ANCON2 ANCON2 `VEuc  1 e 1 @3875 ]
+[s S266 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 RE4 1 0 :1:4 
+`uc 1 RE5 1 0 :1:5 
+`uc 1 RE6 1 0 :1:6 
+`uc 1 RE7 1 0 :1:7 
+]
+"8793
+[s S275 . 1 `uc 1 AD8 1 0 :1:0 
+`uc 1 AD9 1 0 :1:1 
+`uc 1 AD10 1 0 :1:2 
+`uc 1 AD11 1 0 :1:3 
+`uc 1 AD12 1 0 :1:4 
+`uc 1 AD13 1 0 :1:5 
+`uc 1 AD14 1 0 :1:6 
+`uc 1 AD15 1 0 :1:7 
+]
+[s S284 . 1 `uc 1 P2D 1 0 :1:0 
+`uc 1 P2C 1 0 :1:1 
+`uc 1 P2B 1 0 :1:2 
+`uc 1 P3C 1 0 :1:3 
+`uc 1 P3B 1 0 :1:4 
+`uc 1 P1C 1 0 :1:5 
+`uc 1 P1B 1 0 :1:6 
+`uc 1 P2A 1 0 :1:7 
+]
+[s S293 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9 1 0 :1:3 
+`uc 1 CCP8 1 0 :1:4 
+`uc 1 CCP7 1 0 :1:5 
+`uc 1 CCP6 1 0 :1:6 
+`uc 1 CCP2 1 0 :1:7 
+]
+[s S301 . 1 `uc 1 NOT_RD 1 0 :1:0 
+]
+[s S303 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_WR 1 0 :1:1 
+]
+[s S306 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_CS 1 0 :1:2 
+]
+[s S309 . 1 `uc 1 nRD 1 0 :1:0 
+`uc 1 nWR 1 0 :1:1 
+`uc 1 nCS 1 0 :1:2 
+`uc 1 REFO 1 0 :1:3 
+]
+[s S314 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S317 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CCP6E 1 0 :1:6 
+]
+[s S320 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 CCP7E 1 0 :1:5 
+]
+[s S323 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP8E 1 0 :1:4 
+]
+[s S326 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP9E 1 0 :1:3 
+]
+[s S329 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CS 1 0 :1:2 
+]
+[s S332 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S335 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PB1E 1 0 :1:6 
+]
+[s S338 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+]
+[s S341 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PB3E 1 0 :1:4 
+]
+[s S344 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 PC1E 1 0 :1:5 
+]
+[s S347 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+]
+[s S350 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 PC3E 1 0 :1:3 
+]
+[s S353 . 1 `uc 1 PD2 1 0 :1:0 
+]
+[s S355 . 1 `uc 1 RDE 1 0 :1:0 
+]
+[s S357 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+]
+[u S360 . 1 `S266 1 . 1 0 `S275 1 . 1 0 `S284 1 . 1 0 `S293 1 . 1 0 `S301 1 . 1 0 `S303 1 . 1 0 `S306 1 . 1 0 `S309 1 . 1 0 `S314 1 . 1 0 `S317 1 . 1 0 `S320 1 . 1 0 `S323 1 . 1 0 `S326 1 . 1 0 `S329 1 . 1 0 `S332 1 . 1 0 `S335 1 . 1 0 `S338 1 . 1 0 `S341 1 . 1 0 `S344 1 . 1 0 `S347 1 . 1 0 `S350 1 . 1 0 `S353 1 . 1 0 `S355 1 . 1 0 `S357 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES360  1 e 1 @3972 ]
+[s S535 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"10500
+[u S544 . 1 `S535 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES544  1 e 1 @3988 ]
+"10544
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"10605
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+[s S126 . 1 `uc 1 TRISG0 1 0 :1:0 
+`uc 1 TRISG1 1 0 :1:1 
+`uc 1 TRISG2 1 0 :1:2 
+`uc 1 TRISG3 1 0 :1:3 
+`uc 1 TRISG4 1 0 :1:4 
+]
+"10736
+[u S132 . 1 `S126 1 . 1 0 ]
+[v _TRISGbits TRISGbits `VES132  1 e 1 @3992 ]
+[s S592 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 TMR1GIE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TX1IE 1 0 :1:4 
+`uc 1 RC1IE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"10922
+[s S601 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+]
+[u S606 . 1 `S592 1 . 1 0 `S601 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES606  1 e 1 @3997 ]
+"16833
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"16852
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+"18897
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"19015
+[v _IPEN IPEN `VEb  1 e 0 @32391 ]
+"19555
+[v _PSA PSA `VEb  1 e 0 @32427 ]
+"19661
+[v _RC2IF RC2IF `VEb  1 e 0 @32037 ]
+"19665
+[v _RC3 RC3 `VEb  1 e 0 @31763 ]
+"19667
+[v _RC4 RC4 `VEb  1 e 0 @31764 ]
+"19727
+[v _RD6 RD6 `VEb  1 e 0 @31774 ]
+"19729
+[v _RD7 RD7 `VEb  1 e 0 @31775 ]
+"19739
+[v _RE2 RE2 `VEb  1 e 0 @31778 ]
+"19741
+[v _RE3 RE3 `VEb  1 e 0 @31779 ]
+"19743
+[v _RE4 RE4 `VEb  1 e 0 @31780 ]
+"19745
+[v _RE5 RE5 `VEb  1 e 0 @31781 ]
+"19747
+[v _RE6 RE6 `VEb  1 e 0 @31782 ]
+"19749
+[v _RE7 RE7 `VEb  1 e 0 @31783 ]
+"19781
+[v _RG3 RG3 `VEb  1 e 0 @31795 ]
+"20063
+[v _T08BIT T08BIT `VEb  1 e 0 @32430 ]
+"20067
+[v _T0CS T0CS `VEb  1 e 0 @32429 ]
+"20075
+[v _T0PS0 T0PS0 `VEb  1 e 0 @32424 ]
+"20077
+[v _T0PS1 T0PS1 `VEb  1 e 0 @32425 ]
+"20079
+[v _T0PS2 T0PS2 `VEb  1 e 0 @32426 ]
+"20081
+[v _T0SE T0SE `VEb  1 e 0 @32428 ]
+"20267
+[v _TMR0IE TMR0IE `VEb  1 e 0 @32661 ]
+"20269
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"20273
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"704 F:\Program Files (x86)\Microchip\xc8\v1.34\include\pic18f67k22.h
+[v _SPBRG2 SPBRG2 `VEuc  1 e 1 @3870 ]
+"723
+[v _SPBRGH2 SPBRGH2 `VEuc  1 e 1 @3871 ]
+"887
+[v _TXSTA2 TXSTA2 `VEuc  1 e 1 @3873 ]
+"1015
+[v _RCSTA2 RCSTA2 `VEuc  1 e 1 @3874 ]
+[s S1145 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"1053
+[s S1154 . 1 `uc 1 RX9D2 1 0 :1:0 
+`uc 1 OERR2 1 0 :1:1 
+`uc 1 FERR2 1 0 :1:2 
+`uc 1 ADDEN2 1 0 :1:3 
+`uc 1 CREN2 1 0 :1:4 
+`uc 1 SREN2 1 0 :1:5 
+`uc 1 RX92 1 0 :1:6 
+`uc 1 SPEN2 1 0 :1:7 
+]
+[s S1163 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_92 1 0 :1:6 
+]
+[s S1166 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC92 1 0 :1:6 
+]
+[s S1169 . 1 `uc 1 RCD82 1 0 :1:0 
+]
+[u S1171 . 1 `S1145 1 . 1 0 `S1154 1 . 1 0 `S1163 1 . 1 0 `S1166 1 . 1 0 `S1169 1 . 1 0 ]
+[v _RCSTA2bits RCSTA2bits `VES1171  1 e 1 @3874 ]
+[s S921 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 TMR1GIF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TX1IF 1 0 :1:4 
+`uc 1 RC1IF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"11004
+[s S930 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+]
+[u S935 . 1 `S921 1 . 1 0 `S930 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES935  1 e 1 @3998 ]
+[s S1204 . 1 `uc 1 RTCCIE 1 0 :1:0 
+`uc 1 CCP1IE 1 0 :1:1 
+`uc 1 CCP2IE 1 0 :1:2 
+`uc 1 CTMUIE 1 0 :1:3 
+`uc 1 TX2IE 1 0 :1:4 
+`uc 1 RC2IE 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+`uc 1 TMR5GIE 1 0 :1:7 
+]
+"11402
+[s S1213 . 1 `uc 1 RXB0IE 1 0 :1:0 
+]
+[s S1215 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXB1IE 1 0 :1:1 
+]
+[s S1218 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 RXBNIE 1 0 :1:1 
+]
+[s S1221 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 TXB0IE 1 0 :1:2 
+]
+[s S1224 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 TXB1IE 1 0 :1:3 
+]
+[s S1227 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXB2IE 1 0 :1:4 
+]
+[s S1230 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 TXBNIE 1 0 :1:4 
+]
+[u S1233 . 1 `S1204 1 . 1 0 `S1213 1 . 1 0 `S1215 1 . 1 0 `S1218 1 . 1 0 `S1221 1 . 1 0 `S1224 1 . 1 0 `S1227 1 . 1 0 `S1230 1 . 1 0 ]
+[v _PIE3bits PIE3bits `VES1233  1 e 1 @4003 ]
+"13874
+[v _ADCON2 ADCON2 `VEuc  1 e 1 @4032 ]
+"13944
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
+"14053
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
+[s S804 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_NOT_DONE 1 0 :1:1 
+]
+"14098
+[s S807 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 GO_nDONE 1 0 :1:1 
+`uc 1 CHS 1 0 :5:2 
+]
+[s S811 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 DONE 1 0 :1:1 
+`uc 1 CHS0 1 0 :1:2 
+`uc 1 CHS1 1 0 :1:3 
+`uc 1 CHS2 1 0 :1:4 
+`uc 1 CHS3 1 0 :1:5 
+`uc 1 CHS4 1 0 :1:6 
+]
+[s S819 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO 1 0 :1:1 
+]
+[s S822 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_DONE 1 0 :1:1 
+]
+[s S825 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 nDONE 1 0 :1:1 
+]
+[s S828 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GODONE 1 0 :1:1 
+]
+[s S831 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 GO_DONE 1 0 :1:1 
+]
+[u S834 . 1 `S804 1 . 1 0 `S807 1 . 1 0 `S811 1 . 1 0 `S819 1 . 1 0 `S822 1 . 1 0 `S825 1 . 1 0 `S828 1 . 1 0 `S831 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES834  1 e 1 @4034 ]
+"14183
+[v _ADRESL ADRESL `VEuc  1 e 1 @4035 ]
+"14202
+[v _ADRESH ADRESH `VEuc  1 e 1 @4036 ]
+[s S971 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"17602
+[s S980 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S989 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S1006 . 1 `S971 1 . 1 0 `S980 1 . 1 0 `S989 1 . 1 0 `S980 1 . 1 0 `S989 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES1006  1 e 1 @4082 ]
+"3 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\errno.c
+[v _errno errno `i  1 e 2 0 ]
+"37 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"40
+[v main@num num `f  1 a 3 0 ]
+"58
+} 0
+"41 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(v  1 e 0 0 ]
+{
+"67
+} 0
+"79
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v SetTimer0@_tmr _tmr `ui  1 p 2 24 ]
+"86
+} 0
+"118 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Run.c
+[v _Show_Result Show_Result `(v  1 e 0 0 ]
+{
+"133
+} 0
+"55 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/TM1640.c
+[v _TM1640_Show_integer TM1640_Show_integer `(v  1 e 0 0 ]
+{
+[v TM1640_Show_integer@Numbers Numbers `ui  1 p 2 31 ]
+"62
+} 0
+"66
+[v _TM1640_Writer_Dates TM1640_Writer_Dates `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 wreg ]
+[v TM1640_Writer_Dates@Date Date `uc  1 p 1 29 ]
+"68
+[v TM1640_Writer_Dates@Addr Addr `uc  1 a 1 30 ]
+"75
+} 0
+"92 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Run.c
+[v _Run Run `(v  1 e 0 0 ]
+{
+"106
+} 0
+"74 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_USART.c
+[v _RS485_Send_Date RS485_Send_Date `(v  1 e 0 0 ]
+{
+"76
+[v RS485_Send_Date@temp temp `ui  1 a 2 90 ]
+"74
+[v RS485_Send_Date@date_dress date_dress `*.39uc  1 p 2 83 ]
+[v RS485_Send_Date@date_lenth date_lenth `uc  1 p 1 85 ]
+"101
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwmod@counter counter `uc  1 a 1 28 ]
+"8
+[v ___lwmod@dividend dividend `ui  1 p 2 24 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 26 ]
+"26
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"11
+[v ___lwdiv@quotient quotient `ui  1 a 2 29 ]
+"12
+[v ___lwdiv@counter counter `uc  1 a 1 28 ]
+"8
+[v ___lwdiv@dividend dividend `ui  1 p 2 24 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 26 ]
+"31
+} 0
+"138 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_USART.c
+[v _CRC_Verify CRC_Verify `(ui  1 s 2 CRC_Verify ]
+{
+"140
+[v CRC_Verify@CRC_Value CRC_Value `ul  1 a 4 78 ]
+"141
+[v CRC_Verify@CRC_Byte CRC_Byte `uc  1 a 1 82 ]
+"138
+[v CRC_Verify@DataBuff DataBuff `*.39uc  1 p 2 69 ]
+"147
+} 0
+"5 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\pow.c
+[v _pow pow `(d  1 e 3 0 ]
+{
+"8
+[v pow@yi yi `ul  1 a 4 65 ]
+"7
+[v pow@sign sign `uc  1 a 1 64 ]
+"5
+[v pow@x x `d  1 p 3 52 ]
+[v pow@y y `d  1 p 3 55 ]
+"31
+} 0
+"5 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\log.c
+[v _log log `(d  1 e 3 0 ]
+{
+"7
+[v log@exponent exponent `i  1 a 2 25 ]
+"5
+[v log@x x `d  1 p 3 22 ]
+"9
+[v log@coeff coeff `C[9]d  1 s 27 coeff ]
+"36
+} 0
+"12 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\exp.c
+[v _exp exp `(d  1 e 3 0 ]
+{
+"14
+[v exp@exponent exponent `i  1 a 2 49 ]
+"15
+[v exp@sign sign `uc  1 a 1 51 ]
+"12
+[v exp@x x `d  1 p 3 43 ]
+"17
+[v exp@coeff coeff `C[10]d  1 s 30 coeff ]
+"57
+} 0
+"277 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\frexp.c
+[v _ldexp ldexp `(d  1 e 3 0 ]
+{
+[v ldexp@value value `d  1 p 3 22 ]
+[v ldexp@newexp newexp `i  1 p 2 25 ]
+"307
+} 0
+"13 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\floor.c
+[v _floor floor `(d  1 e 3 0 ]
+{
+"15
+[v floor@i i `d  1 a 3 38 ]
+"16
+[v floor@expon expon `i  1 a 2 41 ]
+"13
+[v floor@x x `d  1 p 3 35 ]
+"30
+} 0
+"254 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\frexp.c
+[v _frexp frexp `(d  1 e 3 0 ]
+{
+[v frexp@value value `d  1 p 3 24 ]
+[v frexp@eptr eptr `*.39i  1 p 2 27 ]
+"274
+} 0
+"44 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fttol.c
+[v ___fttol __fttol `(l  1 e 4 0 ]
+{
+"47
+[v ___fttol@lval lval `ul  1 a 4 22 ]
+"46
+[v ___fttol@exp1 exp1 `uc  1 a 1 26 ]
+[v ___fttol@sign1 sign1 `uc  1 a 1 21 ]
+"44
+[v ___fttol@f1 f1 `f  1 p 3 12 ]
+"73
+} 0
+"4 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftge.c
+[v ___ftge __ftge `(b  1 e 0 0 ]
+{
+[v ___ftge@ff1 ff1 `f  1 p 3 24 ]
+[v ___ftge@ff2 ff2 `f  1 p 3 27 ]
+"13
+} 0
+"42 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\altoft.c
+[v ___altoft __altoft `(f  1 e 3 0 ]
+{
+"44
+[v ___altoft@sign sign `uc  1 a 1 52 ]
+[v ___altoft@exp exp `uc  1 a 1 51 ]
+"42
+[v ___altoft@c c `l  1 p 4 27 ]
+"57
+} 0
+"4 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\evalpoly.c
+[v _eval_poly eval_poly `(d  1 e 3 0 ]
+{
+"6
+[v eval_poly@res res `d  1 a 3 19 ]
+"4
+[v eval_poly@x x `d  1 p 3 12 ]
+[v eval_poly@d d `*.32Cd  1 p 2 15 ]
+[v eval_poly@n n `i  1 p 2 17 ]
+"12
+} 0
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 28 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 24 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 26 ]
+"53
+} 0
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+{
+[v ___ftsub@f1 f1 `f  1 p 3 12 ]
+[v ___ftsub@f2 f2 `f  1 p 3 15 ]
+"27
+} 0
+"86 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+{
+"88
+[v ___ftadd@exp1 exp1 `uc  1 a 1 11 ]
+[v ___ftadd@exp2 exp2 `uc  1 a 1 10 ]
+[v ___ftadd@sign sign `uc  1 a 1 9 ]
+"86
+[v ___ftadd@f1 f1 `f  1 p 3 0 ]
+[v ___ftadd@f2 f2 `f  1 p 3 3 ]
+"148
+} 0
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftneg.c
+[v ___ftneg __ftneg `(f  1 e 3 0 ]
+{
+[v ___ftneg@f1 f1 `f  1 p 3 24 ]
+"20
+} 0
+"32 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\awtoft.c
+[v ___awtoft __awtoft `(f  1 e 3 0 ]
+{
+"34
+[v ___awtoft@sign sign `uc  1 a 1 35 ]
+"32
+[v ___awtoft@c c `i  1 p 2 32 ]
+"42
+} 0
+"35 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lltoft.c
+[v ___lltoft __lltoft `(f  1 e 3 0 ]
+{
+"37
+[v ___lltoft@exp exp `uc  1 a 1 40 ]
+"35
+[v ___lltoft@c c `ul  1 p 4 32 ]
+"46
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 32 ]
+"8
+[v ___llmod@dividend dividend `ul  1 p 4 24 ]
+[v ___llmod@divisor divisor `ul  1 p 4 28 ]
+"26
+} 0
+"27 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lbtoft.c
+[v ___lbtoft __lbtoft `(f  1 e 3 0 ]
+{
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+[v ___lbtoft@c c `uc  1 a 1 wreg ]
+"29
+[v ___lbtoft@c c `uc  1 a 1 35 ]
+"30
+} 0
+"67 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_ADC.c
+[v _Get_ADC6 Get_ADC6 `(v  1 e 0 0 ]
+{
+"73
+} 0
+"28 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lwtoft.c
+[v ___lwtoft __lwtoft `(f  1 e 3 0 ]
+{
+[v ___lwtoft@c c `ui  1 p 2 32 ]
+"31
+} 0
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+{
+"65
+[v ___ftmul@f3_as_product f3_as_product `um  1 a 3 46 ]
+"64
+[v ___ftmul@sign sign `uc  1 a 1 50 ]
+[v ___ftmul@cntr cntr `uc  1 a 1 49 ]
+[v ___ftmul@exp exp `uc  1 a 1 45 ]
+"62
+[v ___ftmul@f1 f1 `f  1 p 3 36 ]
+[v ___ftmul@f2 f2 `f  1 p 3 39 ]
+"157
+} 0
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+{
+"60
+[v ___ftdiv@f3 f3 `f  1 a 3 10 ]
+"59
+[v ___ftdiv@sign sign `uc  1 a 1 14 ]
+[v ___ftdiv@exp exp `uc  1 a 1 13 ]
+[v ___ftdiv@cntr cntr `uc  1 a 1 9 ]
+"54
+[v ___ftdiv@f1 f1 `f  1 p 3 0 ]
+[v ___ftdiv@f2 f2 `f  1 p 3 3 ]
+"86
+} 0
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+{
+[v ___ftpack@arg arg `um  1 p 3 24 ]
+[v ___ftpack@exp exp `uc  1 p 1 27 ]
+[v ___ftpack@sign sign `uc  1 p 1 28 ]
+"86
+} 0
+"24 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcread.c
+[v _ReadADC ReadADC `(i  1 e 2 0 ]
+{
+"27
+} 0
+"22 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcconv.c
+[v _ConvertADC ConvertADC `(v  1 e 0 0 ]
+{
+"25
+} 0
+"26 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcbusy.c
+[v _BusyADC BusyADC `(uc  1 e 1 0 ]
+{
+"29
+} 0
+"44 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_USART.c
+[v _RS485_Init RS485_Init `(v  1 e 0 0 ]
+{
+"61
+} 0
+"118 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\USART\u2open.c
+[v _Open2USART Open2USART `(v  1 e 0 0 ]
+{
+[v Open2USART@config config `uc  1 a 1 wreg ]
+[v Open2USART@config config `uc  1 a 1 wreg ]
+[v Open2USART@spbrg spbrg `ui  1 p 2 24 ]
+"120
+[v Open2USART@config config `uc  1 a 1 26 ]
+"165
+} 0
+"39 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+{
+"43
+} 0
+"119 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/TM1640.c
+[v _Init_TM1640 Init_TM1640 `(v  1 e 0 0 ]
+{
+"132
+} 0
+"77
+[v _TM1640_Writer_Byte TM1640_Writer_Byte `(v  1 e 0 0 ]
+{
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 wreg ]
+"79
+[v TM1640_Writer_Byte@mask mask `uc  1 a 1 27 ]
+"77
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 wreg ]
+"81
+[v TM1640_Writer_Byte@Date Date `Cuc  1 a 1 26 ]
+"93
+} 0
+"32
+[v _TM1640_Stop TM1640_Stop `(v  1 e 0 0 ]
+{
+"43
+} 0
+"19
+[v _TM1640_Start TM1640_Start `(v  1 e 0 0 ]
+{
+"30
+} 0
+"109
+[v _TM1640_Delay TM1640_Delay `(v  1 e 0 0 ]
+{
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+"111
+[v TM1640_Delay@i i `uc  1 a 1 25 ]
+"109
+[v TM1640_Delay@Time Time `uc  1 a 1 wreg ]
+[v TM1640_Delay@Time Time `uc  1 a 1 24 ]
+"117
+} 0
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+{
+"46
+} 0
+"37 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_ADC.c
+[v _ADC6_Init ADC6_Init `(v  1 e 0 0 ]
+{
+"56
+} 0
+"305 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\pic18\plib\ADC\adcopen.c
+[v _OpenADC OpenADC `(v  1 e 0 0 ]
+{
+[v OpenADC@config config `uc  1 a 1 wreg ]
+[v OpenADC@config config `uc  1 a 1 wreg ]
+"306
+[v OpenADC@config2 config2 `uc  1 p 1 24 ]
+"307
+[v OpenADC@config3 config3 `uc  1 p 1 25 ]
+"309
+[v OpenADC@config config `uc  1 a 1 28 ]
+"328
+} 0
+"98 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_Timer.c
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+{
+"102
+[v Sys_Cyc@_pulse _pulse `uc  1 a 1 23 ]
+"101
+[v Sys_Cyc@_overturn_1Khz _overturn_1Khz `uc  1 s 1 overturn_1Khz ]
+[v Sys_Cyc@_overturn_LED _overturn_LED `uc  1 s 1 overturn_LED ]
+"103
+[v Sys_Cyc@_RS485_Receive_Num _RS485_Receive_Num `uc  1 s 1 RS485_Receive_Num ]
+[v Sys_Cyc@RS485_Timer RS485_Timer `uc  1 s 1 RS485_Timer ]
+"155
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v i2___llmod __llmod `(ul  1 e 4 0 ]
+{
+[v i2___llmod@counter __llmod `uc  1 a 1 8 ]
+[v i2___llmod@dividend dividend `ul  1 p 4 0 ]
+[v i2___llmod@divisor divisor `ul  1 p 4 4 ]
+"26
+} 0
+"79 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_Timer.c
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v i2SetTimer0@_tmr _tmr `ui  1 p 2 0 ]
+"86
+} 0
+"49 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Run.c
+[v _Manage_Message Manage_Message `(v  1 e 0 0 ]
+{
+"80
+} 0
+"4 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\lbmod.c
+[v ___lbmod __lbmod `(uc  1 e 1 0 ]
+{
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+"6
+[v ___lbmod@rem rem `uc  1 a 1 3 ]
+"7
+[v ___lbmod@counter counter `uc  1 a 1 2 ]
+"4
+[v ___lbmod@dividend dividend `uc  1 a 1 wreg ]
+[v ___lbmod@divisor divisor `uc  1 p 1 0 ]
+"9
+[v ___lbmod@dividend dividend `uc  1 a 1 1 ]
+"18
+} 0
+"148 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/Key.c
+[v _Key_FSM_Reset Key_FSM_Reset `(v  1 e 0 0 ]
+{
+"150
+[v Key_FSM_Reset@t t `uc  1 a 1 0 ]
+"156
+} 0
+"98
+[v _Key_FSM_Read Key_FSM_Read `(v  1 e 0 0 ]
+{
+"100
+[v Key_FSM_Read@key_num key_num `uc  1 a 1 5 ]
+[v Key_FSM_Read@key_num_mate key_num_mate `uc  1 a 1 4 ]
+"137
+} 0
+"77
+[v _Key_FSM_Scan Key_FSM_Scan `(v  1 e 0 0 ]
+{
+"86
+} 0
+"55
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+{
+"65
+} 0
+"75 D:\_05_PIC\_03_程序\_02_MyWork\_02_手柄\_02_A号\__Fine\Handle_A03(抓取数据包)\_01_USER/My_Delay.c
+[v _Delay_1Khz Delay_1Khz `(v  1 e 0 0 ]
+{
+"77
+[v Delay_1Khz@c c `uc  1 a 1 2 ]
+[v Delay_1Khz@b b `uc  1 a 1 1 ]
+[v Delay_1Khz@a a `uc  1 a 1 0 ]
+"81
+} 0

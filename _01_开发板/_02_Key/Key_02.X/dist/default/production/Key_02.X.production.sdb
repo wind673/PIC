@@ -1,0 +1,261 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F67K22 ]
+[d frameptr 4065 ]
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+"53
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+"73
+[v _Key_FSM_Scan Key_FSM_Scan `(v  1 e 0 0 ]
+"31 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+"58 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/My_Delay.c
+[v _delay1ms delay1ms `(v  1 s 0 delay1ms ]
+"66
+[v _delay1s delay1s `(v  1 s 0 delay1s ]
+"36 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(i  1 e 2 0 ]
+"74
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+"95
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+"63 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\double.c
+[v ___flpack __flpack `(d  1 e 3 0 ]
+"88 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fladd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\fldiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\flsub.c
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"86 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"15 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+[s S55 . 10 `VEuc 1 key_state 1 0 `VE[4]uc 1 key_FSM 4 1 `VEuc 1 key_group 1 5 `VE[4]uc 1 key 4 6 ]
+"25 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/Key.c
+[v _Local_Key_FSM Local_Key_FSM `VES55  1 e 10 0 ]
+"24 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/My_Timer.c
+[v _Timer_Cyc Timer_Cyc `ul  1 e 4 0 ]
+[s S114 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 RE4 1 0 :1:4 
+`uc 1 RE5 1 0 :1:5 
+`uc 1 RE6 1 0 :1:6 
+`uc 1 RE7 1 0 :1:7 
+]
+"8793 F:/Program Files (x86)/Microchip/xc8/v1.34/include\pic18f67k22.h
+[s S123 . 1 `uc 1 AD8 1 0 :1:0 
+`uc 1 AD9 1 0 :1:1 
+`uc 1 AD10 1 0 :1:2 
+`uc 1 AD11 1 0 :1:3 
+`uc 1 AD12 1 0 :1:4 
+`uc 1 AD13 1 0 :1:5 
+`uc 1 AD14 1 0 :1:6 
+`uc 1 AD15 1 0 :1:7 
+]
+[s S132 . 1 `uc 1 P2D 1 0 :1:0 
+`uc 1 P2C 1 0 :1:1 
+`uc 1 P2B 1 0 :1:2 
+`uc 1 P3C 1 0 :1:3 
+`uc 1 P3B 1 0 :1:4 
+`uc 1 P1C 1 0 :1:5 
+`uc 1 P1B 1 0 :1:6 
+`uc 1 P2A 1 0 :1:7 
+]
+[s S141 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9 1 0 :1:3 
+`uc 1 CCP8 1 0 :1:4 
+`uc 1 CCP7 1 0 :1:5 
+`uc 1 CCP6 1 0 :1:6 
+`uc 1 CCP2 1 0 :1:7 
+]
+[s S149 . 1 `uc 1 NOT_RD 1 0 :1:0 
+]
+[s S151 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_WR 1 0 :1:1 
+]
+[s S154 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_CS 1 0 :1:2 
+]
+[s S157 . 1 `uc 1 nRD 1 0 :1:0 
+`uc 1 nWR 1 0 :1:1 
+`uc 1 nCS 1 0 :1:2 
+`uc 1 REFO 1 0 :1:3 
+]
+[s S162 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S165 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 CCP6E 1 0 :1:6 
+]
+[s S168 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 CCP7E 1 0 :1:5 
+]
+[s S171 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 CCP8E 1 0 :1:4 
+]
+[s S174 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 CCP9E 1 0 :1:3 
+]
+[s S177 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CS 1 0 :1:2 
+]
+[s S180 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S183 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 PB1E 1 0 :1:6 
+]
+[s S186 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+]
+[s S189 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 PB3E 1 0 :1:4 
+]
+[s S192 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 PC1E 1 0 :1:5 
+]
+[s S195 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+]
+[s S198 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 PC3E 1 0 :1:3 
+]
+[s S201 . 1 `uc 1 PD2 1 0 :1:0 
+]
+[s S203 . 1 `uc 1 RDE 1 0 :1:0 
+]
+[s S205 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+]
+[u S208 . 1 `S114 1 . 1 0 `S123 1 . 1 0 `S132 1 . 1 0 `S141 1 . 1 0 `S149 1 . 1 0 `S151 1 . 1 0 `S154 1 . 1 0 `S157 1 . 1 0 `S162 1 . 1 0 `S165 1 . 1 0 `S168 1 . 1 0 `S171 1 . 1 0 `S174 1 . 1 0 `S177 1 . 1 0 `S180 1 . 1 0 `S183 1 . 1 0 `S186 1 . 1 0 `S189 1 . 1 0 `S192 1 . 1 0 `S195 1 . 1 0 `S198 1 . 1 0 `S201 1 . 1 0 `S203 1 . 1 0 `S205 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES208  1 e 1 @3972 ]
+"10483
+[v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+"10605
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"10666
+[v _TRISF TRISF `VEuc  1 e 1 @3991 ]
+"16833
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"16852
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+"18897
+[v _GIE GIE `VEb  1 e 0 @32663 ]
+"19015
+[v _IPEN IPEN `VEb  1 e 0 @32391 ]
+"19555
+[v _PSA PSA `VEb  1 e 0 @32427 ]
+"19657
+[v _RC2 RC2 `VEb  1 e 0 @31762 ]
+"19665
+[v _RC3 RC3 `VEb  1 e 0 @31763 ]
+"19667
+[v _RC4 RC4 `VEb  1 e 0 @31764 ]
+"19669
+[v _RC5 RC5 `VEb  1 e 0 @31765 ]
+"19739
+[v _RE2 RE2 `VEb  1 e 0 @31778 ]
+"19741
+[v _RE3 RE3 `VEb  1 e 0 @31779 ]
+"19743
+[v _RE4 RE4 `VEb  1 e 0 @31780 ]
+"19745
+[v _RE5 RE5 `VEb  1 e 0 @31781 ]
+"20063
+[v _T08BIT T08BIT `VEb  1 e 0 @32430 ]
+"20067
+[v _T0CS T0CS `VEb  1 e 0 @32429 ]
+"20075
+[v _T0PS0 T0PS0 `VEb  1 e 0 @32424 ]
+"20077
+[v _T0PS1 T0PS1 `VEb  1 e 0 @32425 ]
+"20079
+[v _T0PS2 T0PS2 `VEb  1 e 0 @32426 ]
+"20081
+[v _T0SE T0SE `VEb  1 e 0 @32428 ]
+"20267
+[v _TMR0IE TMR0IE `VEb  1 e 0 @32661 ]
+"20269
+[v _TMR0IF TMR0IF `VEb  1 e 0 @32658 ]
+"20273
+[v _TMR0ON TMR0ON `VEb  1 e 0 @32431 ]
+"31 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/main.c
+[v _main main `(i  1 e 2 0 ]
+{
+"33
+[v main@t t `uc  1 a 1 27 ]
+"47
+} 0
+"36 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/My_Timer.c
+[v _Timer0_Init Timer0_Init `(i  1 e 2 0 ]
+{
+"62
+} 0
+"74
+[v _SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v SetTimer0@_tmr _tmr `ui  1 p 2 23 ]
+"83
+} 0
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/Key.c
+[v _Key_Init Key_Init `(v  1 e 0 0 ]
+{
+"41
+} 0
+"38 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/GPIO.c
+[v _GPIO_Config GPIO_Config `(v  1 e 0 0 ]
+{
+"47
+} 0
+"95 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/My_Timer.c
+[v _Sys_Cyc Sys_Cyc `II(v  1 e 0 0 ]
+{
+"114
+} 0
+"74
+[v i2_SetTimer0 SetTimer0 `(v  1 e 0 0 ]
+{
+[v i2SetTimer0@_tmr _tmr `ui  1 p 2 0 ]
+"83
+} 0
+"8 F:\Program Files (x86)\Microchip\xc8\v1.34\sources\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"11
+[v ___llmod@counter counter `uc  1 a 1 8 ]
+"8
+[v ___llmod@dividend dividend `ul  1 p 4 0 ]
+[v ___llmod@divisor divisor `ul  1 p 4 4 ]
+"26
+} 0
+"73 D:\_05_PIC\_03_程序\_02_MyWork\_02_Key\Key_02.X\_01_USER/Key.c
+[v _Key_FSM_Scan Key_FSM_Scan `(v  1 e 0 0 ]
+{
+"114
+} 0
+"53
+[v _Key_Scan Key_Scan `(v  1 s 0 Key_Scan ]
+{
+"61
+} 0

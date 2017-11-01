@@ -1,0 +1,596 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.34 build -361300703 
+                                                                                               Thu Oct 29 21:38:05 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
+     1                           	processor	18F67K22
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    10                           	psect	text3,global,reloc=2,class=CODE,delta=1
+    11                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    12                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    13  0000                     _PORTEbits	set	3972
+    14  0000                     _TRISE	set	3990
+    15                           
+    16                           ; 0 bytes @ 0x5
+    17 ;;
+    18 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    19 ;;
+    20 ;; *************** function _main *****************
+    21 ;; Defined at:
+    22 ;;		line 30 in file "_01_USER/main.c"
+    23 ;; Parameters:    Size  Location     Type
+    24 ;;		None
+    25 ;; Auto vars:     Size  Location     Type
+    26 ;;		None
+    27 ;; Return value:  Size  Location     Type
+    28 ;;                  2    8[None  ] int 
+    29 ;; Registers used:
+    30 ;;		wreg, status,2, status,0, cstack
+    31 ;; Tracked objects:
+    32 ;;		On entry : 0/0
+    33 ;;		On exit  : 0/0
+    34 ;;		Unchanged: 0/0
+    35 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+    36 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    37 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    38 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    39 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    40 ;;Total ram usage:        0 bytes
+    41 ;; Hardware stack levels required when called:    2
+    42 ;; This function calls:
+    43 ;;		_GPIO_Config
+    44 ;;		_delay_ms
+    45 ;; This function is called by:
+    46 ;;		Startup code after reset
+    47 ;; This function uses a non-reentrant model
+    48 ;;
+    49                           
+    50                           	psect	text0
+    51  01FF84                     __ptext0:
+    52                           	opt stack 0
+    53  01FF84                     _main:
+    54                           	opt stack 29
+    55                           
+    56                           ;main.c: 32: GPIO_Config();
+    57                           
+    58                           ;incstack = 0
+    59  01FF84  EC93  F0FF         	call	_GPIO_Config	;wreg free
+    60  01FF88  D000               	goto	l778
+    61  01FF8A                     l778:
+    62                           
+    63                           ;main.c: 34: {
+    64                           ;main.c: 35: PORTEbits.RE2=0; delay_ms(30); PORTEbits.RE2=1; delay_ms(30);
+    65  01FF8A  9484               	bcf	3972,2,c	;volatile
+    66  01FF8C  0E00               	movlw	0
+    67  01FF8E  6E05               	movwf	delay_ms@_ms+1,c
+    68  01FF90  0E1E               	movlw	30
+    69  01FF92  6E04               	movwf	delay_ms@_ms,c
+    70  01FF94  EC99  F0FF         	call	_delay_ms	;wreg free
+    71  01FF98  8484               	bsf	3972,2,c	;volatile
+    72  01FF9A  0E00               	movlw	0
+    73  01FF9C  6E05               	movwf	delay_ms@_ms+1,c
+    74  01FF9E  0E1E               	movlw	30
+    75  01FFA0  6E04               	movwf	delay_ms@_ms,c
+    76  01FFA2  EC99  F0FF         	call	_delay_ms	;wreg free
+    77                           
+    78                           ;main.c: 36: PORTEbits.RE3=0; delay_ms(30); PORTEbits.RE3=1; delay_ms(30);
+    79  01FFA6  9684               	bcf	3972,3,c	;volatile
+    80  01FFA8  0E00               	movlw	0
+    81  01FFAA  6E05               	movwf	delay_ms@_ms+1,c
+    82  01FFAC  0E1E               	movlw	30
+    83  01FFAE  6E04               	movwf	delay_ms@_ms,c
+    84  01FFB0  EC99  F0FF         	call	_delay_ms	;wreg free
+    85  01FFB4  8684               	bsf	3972,3,c	;volatile
+    86  01FFB6  0E00               	movlw	0
+    87  01FFB8  6E05               	movwf	delay_ms@_ms+1,c
+    88  01FFBA  0E1E               	movlw	30
+    89  01FFBC  6E04               	movwf	delay_ms@_ms,c
+    90  01FFBE  EC99  F0FF         	call	_delay_ms	;wreg free
+    91                           
+    92                           ;main.c: 37: PORTEbits.RE4=0; delay_ms(30); PORTEbits.RE4=1; delay_ms(30);
+    93  01FFC2  9884               	bcf	3972,4,c	;volatile
+    94  01FFC4  0E00               	movlw	0
+    95  01FFC6  6E05               	movwf	delay_ms@_ms+1,c
+    96  01FFC8  0E1E               	movlw	30
+    97  01FFCA  6E04               	movwf	delay_ms@_ms,c
+    98  01FFCC  EC99  F0FF         	call	_delay_ms	;wreg free
+    99  01FFD0  8884               	bsf	3972,4,c	;volatile
+   100  01FFD2  0E00               	movlw	0
+   101  01FFD4  6E05               	movwf	delay_ms@_ms+1,c
+   102  01FFD6  0E1E               	movlw	30
+   103  01FFD8  6E04               	movwf	delay_ms@_ms,c
+   104  01FFDA  EC99  F0FF         	call	_delay_ms	;wreg free
+   105                           
+   106                           ;main.c: 38: PORTEbits.RE5=0; delay_ms(30); PORTEbits.RE5=1; delay_ms(30);
+   107  01FFDE  9A84               	bcf	3972,5,c	;volatile
+   108  01FFE0  0E00               	movlw	0
+   109  01FFE2  6E05               	movwf	delay_ms@_ms+1,c
+   110  01FFE4  0E1E               	movlw	30
+   111  01FFE6  6E04               	movwf	delay_ms@_ms,c
+   112  01FFE8  EC99  F0FF         	call	_delay_ms	;wreg free
+   113  01FFEC  8A84               	bsf	3972,5,c	;volatile
+   114  01FFEE  0E00               	movlw	0
+   115  01FFF0  6E05               	movwf	delay_ms@_ms+1,c
+   116  01FFF2  0E1E               	movlw	30
+   117  01FFF4  6E04               	movwf	delay_ms@_ms,c
+   118  01FFF6  EC99  F0FF         	call	_delay_ms	;wreg free
+   119  01FFFA  D7C7               	goto	l778
+   120                           
+   121                           ;main.c: 40: }
+   122                           ;main.c: 42: return 0;
+   123                           ;	Return value of _main is never used
+   124  01FFFC  EF00  F000         	goto	start
+   125  020000                     __end_of_main:
+   126                           	opt stack 0
+   127                           
+   128                           	psect	cinit
+   129  01FF2C                     __pcinit:
+   130                           	opt stack 0
+   131  01FF2C                     start_initialization:
+   132                           	opt stack 0
+   133  01FF2C                     __initialization:
+   134                           	opt stack 0
+   135  01FF2C                     end_of_initialization:
+   136                           	opt stack 0
+   137  01FF2C                     __end_of__initialization:
+   138                           	opt stack 0
+   139  01FF2C  0100               	movlb	0
+   140  01FF2E  EFC2  F0FF         	goto	_main	;jump to C main() function
+   141                           
+   142                           	psect	cstackCOMRAM
+   143  000001                     __pcstackCOMRAM:
+   144                           	opt stack 0
+   145  000001                     delay1ms@a:
+   146                           	opt stack 0
+   147                           
+   148                           ; 1 bytes @ 0x0
+   149  000001                     	ds	1
+   150  000002                     delay1ms@b:
+   151                           	opt stack 0
+   152                           
+   153                           ; 1 bytes @ 0x1
+   154  000002                     	ds	1
+   155  000003                     delay1ms@c:
+   156                           	opt stack 0
+   157                           
+   158                           ; 1 bytes @ 0x2
+   159  000003                     	ds	1
+   160  000004                     delay_ms@_ms:
+   161                           	opt stack 0
+   162                           
+   163                           ; 2 bytes @ 0x3
+   164  000004                     	ds	2
+   165  000006                     
+   166 ;; *************** function _delay_ms *****************
+   167 ;; Defined at:
+   168 ;;		line 35 in file "_01_USER/My_Delay.c"
+   169 ;; Parameters:    Size  Location     Type
+   170 ;;  _ms             2    3[COMRAM] unsigned int 
+   171 ;; Auto vars:     Size  Location     Type
+   172 ;;		None
+   173 ;; Return value:  Size  Location     Type
+   174 ;;		None               void
+   175 ;; Registers used:
+   176 ;;		wreg, status,2, status,0, cstack
+   177 ;; Tracked objects:
+   178 ;;		On entry : 0/0
+   179 ;;		On exit  : 0/0
+   180 ;;		Unchanged: 0/0
+   181 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   182 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   183 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   184 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   185 ;;      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   186 ;;Total ram usage:        2 bytes
+   187 ;; Hardware stack levels used:    1
+   188 ;; Hardware stack levels required when called:    1
+   189 ;; This function calls:
+   190 ;;		_delay1ms
+   191 ;; This function is called by:
+   192 ;;		_main
+   193 ;; This function uses a non-reentrant model
+   194 ;;
+   195                           
+   196                           	psect	text1
+   197  01FF32                     __ptext1:
+   198                           	opt stack 0
+   199  01FF32                     _delay_ms:
+   200                           	opt stack 29
+   201                           
+   202                           ;My_Delay.c: 37: while(_ms--) delay1ms();
+   203                           
+   204                           ;incstack = 0
+   205  01FF32  D003               	goto	l774
+   206  01FF34                     l772:
+   207  01FF34  ECA6  F0FF         	call	_delay1ms	;wreg free
+   208  01FF38  D000               	goto	l774
+   209  01FF3A                     l774:
+   210  01FF3A  0604               	decf	delay_ms@_ms,f,c
+   211  01FF3C  A0D8               	btfss	status,0,c
+   212  01FF3E  0605               	decf	delay_ms@_ms+1,f,c
+   213  01FF40  2804               	incf	delay_ms@_ms,w,c
+   214  01FF42  E1F8               	bnz	l772
+   215  01FF44  2805               	incf	delay_ms@_ms+1,w,c
+   216  01FF46  A4D8               	btfss	status,2,c
+   217  01FF48  D7F5               	goto	l772
+   218  01FF4A  0012               	return		;funcret
+   219  01FF4C                     __end_of_delay_ms:
+   220                           	opt stack 0
+   221                           status	equ	0xFD8
+   222                           
+   223 ;; *************** function _delay1ms *****************
+   224 ;; Defined at:
+   225 ;;		line 58 in file "_01_USER/My_Delay.c"
+   226 ;; Parameters:    Size  Location     Type
+   227 ;;		None
+   228 ;; Auto vars:     Size  Location     Type
+   229 ;;  c               1    2[COMRAM] unsigned char 
+   230 ;;  b               1    1[COMRAM] unsigned char 
+   231 ;;  a               1    0[COMRAM] unsigned char 
+   232 ;; Return value:  Size  Location     Type
+   233 ;;		None               void
+   234 ;; Registers used:
+   235 ;;		wreg, status,2, status,0
+   236 ;; Tracked objects:
+   237 ;;		On entry : 0/0
+   238 ;;		On exit  : 0/0
+   239 ;;		Unchanged: 0/0
+   240 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   241 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   242 ;;      Locals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   243 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   244 ;;      Totals:         3       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   245 ;;Total ram usage:        3 bytes
+   246 ;; Hardware stack levels used:    1
+   247 ;; This function calls:
+   248 ;;		Nothing
+   249 ;; This function is called by:
+   250 ;;		_delay_ms
+   251 ;; This function uses a non-reentrant model
+   252 ;;
+   253                           
+   254                           	psect	text2
+   255  01FF4C                     __ptext2:
+   256                           	opt stack 0
+   257  01FF4C                     _delay1ms:
+   258                           	opt stack 29
+   259                           
+   260                           ;My_Delay.c: 60: unsigned char a,b,c;
+   261                           ;My_Delay.c: 61: for(c=1;c>0;c--)
+   262                           
+   263                           ;incstack = 0
+   264  01FF4C  0E01               	movlw	1
+   265  01FF4E  6E03               	movwf	delay1ms@c,c
+   266  01FF50  5003               	movf	delay1ms@c,w,c
+   267  01FF52  B4D8               	btfsc	status,2,c
+   268  01FF54  0012               	return	
+   269  01FF56  D001               	goto	l656
+   270  01FF58  0012               	return	
+   271  01FF5A                     l656:
+   272                           
+   273                           ;My_Delay.c: 62: for(b=94;b>0;b--)
+   274  01FF5A  0E5E               	movlw	94
+   275  01FF5C  6E02               	movwf	delay1ms@b,c
+   276  01FF5E  5002               	movf	delay1ms@b,w,c
+   277  01FF60  B4D8               	btfsc	status,2,c
+   278  01FF62  D00D               	goto	l672
+   279  01FF64  D001               	goto	l660
+   280  01FF66  D00B               	goto	l672
+   281  01FF68                     l660:
+   282                           
+   283                           ;My_Delay.c: 63: for(a=2;a>0;a--);
+   284  01FF68  0E02               	movlw	2
+   285  01FF6A  6E01               	movwf	delay1ms@a,c
+   286  01FF6C  5001               	movf	delay1ms@a,w,c
+   287  01FF6E  B4D8               	btfsc	status,2,c
+   288  01FF70  D004               	goto	l668
+   289  01FF72  D001               	goto	l664
+   290  01FF74  D002               	goto	l668
+   291  01FF76                     l664:
+   292  01FF76  0601               	decf	delay1ms@a,f,c
+   293  01FF78  D7F9               	goto	L1
+   294  01FF7A                     l668:
+   295  01FF7A  0602               	decf	delay1ms@b,f,c
+   296  01FF7C  D7F0               	goto	L2
+   297  01FF7E                     l672:
+   298  01FF7E  0603               	decf	delay1ms@c,f,c
+   299  01FF80  D7E7               	goto	L3
+   300  01FF82  0012               	return		;funcret
+   301  01FF84                     __end_of_delay1ms:
+   302                           	opt stack 0
+   303                           status	equ	0xFD8
+   304                           
+   305 ;; *************** function _GPIO_Config *****************
+   306 ;; Defined at:
+   307 ;;		line 35 in file "_01_USER/GPIO_Config.c"
+   308 ;; Parameters:    Size  Location     Type
+   309 ;;		None
+   310 ;; Auto vars:     Size  Location     Type
+   311 ;;		None
+   312 ;; Return value:  Size  Location     Type
+   313 ;;		None               void
+   314 ;; Registers used:
+   315 ;;		wreg, status,2
+   316 ;; Tracked objects:
+   317 ;;		On entry : 0/0
+   318 ;;		On exit  : 0/0
+   319 ;;		Unchanged: 0/0
+   320 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   321 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   322 ;;      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   323 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   324 ;;      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   325 ;;Total ram usage:        0 bytes
+   326 ;; Hardware stack levels used:    1
+   327 ;; This function calls:
+   328 ;;		Nothing
+   329 ;; This function is called by:
+   330 ;;		_main
+   331 ;; This function uses a non-reentrant model
+   332 ;;
+   333                           
+   334                           	psect	text3
+   335  01FF26                     __ptext3:
+   336                           	opt stack 0
+   337  01FF26                     _GPIO_Config:
+   338                           	opt stack 30
+   339                           
+   340                           ;GPIO_Config.c: 37: TRISE=0x00;
+   341                           
+   342                           ;incstack = 0
+   343  01FF26  0E00               	movlw	0
+   344  01FF28  6E96               	movwf	3990,c	;volatile
+   345  01FF2A  0012               	return		;funcret
+   346  01FF2C                     __end_of_GPIO_Config:
+   347                           	opt stack 0
+   348  0000                     status	equ	0xFD8
+   349                           status	equ	0xFD8
+   350                           
+   351                           	psect	rparam
+   352  0000                     status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      5       5
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15           22      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_delay_ms
+    _delay_ms->_delay1ms
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 0     0      0     456
+                        _GPIO_Config
+                           _delay_ms
+ ---------------------------------------------------------------------------------
+ (1) _delay_ms                                             2     0      2     456
+                                              3 COMRAM     2     0      2
+                           _delay1ms
+ ---------------------------------------------------------------------------------
+ (2) _delay1ms                                             3     3      0      90
+                                              0 COMRAM     3     3      0
+ ---------------------------------------------------------------------------------
+ (1) _GPIO_Config                                          0     0      0       0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 2
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _GPIO_Config
+   _delay_ms
+     _delay1ms
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             400      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      5       5       1        5.3%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+ABS                  0      0       0      12        0.0%
+BITBANK4           100      0       0      13        0.0%
+BANK4              100      0       0      14        0.0%
+BITBANK5           100      0       0      15        0.0%
+BANK5              100      0       0      16        0.0%
+BITBANK6           100      0       0      17        0.0%
+BANK6              100      0       0      18        0.0%
+BITBANK7           100      0       0      19        0.0%
+BANK7              100      0       0      20        0.0%
+BITBANK8           100      0       0      21        0.0%
+BANK8              100      0       0      22        0.0%
+BITBANK9           100      0       0      23        0.0%
+BANK9              100      0       0      24        0.0%
+BITBANK10          100      0       0      25        0.0%
+BANK10             100      0       0      26        0.0%
+BITBANK11          100      0       0      27        0.0%
+BANK11             100      0       0      28        0.0%
+BITBANK12          100      0       0      29        0.0%
+BANK12             100      0       0      30        0.0%
+BITBANK13          100      0       0      31        0.0%
+BANK13             100      0       0      32        0.0%
+BITBANK14          100      0       0      33        0.0%
+BANK14             100      0       0      34        0.0%
+BITBANK15           16      0       0      35        0.0%
+BANK15              16      0       0      36        0.0%
+BIGRAM             F15      0       0      37        0.0%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.34 build -361300703 
+Symbol Table                                                                                   Thu Oct 29 21:38:05 2015
+
+            __CFG_BORV$3 000000             __CFG_CP0$OFF 000000             __CFG_CP1$OFF 000000  
+           __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000             __CFG_CP4$OFF 000000  
+           __CFG_CP5$OFF 000000             __CFG_CP6$OFF 000000             __CFG_CP7$OFF 000000  
+                    l660 FF68                      l664 FF76                      l672 FF7E  
+                    l656 FF5A                      l668 FF7A                      l772 FF34  
+                    l774 FF3A                      l778 FF8A             __CFG_CPB$OFF 000000  
+           __CFG_CPD$OFF 000000             ?_GPIO_Config 0001                     _main FF84  
+                   start 0000            __CFG_IESO$OFF 000000            __CFG_MCLRE$ON 000000  
+           ___param_bank 000010            __CFG_RETEN$ON 000000                    ?_main 0001  
+                  _TRISE 000F96            __CFG_WRT0$OFF 000000            __CFG_WRT1$OFF 000000  
+          __CFG_WRT2$OFF 000000            __CFG_WRT3$OFF 000000            __CFG_WRT4$OFF 000000  
+         __CFG_EBRT0$OFF 000000            __CFG_WRT5$OFF 000000           __CFG_EBRT1$OFF 000000  
+          __CFG_WRT6$OFF 000000           __CFG_EBRT2$OFF 000000            __CFG_WRT7$OFF 000000  
+         __CFG_EBRT3$OFF 000000           __CFG_EBRT4$OFF 000000           __CFG_FCMEN$OFF 000000  
+         __CFG_EBRT5$OFF 000000            __CFG_XINST$ON 000000           __CFG_EBRT6$OFF 000000  
+         __CFG_EBRT7$OFF 000000            __CFG_WRTB$OFF 000000            __CFG_WRTC$OFF 000000  
+          __CFG_WRTD$OFF 000000           __CFG_EBRTB$OFF 000000                    status 000FD8  
+        __initialization FF2C             __end_of_main 0000                   ??_main 0006  
+          __activetblptr 000003          __CFG_BBSIZ$BB2K 000000         __end_of_delay1ms FF84  
+       __end_of_delay_ms FF4C           __CFG_STVREN$ON 000000     __size_of_GPIO_Config 0006  
+             __accesstop 0060  __end_of__initialization FF2C            ___rparam_used 000001  
+         __pcstackCOMRAM 0001          __CFG_PLLCFG$OFF 000000                ?_delay1ms 0001  
+              ?_delay_ms 0004          __CFG_PWRTEN$OFF 000000                  __Hparam 0000  
+                __Lparam 0000                  __pcinit FF2C                  __ramtop 1000  
+                __ptext0 FF84                  __ptext1 FF32                  __ptext2 FF4C  
+                __ptext3 FF26               ??_delay1ms 0001        __CFG_MSSPMSK$MSK7 000000  
+             ??_delay_ms 0006     end_of_initialization FF2C                _PORTEbits 000F84  
+       __CFG_FOSC$INTIO2 000000        __CFG_SOSCSEL$HIGH 000000            ??_GPIO_Config 0001  
+    start_initialization FF2C        __size_of_delay1ms 0038        __size_of_delay_ms 001A  
+    __end_of_GPIO_Config FF2C        __CFG_CCP2MX$PORTC 000000                delay1ms@a 0001  
+              delay1ms@b 0002                delay1ms@c 0003              _GPIO_Config FF26  
+               __Hrparam 0000                 __Lrparam 0000       __CFG_BOREN$SBORDIS 000000  
+               _delay1ms FF4C                 _delay_ms FF32            __size_of_main 007C  
+    __CFG_RTCOSC$SOSCREF 000000      __CFG_INTOSCSEL$HIGH 000000              delay_ms@_ms 0004  
+     __CFG_WDTEN$SWDTDIS 000000       __CFG_WDTPS$1048576 000000      __CFG_BORPWR$ZPBORMV 000000  

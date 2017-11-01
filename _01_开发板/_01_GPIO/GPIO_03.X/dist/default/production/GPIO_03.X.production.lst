@@ -1,0 +1,512 @@
+
+
+Microchip Technology PIC18 LITE Macro Assembler V1.34 build -361300703 
+                                                                                               Sun Oct 25 18:32:09 2015
+
+Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
+     1                           	processor	18F67K22
+     2                           	fnconf	rparam,??,?,0
+     3                           	opt	pw 120
+     4                           	opt	lm
+     5                           	psect	text0,global,reloc=2,class=CODE,delta=1
+     6                           	psect	cinit,global,reloc=2,class=CODE,delta=1
+     7                           	psect	cstackCOMRAM,global,class=COMRAM,space=1,delta=1
+     8                           	psect	text1,global,reloc=2,class=CODE,delta=1
+     9                           	psect	text2,global,reloc=2,class=CODE,delta=1
+    10                           	psect	intsave_regs,global,class=BIGRAM,space=1,delta=1
+    11                           	psect	rparam,global,class=COMRAM,space=1,delta=1
+    12  0000                     _PORTEbits	set	3972
+    13  0000                     _TRISE	set	3990
+    14                           
+    15 ;;
+    16 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
+    17 ;;
+    18 ;; *************** function _main *****************
+    19 ;; Defined at:
+    20 ;;		line 25 in file "_01_USER/main.c"
+    21 ;; Parameters:    Size  Location     Type
+    22 ;;		None
+    23 ;; Auto vars:     Size  Location     Type
+    24 ;;  i               1    4[COMRAM] unsigned char 
+    25 ;; Return value:  Size  Location     Type
+    26 ;;                  2   24[None  ] int 
+    27 ;; Registers used:
+    28 ;;		wreg, status,2, status,0, cstack
+    29 ;; Tracked objects:
+    30 ;;		On entry : 0/0
+    31 ;;		On exit  : 0/0
+    32 ;;		Unchanged: 0/0
+    33 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+    34 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    35 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    36 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    37 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+    38 ;;Total ram usage:        1 bytes
+    39 ;; Hardware stack levels required when called:    1
+    40 ;; This function calls:
+    41 ;;		_LED_Switch
+    42 ;;		_delay_ms
+    43 ;; This function is called by:
+    44 ;;		Startup code after reset
+    45 ;; This function uses a non-reentrant model
+    46 ;;
+    47                           
+    48                           	psect	text0
+    49  01FF5C                     __ptext0:
+    50                           	opt stack 0
+    51  01FF5C                     _main:
+    52                           	opt stack 30
+    53                           
+    54                           ;main.c: 27: unsigned char i=0;
+    55                           
+    56                           ;incstack = 0
+    57  01FF5C  0E00               	movlw	0
+    58  01FF5E  6E05               	movwf	main@i,c
+    59                           
+    60                           ;main.c: 28: TRISE=0x00;
+    61  01FF60  0E00               	movlw	0
+    62  01FF62  6E96               	movwf	3990,c	;volatile
+    63  01FF64  D000               	goto	l638
+    64  01FF66                     l638:
+    65                           
+    66                           ;main.c: 30: {
+    67                           ;main.c: 33: i=(i+1)%4;
+    68  01FF66  2805               	incf	main@i,w,c
+    69  01FF68  0B03               	andlw	3
+    70  01FF6A  6E05               	movwf	main@i,c
+    71                           
+    72                           ;main.c: 35: delay_ms(1);
+    73  01FF6C  0E00               	movlw	0
+    74  01FF6E  6E02               	movwf	delay_ms@_ms+1,c
+    75  01FF70  0E01               	movlw	1
+    76  01FF72  6E01               	movwf	delay_ms@_ms,c
+    77  01FF74  ECC2  F0FF         	call	_delay_ms	;wreg free
+    78                           
+    79                           ;main.c: 36: LED_Switch(i);
+    80  01FF78  5005               	movf	main@i,w,c
+    81  01FF7A  ECDB  F0FF         	call	_LED_Switch
+    82  01FF7E  D7F3               	goto	l638
+    83                           
+    84                           ;main.c: 38: }
+    85                           ;main.c: 40: return 0;
+    86                           ;	Return value of _main is never used
+    87  01FF80  EF00  F000         	goto	start
+    88  01FF84                     __end_of_main:
+    89                           	opt stack 0
+    90                           
+    91                           	psect	cinit
+    92  01FF56                     __pcinit:
+    93                           	opt stack 0
+    94  01FF56                     start_initialization:
+    95                           	opt stack 0
+    96  01FF56                     __initialization:
+    97                           	opt stack 0
+    98  01FF56                     end_of_initialization:
+    99                           	opt stack 0
+   100  01FF56                     __end_of__initialization:
+   101                           	opt stack 0
+   102  01FF56  0100               	movlb	0
+   103  01FF58  EFAE  F0FF         	goto	_main	;jump to C main() function
+   104                           
+   105                           	psect	cstackCOMRAM
+   106  000001                     __pcstackCOMRAM:
+   107                           	opt stack 0
+   108  000001                     LED_Switch@_list:
+   109                           	opt stack 0
+   110  000001                     delay_ms@_ms:
+   111                           	opt stack 0
+   112                           
+   113                           ; 2 bytes @ 0x0
+   114  000001                     	ds	2
+   115  000003                     delay_ms@i:
+   116                           	opt stack 0
+   117                           
+   118                           ; 2 bytes @ 0x2
+   119  000003                     	ds	2
+   120  000005                     main@i:
+   121                           	opt stack 0
+   122                           
+   123                           ; 1 bytes @ 0x4
+   124  000005                     	ds	1
+   125                           
+   126 ;; *************** function _delay_ms *****************
+   127 ;; Defined at:
+   128 ;;		line 5 in file "_01_USER/main.c"
+   129 ;; Parameters:    Size  Location     Type
+   130 ;;  _ms             2    0[COMRAM] unsigned int 
+   131 ;; Auto vars:     Size  Location     Type
+   132 ;;  i               2    2[COMRAM] unsigned int 
+   133 ;; Return value:  Size  Location     Type
+   134 ;;		None               void
+   135 ;; Registers used:
+   136 ;;		wreg, status,2, status,0
+   137 ;; Tracked objects:
+   138 ;;		On entry : 0/0
+   139 ;;		On exit  : 0/0
+   140 ;;		Unchanged: 0/0
+   141 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   142 ;;      Params:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   143 ;;      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   144 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   145 ;;      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   146 ;;Total ram usage:        4 bytes
+   147 ;; Hardware stack levels used:    1
+   148 ;; This function calls:
+   149 ;;		Nothing
+   150 ;; This function is called by:
+   151 ;;		_main
+   152 ;; This function uses a non-reentrant model
+   153 ;;
+   154                           
+   155                           	psect	text1
+   156  01FF84                     __ptext1:
+   157                           	opt stack 0
+   158  01FF84                     _delay_ms:
+   159                           	opt stack 30
+   160                           
+   161                           ;main.c: 7: unsigned int i=999999;
+   162                           
+   163                           ;incstack = 0
+   164  01FF84  0E42               	movlw	66
+   165  01FF86  6E04               	movwf	delay_ms@i+1,c
+   166  01FF88  0E3F               	movlw	63
+   167  01FF8A  6E03               	movwf	delay_ms@i,c
+   168                           
+   169                           ;main.c: 9: while(_ms--)
+   170  01FF8C  D00B               	goto	l634
+   171                           
+   172                           ;main.c: 10: while(i--);
+   173  01FF8E  D000               	goto	l632
+   174  01FF90                     l632:
+   175  01FF90  0603               	decf	delay_ms@i,f,c
+   176  01FF92  A0D8               	btfss	status,0,c
+   177  01FF94  0604               	decf	delay_ms@i+1,f,c
+   178  01FF96  2803               	incf	delay_ms@i,w,c
+   179  01FF98  E1FB               	bnz	l632
+   180  01FF9A  2804               	incf	delay_ms@i+1,w,c
+   181  01FF9C  B4D8               	btfsc	status,2,c
+   182  01FF9E  D002               	goto	l634
+   183  01FFA0  D7F7               	goto	l632
+   184  01FFA2  D000               	goto	l634
+   185  01FFA4                     l634:
+   186  01FFA4  0601               	decf	delay_ms@_ms,f,c
+   187  01FFA6  A0D8               	btfss	status,0,c
+   188  01FFA8  0602               	decf	delay_ms@_ms+1,f,c
+   189  01FFAA  2801               	incf	delay_ms@_ms,w,c
+   190  01FFAC  E1F1               	bnz	l632
+   191  01FFAE  2802               	incf	delay_ms@_ms+1,w,c
+   192  01FFB0  A4D8               	btfss	status,2,c
+   193  01FFB2  D7EE               	goto	l632
+   194  01FFB4  0012               	return		;funcret
+   195  01FFB6                     __end_of_delay_ms:
+   196                           	opt stack 0
+   197                           status	equ	0xFD8
+   198                           
+   199 ;; *************** function _LED_Switch *****************
+   200 ;; Defined at:
+   201 ;;		line 13 in file "_01_USER/main.c"
+   202 ;; Parameters:    Size  Location     Type
+   203 ;;  _list           1    wreg     unsigned char 
+   204 ;; Auto vars:     Size  Location     Type
+   205 ;;  _list           1    0[COMRAM] unsigned char 
+   206 ;; Return value:  Size  Location     Type
+   207 ;;		None               void
+   208 ;; Registers used:
+   209 ;;		wreg, status,2, status,0
+   210 ;; Tracked objects:
+   211 ;;		On entry : 0/0
+   212 ;;		On exit  : 0/0
+   213 ;;		Unchanged: 0/0
+   214 ;; Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK1
+      +1  BANK12  BANK13  BANK14  BANK15
+   215 ;;      Params:         0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   216 ;;      Locals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   217 ;;      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   218 ;;      Totals:         1       0       0       0       0       0       0       0       0       0       0       0       
+      +0       0       0       0       0
+   219 ;;Total ram usage:        1 bytes
+   220 ;; Hardware stack levels used:    1
+   221 ;; This function calls:
+   222 ;;		Nothing
+   223 ;; This function is called by:
+   224 ;;		_main
+   225 ;; This function uses a non-reentrant model
+   226 ;;
+   227                           
+   228                           	psect	text2
+   229  01FFB6                     __ptext2:
+   230                           	opt stack 0
+   231  01FFB6                     _LED_Switch:
+   232                           	opt stack 30
+   233                           
+   234                           ;incstack = 0
+   235                           ;LED_Switch@_list stored from wreg
+   236  01FFB6  6E01               	movwf	LED_Switch@_list,c
+   237                           
+   238                           ;main.c: 15: switch(_list)
+   239  01FFB8  D014               	goto	l620
+   240  01FFBA                     l17:
+   241  01FFBA  9484               	bcf	3972,2,c	;volatile
+   242  01FFBC  8684               	bsf	3972,3,c	;volatile
+   243  01FFBE  8884               	bsf	3972,4,c	;volatile
+   244  01FFC0  8A84               	bsf	3972,5,c	;volatile
+   245  01FFC2  0012               	return	
+   246  01FFC4                     l19:
+   247  01FFC4  9484               	bcf	3972,2,c	;volatile
+   248  01FFC6  9684               	bcf	3972,3,c	;volatile
+   249  01FFC8  8884               	bsf	3972,4,c	;volatile
+   250  01FFCA  8A84               	bsf	3972,5,c	;volatile
+   251  01FFCC  0012               	return	
+   252  01FFCE                     l20:
+   253  01FFCE  9484               	bcf	3972,2,c	;volatile
+   254  01FFD0  9684               	bcf	3972,3,c	;volatile
+   255  01FFD2  9884               	bcf	3972,4,c	;volatile
+   256  01FFD4  8A84               	bsf	3972,5,c	;volatile
+   257  01FFD6  0012               	return	
+   258  01FFD8                     l21:
+   259  01FFD8  9484               	bcf	3972,2,c	;volatile
+   260  01FFDA  9684               	bcf	3972,3,c	;volatile
+   261  01FFDC  9884               	bcf	3972,4,c	;volatile
+   262  01FFDE  9A84               	bcf	3972,5,c	;volatile
+   263                           
+   264                           ;main.c: 21: }
+   265  01FFE0  0012               	return	
+   266  01FFE2                     l620:
+   267  01FFE2  5001               	movf	LED_Switch@_list,w,c
+   268                           
+   269                           ; Switch size 1, requested type "space"
+   270                           ; Number of cases is 4, Range of values is 0 to 3
+   271                           ; switch strategies available:
+   272                           ; Name         Instructions Cycles
+   273                           ; simple_byte           13     7 (average)
+   274                           ;	Chosen strategy is simple_byte
+   275  01FFE4  0A00               	xorlw	0	; case 0
+   276  01FFE6  B4D8               	btfsc	status,2,c
+   277  01FFE8  D7E8               	goto	l17
+   278  01FFEA  0A01               	xorlw	1	; case 1
+   279  01FFEC  B4D8               	btfsc	status,2,c
+   280  01FFEE  D7EA               	goto	l19
+   281  01FFF0  0A03               	xorlw	3	; case 2
+   282  01FFF2  B4D8               	btfsc	status,2,c
+   283  01FFF4  D7EC               	goto	l20
+   284  01FFF6  0A01               	xorlw	1	; case 3
+   285  01FFF8  A4D8               	btfss	status,2,c
+   286  01FFFA  0012               	return	
+   287  01FFFC  D7ED               	goto	l21
+   288  01FFFE  0012               	return		;funcret
+   289  020000                     __end_of_LED_Switch:
+   290                           	opt stack 0
+   291  0000                     status	equ	0xFD8
+   292                           status	equ	0xFD8
+   293                           
+   294                           	psect	rparam
+   295  0000                     status	equ	0xFD8
+
+
+Data Sizes:
+    Strings     0
+    Constant    0
+    Data        0
+    BSS         0
+    Persistent  0
+    Stack       0
+
+Auto Spaces:
+    Space          Size  Autos    Used
+    COMRAM           95      5       5
+    BANK0           160      0       0
+    BANK1           256      0       0
+    BANK2           256      0       0
+    BANK3           256      0       0
+    BANK4           256      0       0
+    BANK5           256      0       0
+    BANK6           256      0       0
+    BANK7           256      0       0
+    BANK8           256      0       0
+    BANK9           256      0       0
+    BANK10          256      0       0
+    BANK11          256      0       0
+    BANK12          256      0       0
+    BANK13          256      0       0
+    BANK14          256      0       0
+    BANK15           22      0       0
+
+Pointer List with Targets:
+
+    None.
+
+Critical Paths under _main in COMRAM
+
+    _main->_delay_ms
+
+Critical Paths under _main in BANK0
+
+    None.
+
+Critical Paths under _main in BANK1
+
+    None.
+
+Critical Paths under _main in BANK2
+
+    None.
+
+Critical Paths under _main in BANK3
+
+    None.
+
+Critical Paths under _main in BANK4
+
+    None.
+
+Critical Paths under _main in BANK5
+
+    None.
+
+Critical Paths under _main in BANK6
+
+    None.
+
+Critical Paths under _main in BANK7
+
+    None.
+
+Critical Paths under _main in BANK8
+
+    None.
+
+Critical Paths under _main in BANK9
+
+    None.
+
+Critical Paths under _main in BANK10
+
+    None.
+
+Critical Paths under _main in BANK11
+
+    None.
+
+Critical Paths under _main in BANK12
+
+    None.
+
+Critical Paths under _main in BANK13
+
+    None.
+
+Critical Paths under _main in BANK14
+
+    None.
+
+Critical Paths under _main in BANK15
+
+    None.
+
+Call Graph Tables:
+
+ ---------------------------------------------------------------------------------
+ (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
+ ---------------------------------------------------------------------------------
+ (0) _main                                                 1     1      0     149
+                                              4 COMRAM     1     1      0
+                         _LED_Switch
+                           _delay_ms
+ ---------------------------------------------------------------------------------
+ (1) _delay_ms                                             4     2      2      88
+                                              0 COMRAM     4     2      2
+ ---------------------------------------------------------------------------------
+ (1) _LED_Switch                                           1     1      0      15
+                                              0 COMRAM     1     1      0
+ ---------------------------------------------------------------------------------
+ Estimated maximum stack depth 1
+ ---------------------------------------------------------------------------------
+
+ Call Graph Graphs:
+
+ _main (ROOT)
+   _LED_Switch
+   _delay_ms
+
+ Address spaces:
+Name               Size   Autos  Total    Cost      Usage
+BITCOMRAM           5F      0       0       0        0.0%
+EEDATA             400      0       0       0        0.0%
+NULL                 0      0       0       0        0.0%
+CODE                 0      0       0       0        0.0%
+COMRAM              5F      5       5       1        5.3%
+STACK                0      0       0       2        0.0%
+DATA                 0      0       0       3        0.0%
+BITBANK0            A0      0       0       4        0.0%
+BANK0               A0      0       0       5        0.0%
+BITBANK1           100      0       0       6        0.0%
+BANK1              100      0       0       7        0.0%
+BITBANK2           100      0       0       8        0.0%
+BANK2              100      0       0       9        0.0%
+BITBANK3           100      0       0      10        0.0%
+BANK3              100      0       0      11        0.0%
+ABS                  0      0       0      12        0.0%
+BITBANK4           100      0       0      13        0.0%
+BANK4              100      0       0      14        0.0%
+BITBANK5           100      0       0      15        0.0%
+BANK5              100      0       0      16        0.0%
+BITBANK6           100      0       0      17        0.0%
+BANK6              100      0       0      18        0.0%
+BITBANK7           100      0       0      19        0.0%
+BANK7              100      0       0      20        0.0%
+BITBANK8           100      0       0      21        0.0%
+BANK8              100      0       0      22        0.0%
+BITBANK9           100      0       0      23        0.0%
+BANK9              100      0       0      24        0.0%
+BITBANK10          100      0       0      25        0.0%
+BANK10             100      0       0      26        0.0%
+BITBANK11          100      0       0      27        0.0%
+BANK11             100      0       0      28        0.0%
+BITBANK12          100      0       0      29        0.0%
+BANK12             100      0       0      30        0.0%
+BITBANK13          100      0       0      31        0.0%
+BANK13             100      0       0      32        0.0%
+BITBANK14          100      0       0      33        0.0%
+BANK14             100      0       0      34        0.0%
+BITBANK15           16      0       0      35        0.0%
+BANK15              16      0       0      36        0.0%
+BIGRAM             F15      0       0      37        0.0%
+BITSFR_1             0      0       0      40        0.0%
+SFR_1                0      0       0      40        0.0%
+BITSFR               0      0       0      40        0.0%
+SFR                  0      0       0      40        0.0%
+
+
+Microchip Technology PIC18 Macro Assembler V1.34 build -361300703 
+Symbol Table                                                                                   Sun Oct 25 18:32:09 2015
+
+                     l20 FFCE                       l21 FFD8                       l17 FFBA  
+                     l19 FFC4                      l620 FFE2                      l632 FF90  
+                    l634 FFA4                      l638 FF66              ?_LED_Switch 0001  
+                   _main FF5C                     start 0000             ___param_bank 000010  
+                  ?_main 0001                    _TRISE 000F96          LED_Switch@_list 0001  
+                  main@i 0005                    status 000FD8      __size_of_LED_Switch 004A  
+        __initialization FF56             __end_of_main FF84                   ??_main 0005  
+          __activetblptr 000003         __end_of_delay_ms FFB6               __accesstop 0060  
+__end_of__initialization FF56            ___rparam_used 000001           __pcstackCOMRAM 0001  
+           ??_LED_Switch 0001       __end_of_LED_Switch 0000                ?_delay_ms 0001  
+                __Hparam 0000                  __Lparam 0000                  __pcinit FF56  
+                __ramtop 1000                  __ptext0 FF5C                  __ptext1 FF84  
+                __ptext2 FFB6               ??_delay_ms 0003     end_of_initialization FF56  
+              _PORTEbits 000F84      start_initialization FF56        __size_of_delay_ms 0032  
+              delay_ms@i 0003                 __Hrparam 0000                 __Lrparam 0000  
+               _delay_ms FF84            __size_of_main 0028              delay_ms@_ms 0001  
+             _LED_Switch FFB6  
